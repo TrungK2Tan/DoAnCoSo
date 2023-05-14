@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>NHA KHOA STH</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="~/img/icon_dental.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <!-- Template Stylesheet -->
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+84 356 243 964</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>nhakhoasth@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="">
+                            @Html.Partial("_LoginPartial")
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="~/Home/Index" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>STH</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a class="@Html.Raw(ViewBag.active ==1? "active":"") nav-item nav-link" href="~/Home/Index">TRANG CHỦ</a>
+                        <a href="~/Home/About" class="@Html.Raw(ViewBag.active ==2? "active":"") nav-item nav-link">GIỚI THIỆU</a>
+                        <a href="~/Home/Service" class="@Html.Raw(ViewBag.active ==3? "active":"") nav-item nav-link">DỊCH VỤ</a>
+                        <a href="~/Home/Price" class="@Html.Raw(ViewBag.active ==4? "active":"") nav-item nav-link">GÓI</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">THÊM</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="~/Home/BlogGrid" class="dropdown-item">DIỄN ĐÀN</a>
+                                <a href="~/Home/Team" class="dropdown-item">BÁC SĨ</a>
+                                <a href="~/Home/Testimonial" class="dropdown-item">NHẬN XÉT</a>
+                                <a href="~/Home/Appointment" class="dropdown-item">ĐẶT LỊCH</a>
+                                <a href="~/Home/Search" class="dropdown-item">TÌM KIẾM</a>
+                            </div>
+                        </div>
+                        <a href="~/Home/Contact" class="@Html.Raw(ViewBag.active ==5? "active":"") nav-item nav-link">HỖ TRỢ</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    @RenderBody()
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Liên Lạc</h4>
+                    <p class="mb-4">Chúng Tôi luôn đặt bệnh nhân lên hàng đầu. Hỗ trợ 24/24.</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>10/80C Xa Lộ Hà Nội</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>nhakhoasth@gmail.com</p>
+                    <p style="cursor:pointer" class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+84 356 243 964</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Thông Tin</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>GIỚI THIỆU</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>DỊCH VỤ</a>
+                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>HỖ TRỢ</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">PHỔ BIẾN</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>ĐẶT LỊCH</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>DỊCH VỤ</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>BÁC SĨ</a>
+                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>HỖ TRỢ</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Đăng Tin</h4>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3 border-0" placeholder="Nhập Địa Chỉ Email">
+                            <button class="btn btn-primary">Đăng Nhập</button>
+                        </div>
+                    </form>
+                    <h6 class="text-primary text-uppercase mt-4 mb-3">LIÊN HỆ CHÚNG TÔI</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">STH</a>. BẢN QUYỀN .</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Thiết Kế Bởi <a class="text-primary" href="https://www.facebook.com/profile.php?id=100052186663114">DACS_STH</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="~/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/js/main.js"></script>
+
+    <div class="div-nut">
+        <a href="tel:0357059137" class="nut-goi nut-action">
+            <div><span class="tooltext">Gọi ngay</span></div>
+        </a>
+        <a href="https://zalo.me/0357059137" target="_blank" class="nut-zalo nut-action">
+            <div><span class="tooltext">Chat với chúng tôi qua Zalo</span></div>
+        </a>
+        <a href="https://www.facebook.com/hutechuniversity/?locale=vi_VN" target="_blank" class="nut-face nut-action">
+            <div><span class="tooltext">Facebook Messenger</span></div>
+        </a>
+    </div>
+
+    <style>
+        .div-nut {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px !important;
+            position: fixed;
+            z-index: 2147483647;
+            bottom: 24px;
+            left: 0;
+            padding-left: 5px;
+        }
+
+            .div-nut > a {
+                display: inline-block;
+                overflow: visible !important;
+                width: 54px !important;
+                height: 54px !important;
+                margin: 6px !important;
+                background-size: 100% !important;
+                border: 2px solid #fff !important;
+                border-radius: 50% !important;
+                margin: 8px;
+                text-align: center;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: auto;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .div-nut .nut-action:hover .tooltext {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .div-nut:hover .nut-action {
+                text-decoration: none !important;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.13);
+            }
+
+            .div-nut .tooltext {
+                visibility: hidden;
+                font-size: 12px !important;
+                line-height: 16px !important;
+                text-align: center;
+                white-space: nowrap;
+                border-radius: 4px;
+                padding: 8px;
+                position: absolute;
+                top: calc(50% - 16px);
+                z-index: 1;
+                opacity: 0;
+                transition: opacity 0.5s;
+                left: 120%;
+                background-image: linear-gradient(180deg, #e57373 0%, #c62828 100%);
+                color: #fff;
+            }
+
+            .div-nut .nut-goi {
+                background-image: url("https://thietkewebchuyen.com/data/icon/wordpress/call.svg");
+            }
+
+            .div-nut .nut-zalo {
+                background-image: url("https://thietkewebchuyen.com/data/icon/wordpress/zalo.svg");
+            }
+
+            .div-nut .nut-face {
+                background-image: url("https://thietkewebchuyen.com/data/icon/wordpress/messenger.svg");
+            }
+
+        .nut-goi.nut-action:before {
+            content: "";
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%,-50%) scale(0);
+            -moz-transform: translate(-50%,-50%) scale(0);
+            -ms-transform: translate(-50%,-50%) scale(0);
+            -o-transform: translate(-50%,-50%) scale(0);
+            border: 5px solid #feaf88;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            display: block;
+            -webkit-animation: spread-fade 1s ease-in infinite;
+            animation: spread-fade 1s ease-in infinite;
+        }
+
+        .nut-goi.nut-action:after {
+            display: block;
+            -webkit-animation: spread-fade 1s .2s ease-in infinite;
+            animation: spread-fade 1s .2s ease-in infinite;
+            content: "";
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%,-50%) scale(0);
+            -moz-transform: translate(-50%,-50%) scale(0);
+            -ms-transform: translate(-50%,-50%) scale(0);
+            -o-transform: translate(-50%,-50%) scale(0);
+            border: 5px solid #feaf88;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+        }
+    </style>
+    <button class="nut-mo-chatbox" onclick="moForm()">Chat</button>
+    <div class="Chatbox" id="myForm">
+        <form action="" class="form-container">
+            <h1>HỖ TRỢ</h1>
+            <label for="msg"><b>Lời Nhắn</b></label>
+            <textarea placeholder="Bạn hãy nhập lời nhắn.." name="msg" id="message" required></textarea>
+            <ul id="discussion">
+            </ul>
+            <div style="display:flex">
+                <input type="button" class="btn " id="sendmessage" value="Gửi" />
+                <input type="hidden" id="displayname" value="@Session["Email"]" />
+                <button type="button" class="btn nut-dong-chatbox " onclick="dongForm()">Đóng</button>
+            </div>
+        </form>
+    </div>
+    <style>
+
+        /* Nút Để Mở Chatbox */
+        .nut-mo-chatbox {
+            z-index: 1;
+            background-color: #FF6B6B;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 100px;
+            border-radius: 20px;
+            font-size: 18px;
+        }
+
+        /* Ẩn chatbox mặc định */
+        .Chatbox {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+            width: 300px;
+            max-height: 400px;
+            overflow-y: scroll;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Thêm style cho form */
+        .form-container {
+            max-width: 100%;
+            padding: 10px;
+            background-color: #F8F8F8;
+        }
+
+            /* thiết lập style textarea */
+            .form-container textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0 20px 0;
+                border: none;
+                background: #f1f1f1;
+                resize: none;
+                min-height: 100px;
+                border-radius: 10px;
+                font-size: 16px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+                /*thiết lập style cho textarea khi được focus */
+                .form-container textarea:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+
+            /* Sthiết lập style cho nút trong form*/
+            .form-container .btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 16px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 10px;
+                opacity: 0.8;
+                border-radius: 20px;
+                font-size: 18px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            /* Thiết lập màu nền cho nút đóng chatbox */
+            .form-container .nut-dong-chatbox {
+                background-color: red;
+            }
+
+            /* Thêm hiệu ứng hover cho nút*/
+            .form-container .btn:hover, .nut-mo-chatbox:hover {
+                opacity: 1;
+            }
+    </style>
+    <script src="~/Scripts/jquery.signalR-2.4.3.min.js"></script>
+    <!-- SignalR hub script. -->
+    <script src="~/signalr/hubs"></script>
+    <!-- SignalR script to update the chat page and send messages.-->
+    <script>
+        /*Hàm Mở Form*/
+        function moForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        /*Hàm Đóng Form*/
+        function dongForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script>
+        $(function () {
+            var chat = $.connection.chatHub;
+            // Tạo một chức năng mà trung tâm có thể gọi lại để hiển thị thông báo.
+            chat.client.addNewMessageToPage = function (name, message) {
+                // Thêm tin nhắn vào trang.
+                $('#discussion').append('<li><strong>' + htmlEncode(name)
+                    + '</strong>: ' + htmlEncode(message) + '</li>');
+            };
+            // Lấy tên người dùng và lưu trữ nó để thêm vào tin nhắn.
+            // Đặt tiêu điểm ban đầu cho hộp nhập tin nhắn.
+            $('#message').focus();
+            // Bắt đầu kết nối.
+            $.connection.hub.start().done(function () {
+                $('#sendmessage').click(function () {
+                    // Gọi phương thức Gửi trên trung tâm.
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    // Xóa hộp văn bản và đặt lại tiêu điểm cho nhận xét tiếp theo.
+                    $('#message').val('').focus();
+                });
+            });
+        });
+        // Chức năng tùy chọn này mã hóa html thông báo để hiển thị trong trang.
+        function htmlEncode(value) {
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+    </script>
+</body>
+@RenderSection("scripts", required: false)
+
+</html>

@@ -1,0 +1,70 @@
+﻿@model Booking_Dental_Clinic.Models.HoaDon
+@{
+    ViewBag.Title = "Thanhtoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}<!-- THANH TOÁN -->
+<div class="container-fluid bg-primary my-5 py-5">
+    <div class="container py-5">
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="mb-4">
+                    <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Thanh toán</h5>
+                    <h1 class="display-4">Thanh toán </h1>
+                </div>
+                <p class="text-white mb-5">um ba la</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-white text-center rounded p-5">
+                    <h1 class="mb-4">THANH TOÁN GÓI DỊCH VỤ</h1>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                <div class="row g-3">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-12 col-sm-6">
+                        @Html.DropDownList("Id_GoiDichVu", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Id_GoiDichVu, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <input class="form-control text-box single-line" id="Tongtien" name="Tongtien" type="text" value="" placeholder="Tổng tiền" readonly>
+                        @Html.ValidationMessageFor(model => model.TongTien, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                        @Html.DropDownList("ID_ThanhToan", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ID_ThanhToan, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Thanh toán" class="btn btn-default" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.a " placeholder="Id" hidden>
+                        @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- KẾT THÚC THANH TOÁN -->
+<script>
+    document.addEventListener("DOMContentLoaded", (_) => {
+        document.querySelector("select").addEventListener("change", (e) => {
+            if (e.target.value == 1) {
+                document.getElementById("Tongtien").value = 5000000;
+            }
+            if (e.target.value == 2) {
+                document.getElementById("Tongtien").value = 6000000;
+            }
+            if (e.target.value == 3) {
+                document.getElementById("Tongtien").value = 7000000;
+            }
+        });
+    });
+</script>

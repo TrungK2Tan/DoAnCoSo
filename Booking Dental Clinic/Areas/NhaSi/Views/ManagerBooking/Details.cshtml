@@ -1,0 +1,67 @@
+﻿@model Booking_Dental_Clinic.Models.LichHen
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LichHen</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenkhachhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenkhachhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sdt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sdt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaydat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaydat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiDichVu.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiDichVu.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhaSi.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaSi.Ten)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdLich }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

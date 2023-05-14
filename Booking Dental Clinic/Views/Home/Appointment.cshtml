@@ -1,0 +1,125 @@
+﻿@model Booking_Dental_Clinic.Models.LichHen
+@{
+    ViewBag.Title = "Appointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<!-- ĐẶT LỊCH -->
+<div class="container-fluid bg-primary my-5 py-5">
+    <div class="container py-5">
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="mb-4">
+                    <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">ĐẶT LỊCH</h5>
+                    <h1 class="display-4">Đặt Hẹn Cho Gia Đình Bạn</h1>
+                </div>
+                <p class="text-white mb-5">Đặt lich đi </p>
+                <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="">TÌM BÁC SĨ</a>
+                <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="">THÊM</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-white text-center rounded p-5">
+                    <h1 class="mb-4">ĐẶT LỊCH TRỰC TUYẾN VỚI BÁC SĨ</h1>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                <div class="row g-3">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-12 col-sm-6">
+                        <input class="form-control text-box single-line" id="Tenkhachhang" name="Tenkhachhang" type="text" value="" placeholder="Họ và tên">
+                        @Html.ValidationMessageFor(model => model.Tenkhachhang, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field Sdt must be a number." id="Sdt" name="Sdt" type="text" value="" placeholder="Số điện thoại">
+                        @Html.ValidationMessageFor(model => model.Sdt, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        @Html.DropDownList("IDDICHVU", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.IDDICHVU, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                        @Html.DropDownList("IDBACSI", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.IDBACSI, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <input class="form-control text-box single-line" id="Ngaydat" name="Ngaydat" type="datetime" value="" placeholder="Ngày đặt">
+                        @Html.ValidationMessageFor(model => model.Ngaydat, "", new { @class = "text-danger" })
+                    </div>
+                    @*<input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.a" placeholder="Id">*@
+                <div class="col-12 col-sm-6">
+                    <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.id " placeholder="Id">
+                    @*@Html.DropDownList("Id", null, htmlAttributes: new { @class = "form-control" })*@
+                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                </div>
+
+                    <div class="col-12 col-sm-6">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Đặt Lịch" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                        }
+                    @*<form>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                        <option selected>Chọn Dịch Vụ</option>
+                                        @{
+                                            var dichvu = new Booking_Dental_Clinic.Models.datlichEntities().DICHVUs.ToList();
+                                            int j = 0;
+                                        }
+                                        @foreach (var item in dichvu)
+                                        {
+                                            <option value="@j+1">@item.Ten</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                        <option selected>Chọn Bác Sĩ</option>
+                                        @{
+                                            var bacsi = new Booking_Dental_Clinic.Models.datlichEntities().BACSIs.ToList();
+                                            int i = 0;
+                                        }
+                                            @foreach (var item1 in bacsi)
+                                            {
+
+                                                    <option value="@i+1">@item1.Ten</option>
+
+                                            }
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" id="fullname" placeholder="Họ Và Tên" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <input type="text"
+                                               class="form-control bg-light border-0 datetimepicker-input"
+                                               placeholder="Chọn Ngày" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        <input type="text"
+                                               class="form-control bg-light border-0 datetimepicker-input"
+                                               placeholder="Chọn Thời Gian" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">ĐẶT LỊCH</button>
+                                </div>
+                            </div>
+                        </form>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- KẾT THÚC ĐẶT LỊCH -->

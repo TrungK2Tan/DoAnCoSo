@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- TÌM KIẾM -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">TÌM BÁC SĨ</h5>
+            <h1 class="display-4 mb-4">Tìm một chuyên gia chăm sóc nha khoa</h1>
+            <h5 class="fw-normal">Chúng tôi luôn hỗ trợ cùng bạn</h5>
+        </div>
+        <div class="mx-auto" style="width: 100%; max-width: 600px;">
+            <div class="input-group">
+                @*<select class="form-select border-primary w-25" style="height: 60px;">
+                    <option selected>Department</option>
+                    <option value="1">Department 1</option>
+                    <option value="2">Department 2</option>
+                    <option value="3">Department 3</option>
+                </select>*@
+                <input type="text" class="form-control border-primary w-50" placeholder="Tên nha sĩ cần tìm">
+                <button class="btn btn-dark border-0 w-25">Tìm Kiếm</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- KẾT THÚC TÌM KIẾM -->

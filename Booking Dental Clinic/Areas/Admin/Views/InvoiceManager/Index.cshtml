@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Booking_Dental_Clinic.Models.HoaDon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Trang Chủ</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TongTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GoiDichVu.TenDichVu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhThucThanhToan.TenHinhThuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongTien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoiDichVu.TenDichVu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HinhThucThanhToan.TenHinhThuc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.ID_HoaDon }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID_HoaDon })
+            </td>
+        </tr>
+    }
+
+</table>

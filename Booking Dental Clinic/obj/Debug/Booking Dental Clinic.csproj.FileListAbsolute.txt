@@ -1,0 +1,674 @@
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll.config
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.pdb
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe.config
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.rsp
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe.config
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.rsp
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.AppContext.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Collections.Immutable.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Console.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Globalization.Calendars.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Http.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Sockets.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Reflection.Metadata.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.ValueTuple.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe.config
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.rsp
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe.config
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Web.Infrastructure.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Owin.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\WebGrease.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.pdb
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.AssemblyReference.cache
+D:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CoreCompileInputs.cache
+D:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CopyComplete
+D:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.dll
+D:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.pdb
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll.config
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.pdb
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe.config
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.rsp
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe.config
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.rsp
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.AppContext.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Console.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Http.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Sockets.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.ValueTuple.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe.config
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.rsp
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Owin.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\WebGrease.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.pdb
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.AssemblyReference.cache
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CoreCompileInputs.cache
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CopyComplete
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.dll
+C:\Users\ACER NITRO\Downloads\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.pdb
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll.config
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.pdb
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Owin.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\WebGrease.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.pdb
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.AssemblyReference.cache
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CoreCompileInputs.cache
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CopyComplete
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.pdb
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe.config
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.rsp
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe.config
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.rsp
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.AppContext.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Console.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Http.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Sockets.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.ValueTuple.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe.config
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.rsp
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\trung\Documents\Zalo Received Files\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\.rescache
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll.config
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.pdb
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\.rescache
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe.config
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.rsp
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe.config
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.rsp
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.AppContext.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Collections.Immutable.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Console.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Globalization.Calendars.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Http.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Sockets.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Reflection.Metadata.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.ValueTuple.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe.config
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.rsp
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe.config
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Web.Infrastructure.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Owin.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\WebGrease.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.pdb
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.AssemblyReference.cache
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CoreCompileInputs.cache
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CopyComplete
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.dll
+E:\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.pdb
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.AssemblyReference.cache
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CoreCompileInputs.cache
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.pdb
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll.config
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.pdb
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\.rescache
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe.config
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.rsp
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe.config
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.rsp
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Managed.Core.targets
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.AppContext.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Collections.Immutable.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Console.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Globalization.Calendars.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Http.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Sockets.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Reflection.Metadata.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.ValueTuple.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XmlDocument.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe.config
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.rsp
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe.config
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Web.Infrastructure.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Owin.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\WebGrease.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.pdb
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CopyComplete
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.Core.pdb
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+E:\DentalClinic\Dental\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll.config
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Booking Dental Clinic.pdb
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\.rescache
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.exe.config
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csc.rsp
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.exe.config
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\csi.rsp
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.AppContext.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Collections.Immutable.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Console.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Globalization.Calendars.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Http.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Net.Sockets.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Reflection.Metadata.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.ValueTuple.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.exe.config
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\vbc.rsp
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\roslyn\VBCSCompiler.exe.config
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Web.Infrastructure.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Owin.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\WebGrease.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.Core.pdb
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Helpers.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Mvc.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Optimization.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Razor.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Deployment.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.WebPages.Razor.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Newtonsoft.Json.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Antlr3.Runtime.pdb
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\EntityFramework.SqlServer.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Google.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.AssemblyReference.cache
+E:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CoreCompileInputs.cache
+E:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.csproj.CopyComplete
+E:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\obj\Debug\Booking Dental Clinic.pdb
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Net.Http.Formatting.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Http.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Http.WebHost.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Net.Http.Formatting.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Http.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\System.Web.Http.WebHost.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\PagedList.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\PagedList.Mvc.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\PagedList.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\PagedList.Mvc.xml

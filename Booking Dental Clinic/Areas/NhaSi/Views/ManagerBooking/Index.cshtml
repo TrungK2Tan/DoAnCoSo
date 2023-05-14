@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Booking_Dental_Clinic.Models.LichHen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Tenkhachhang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sdt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngaydat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiDichVu.Ten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhaSi.Ten)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tenkhachhang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sdt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngaydat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhaSi.Ten)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdLich }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdLich }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdLich })
+        </td>
+    </tr>
+}
+
+</table>
