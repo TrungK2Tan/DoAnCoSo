@@ -1,8 +1,4 @@
 ﻿
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -113,6 +109,7 @@
             </ul>
             <div style="display:flex">
                 <input type="button" class="btn " id="sendmessage" value="Gửi" />
+                <input type="hidden" id="displayname" value="@Session["Email"]" />
                 <button type="button" class="btn nut-dong-chatbox " onclick="dongForm()">Đóng</button>
             </div>
         </form>

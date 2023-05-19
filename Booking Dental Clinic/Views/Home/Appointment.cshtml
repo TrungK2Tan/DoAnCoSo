@@ -48,10 +48,8 @@
                         <input class="form-control text-box single-line" id="Ngaydat" name="Ngaydat" type="datetime" value="" placeholder="Ngày đặt">
                         @Html.ValidationMessageFor(model => model.Ngaydat, "", new { @class = "text-danger" })
                     </div>
-                    @*<input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.a" placeholder="Id">*@
                 <div class="col-12 col-sm-6">
-                    <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.id " placeholder="Id">
-                    @*@Html.DropDownList("Id", null, htmlAttributes: new { @class = "form-control" })*@
+                    <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.Id " placeholder="Id">
                     @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
                 </div>
 
@@ -62,61 +60,6 @@
                     </div>
                 </div>
                         }
-                    @*<form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Chọn Dịch Vụ</option>
-                                        @{
-                                            var dichvu = new Booking_Dental_Clinic.Models.datlichEntities().DICHVUs.ToList();
-                                            int j = 0;
-                                        }
-                                        @foreach (var item in dichvu)
-                                        {
-                                            <option value="@j+1">@item.Ten</option>
-                                        }
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Chọn Bác Sĩ</option>
-                                        @{
-                                            var bacsi = new Booking_Dental_Clinic.Models.datlichEntities().BACSIs.ToList();
-                                            int i = 0;
-                                        }
-                                            @foreach (var item1 in bacsi)
-                                            {
-
-                                                    <option value="@i+1">@item1.Ten</option>
-
-                                            }
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" id="fullname" placeholder="Họ Và Tên" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text"
-                                               class="form-control bg-light border-0 datetimepicker-input"
-                                               placeholder="Chọn Ngày" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text"
-                                               class="form-control bg-light border-0 datetimepicker-input"
-                                               placeholder="Chọn Thời Gian" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">ĐẶT LỊCH</button>
-                                </div>
-                            </div>
-                        </form>*@
                 </div>
             </div>
         </div>

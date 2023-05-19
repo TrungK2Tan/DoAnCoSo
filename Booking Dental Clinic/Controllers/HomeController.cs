@@ -7,6 +7,9 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using MoMo;
+using Newtonsoft.Json.Linq;
+
 namespace Booking_Dental_Clinic.Controllers
 {
     public class HomeController : Controller
@@ -84,13 +87,11 @@ namespace Booking_Dental_Clinic.Controllers
         public ActionResult Appointment()
         {
             var a = User.Identity.GetUserName();
-            var id = User.Identity.GetUserId();
             //var user = db.AspNetUsers.Find(id);
             ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten");
             ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten");
             ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Id");
             ViewBag.a = a;
-            ViewBag.id = id;
             return View();
         }
         [HttpPost]
@@ -100,18 +101,22 @@ namespace Booking_Dental_Clinic.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Lấy ID của người dùng hiện tại
+                string currentUserId = User.Identity.GetUserId();
+
+                // Gán ID vào thuộc tính DatLich.Id
+                DatLich.Id = currentUserId;
                 db.LichHens.Add(DatLich);
                 db.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
             ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten", DatLich.IDBACSI);
             ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten", DatLich.IDDICHVU);
-            //ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Id", DatLich.Id);
+            ViewBag.Id = DatLich.Id;
             return View(DatLich);
         }
         public ActionResult Search()
         {
-
             return View();
         }
         public ActionResult Thanhtoan()
@@ -140,15 +145,75 @@ namespace Booking_Dental_Clinic.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    // Lấy ID của người dùng hiện tại
+                    string currentUserId = User.Identity.GetUserId();
+
+                    // Gán ID vào thuộc tính HoaDon.Id
+                    HoaDon.Id = currentUserId;
                     db.HoaDons.Add(HoaDon);
                     db.SaveChanges();
                     return RedirectToAction("Index", "Home");
                 }
                 ViewBag.Id_GoiDichVu = new SelectList(db.GoiDichVus, "Id_DichVu", "TenDichVu", HoaDon.Id_GoiDichVu);
                 ViewBag.ID_ThanhToan = new SelectList(db.HinhThucThanhToans, "ID_ThanhToan", "TenHinhThuc",HoaDon.ID_ThanhToan);
-                ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Id", HoaDon.Id);
+                ViewBag.Id = HoaDon.Id;
                 return View(HoaDon);
             }
+        }
+        public ActionResult Payment()
+        {
+            //request params need to request to MoMo system
+            string endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
+            string partnerCode = "MOMOOJOI20210710";
+            string accessKey = "iPXneGmrJH0G8FOP";
+            string serectkey = "sFcbSGRSJjwGxwhhcEktCHWYUuTuPNDB";
+            string orderInfo = "test";
+            string returnUrl = "https://localhost:44394/Home/Thanhtoan";
+            string notifyurl = "https://4c8d-2001-ee0-5045-50-58c1-b2ec-3123-740d.ap.ngrok.io/Home/SavePayment"; //lưu ý: notifyurl không được sử dụng localhost, có thể sử dụng ngrok để public localhost trong quá trình test
+
+            string amount = "1000";
+            string orderid = DateTime.Now.Ticks.ToString(); //mã đơn hàng
+            string requestId = DateTime.Now.Ticks.ToString();
+            string extraData = "";
+
+            //Before sign HMAC SHA256 signature
+            string rawHash = "partnerCode=" +
+                partnerCode + "&accessKey=" +
+                accessKey + "&requestId=" +
+                requestId + "&amount=" +
+                amount + "&orderId=" +
+                orderid + "&orderInfo=" +
+                orderInfo + "&returnUrl=" +
+                returnUrl + "&notifyUrl=" +
+                notifyurl + "&extraData=" +
+                extraData;
+
+            MoMoSecurity crypto = new MoMoSecurity();
+            //sign signature SHA256
+            string signature = crypto.signSHA256(rawHash, serectkey);
+
+            //build body json request
+            JObject message = new JObject
+            {
+                { "partnerCode", partnerCode },
+                { "accessKey", accessKey },
+                { "requestId", requestId },
+                { "amount", amount },
+                { "orderId", orderid },
+                { "orderInfo", orderInfo },
+                { "returnUrl", returnUrl },
+                { "notifyUrl", notifyurl },
+                { "extraData", extraData },
+                { "requestType", "captureMoMoWallet" },
+                { "signature", signature }
+
+            };
+
+            string responseFromMomo = PaymentRequest.sendPaymentRequest(endpoint, message.ToString());
+
+            JObject jmessage = JObject.Parse(responseFromMomo);
+
+            return Redirect(jmessage.GetValue("payUrl").ToString());
         }
     }
 }

@@ -4,32 +4,31 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Booking_Dental_Clinic.Models;
-using Microsoft.AspNet.Identity;
 
 namespace Booking_Dental_Clinic.Areas.Admin.Controllers
 {
-    public class ManagerController : Controller
+    public class ManagerUserController : Controller
     {
         private DentalClinicEntities db = new DentalClinicEntities();
 
-        // GET: Admin/Manager
+        // GET: Admin/ManagerUser
         public ActionResult Index()
         {
-            var doctorsRole = db.AspNetRoles.SingleOrDefault(r => r.Name == "NhaSi");
+            var user = db.AspNetRoles.SingleOrDefault(r => r.Name == "BenhNhan");
 
-            if (doctorsRole != null)
+            if (user != null)
             {
-                var doctors = doctorsRole.AspNetUsers.ToList();
+                var doctors = user.AspNetUsers.ToList();
                 return View(doctors);
             }
 
             return View(new List<AspNetUser>());
         }
-        // GET: Admin/Manager/Details/5
+
+        // GET: Admin/ManagerUser/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -44,13 +43,13 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
             return View(aspNetUser);
         }
 
-        // GET: Admin/Manager/Create
+        // GET: Admin/ManagerUser/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Manager/Create
+        // POST: Admin/ManagerUser/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -67,7 +66,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
             return View(aspNetUser);
         }
 
-        // GET: Admin/Manager/Edit/5
+        // GET: Admin/ManagerUser/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -82,7 +81,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
             return View(aspNetUser);
         }
 
-        // POST: Admin/Manager/Edit/5
+        // POST: Admin/ManagerUser/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -98,7 +97,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
             return View(aspNetUser);
         }
 
-        // GET: Admin/Manager/Delete/5
+        // GET: Admin/ManagerUser/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -113,7 +112,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
             return View(aspNetUser);
         }
 
-        // POST: Admin/Manager/Delete/5
+        // POST: Admin/ManagerUser/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
@@ -131,50 +130,6 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        //public async Task<ActionResult> Approve(string id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-
-        //    var user = await db.AspNetUsers.FindAsync(id);
-        //    if (user == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-
-        //    user.IsApproved = true;
-        //    await db.SaveChangesAsync();
-
-        //    return RedirectToAction("Index");
-        //}
-        public async Task<ActionResult> Approve(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            var user = await db.AspNetUsers.FindAsync(id);
-            if (user == null)
-            {
-                return HttpNotFound();
-            }
-
-            user.IsApproved = true;
-            await db.SaveChangesAsync();
-
-            // Load the updated user data
-            db.Entry(user).Reload();
-
-            return RedirectToAction("Index");
-        }
-        public async Task<ActionResult> message()
-        {
-            return View();
         }
     }
 }

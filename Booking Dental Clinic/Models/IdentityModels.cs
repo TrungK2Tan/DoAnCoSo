@@ -15,6 +15,13 @@ namespace Booking_Dental_Clinic.Models
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
             return userIdentity;
+
+        }
+        public bool IsApproved { get; set; }
+
+        public ApplicationUser()
+        {
+            IsApproved = false;
         }
     }
 

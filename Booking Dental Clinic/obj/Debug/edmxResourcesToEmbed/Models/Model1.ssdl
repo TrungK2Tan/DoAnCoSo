@@ -48,8 +48,9 @@
     <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
     <Property Name="LockoutEndDateUtc" Type="datetime" />
     <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
-    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" />
     <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="IsApproved" Type="bit" />
   </EntityType>
   <EntityType Name="DienDan">
     <Key>

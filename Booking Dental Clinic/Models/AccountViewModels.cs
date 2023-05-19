@@ -80,12 +80,10 @@ namespace Booking_Dental_Clinic.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-        //[Required]
-        //[Display(Name = "UserName")]
-        //public string UserName { get; set; }
         [Required]
         [Display(Name = "Role")]
         public string Role { get; set; }
+        public bool IsApproved { get; set; }
     }
 
     public class ResetPasswordViewModel

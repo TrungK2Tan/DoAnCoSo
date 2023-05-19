@@ -65,24 +65,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AspNetUsers">
-      <EntityTypeMapping TypeName="DentalClinicModel.AspNetUser">
-        <MappingFragment StoreEntitySet="AspNetUsers">
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
-          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
-          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
-          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
-          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
-          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
-          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
-          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="LichHens">
       <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
         <MappingFragment StoreEntitySet="LichHen">
@@ -96,14 +78,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="AspNetUserRoles" TypeName="DentalClinicModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
-      <EndProperty Name="AspNetRole">
-        <ScalarProperty Name="Id" ColumnName="RoleId" />
-      </EndProperty>
-      <EndProperty Name="AspNetUser">
-        <ScalarProperty Name="Id" ColumnName="UserId" />
-      </EndProperty>
-    </AssociationSetMapping>
     <EntitySetMapping Name="NhaSis">
       <EntityTypeMapping TypeName="DentalClinicModel.NhaSi">
         <MappingFragment StoreEntitySet="NhaSi">
@@ -124,5 +98,32 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="DentalClinicModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="DentalClinicModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

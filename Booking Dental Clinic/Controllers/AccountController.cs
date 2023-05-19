@@ -117,7 +117,16 @@ namespace Booking_Dental_Clinic.Controllers
                         }
                         else if (roles.Contains("NhaSi"))
                         {
-                            return RedirectToAction("Index", "NhaSi", new { area = "NhaSi" });
+                            if (!user.IsApproved)
+                            {
+                               
+                                return RedirectToAction("message", "Manager", new { area = "Admin" });
+                            }
+                            else
+                            {
+                                return RedirectToAction("Index", "NhaSi", new { area = "NhaSi" });
+                            }
+                            //return RedirectToAction("Index", "NhaSi", new { area = "NhaSi" });
                         }
                         else if (roles.Contains("BenhNhan"))
                         {
@@ -198,7 +207,7 @@ namespace Booking_Dental_Clinic.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , IsApproved = false };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -208,18 +217,18 @@ namespace Booking_Dental_Clinic.Controllers
                     var roles = await UserManager.GetRolesAsync(user.Id);
 
                     // Redirect to the corresponding page based on the user role
-                    if (roles.Contains("NhaSi"))
+                    if (roles.Contains("BenhNhan"))
                     {
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-                        return RedirectToAction("NhaSi", "NhaSi");
+                        return RedirectToAction("Index", "Home");
                     }
-                    else if (roles.Contains("BenhNhan"))
+                    else if (roles.Contains("NhaSi"))
                     {
                         // Display message for user account approval
                         ViewBag.Message = "Your account has been created and is awaiting approval from the admin.";
 
                         // Redirect to the home page
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("NhaSi", "NhaSi");
                     }
                 }
                 AddErrors(result);
