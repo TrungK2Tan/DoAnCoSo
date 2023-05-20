@@ -36,9 +36,12 @@
             @Html.DisplayFor(modelItem => item.content)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id_diendan }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id_diendan }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id_diendan })
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.Id_diendan }) |
+        @Html.ActionLink("Details", "Details", new { id=item.Id_diendan }) |
+        @Html.ActionLink("Delete", "Delete", new { id=item.Id_diendan })*@
+            <a class="btn btn-sm btn-success" href="~/Admin/Blog/Edit?id=@item.Id_diendan">Cập Nhật</a>
+            <a class="btn btn-sm btn-danger" href="~/Admin/Blog/Delete?id=@item.Id_diendan">Xóa</a>
+            <a class="btn btn-sm btn-danger" href="~/Admin/Blog/Details?id=@item.Id_diendan">Chi tiết</a>
         </td>
     </tr>
 }

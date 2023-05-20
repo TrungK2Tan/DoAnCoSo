@@ -82,7 +82,7 @@
       <PropertyRef Name="ID_HoaDon" />
     </Key>
     <Property Name="ID_HoaDon" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TongTien" Type="float" />
+    <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" />
     <Property Name="Id" Type="nvarchar" MaxLength="128" />
     <Property Name="Id_GoiDichVu" Type="int" />
     <Property Name="ID_ThanhToan" Type="int" />

@@ -87,7 +87,7 @@
             <PropertyRef Name="ID_HoaDon" />
           </Key>
           <Property Name="ID_HoaDon" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TongTien" Type="float" />
+          <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Id" Type="nvarchar" MaxLength="128" />
           <Property Name="Id_GoiDichVu" Type="int" />
           <Property Name="ID_ThanhToan" Type="int" />
@@ -349,15 +349,6 @@
           <EntitySet Name="LoaiDichVus" EntityType="Self.LoaiDichVu" />
           <EntitySet Name="GoiDichVus" EntityType="DentalClinicModel.GoiDichVu" />
           <EntitySet Name="HinhThucThanhToans" EntityType="DentalClinicModel.HinhThucThanhToan" />
-          <EntitySet Name="HoaDons" EntityType="DentalClinicModel.HoaDon" />
-          <AssociationSet Name="FK_HoaDon_GoiDichVu" Association="DentalClinicModel.FK_HoaDon_GoiDichVu">
-            <End Role="GoiDichVu" EntitySet="GoiDichVus" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HoaDon_HinhThucThanhToan" Association="DentalClinicModel.FK_HoaDon_HinhThucThanhToan">
-            <End Role="HinhThucThanhToan" EntitySet="HinhThucThanhToans" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
           <EntitySet Name="NhaSis" EntityType="DentalClinicModel.NhaSi" />
           <EntitySet Name="DienDans" EntityType="DentalClinicModel.DienDan" />
           <EntitySet Name="AspNetUsers" EntityType="DentalClinicModel.AspNetUser" />
@@ -369,13 +360,22 @@
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
             <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
           </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="DentalClinicModel.AspNetUserRoles">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+          </AssociationSet>
+          <EntitySet Name="HoaDons" EntityType="DentalClinicModel.HoaDon" />
           <AssociationSet Name="FK_HoaDon_AspNetUsers1" Association="DentalClinicModel.FK_HoaDon_AspNetUsers1">
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
-          <AssociationSet Name="AspNetUserRoles" Association="DentalClinicModel.AspNetUserRoles">
-            <End Role="AspNetUser" EntitySet="AspNetUsers" />
-            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+          <AssociationSet Name="FK_HoaDon_GoiDichVu" Association="DentalClinicModel.FK_HoaDon_GoiDichVu">
+            <End Role="GoiDichVu" EntitySet="GoiDichVus" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_HinhThucThanhToan" Association="DentalClinicModel.FK_HoaDon_HinhThucThanhToan">
+            <End Role="HinhThucThanhToan" EntitySet="HinhThucThanhToans" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
           <EntitySet Name="LichHens" EntityType="DentalClinicModel.LichHen" />
           <AssociationSet Name="FK_LichHen_AspNetUsers" Association="DentalClinicModel.FK_LichHen_AspNetUsers">
@@ -409,43 +409,6 @@
           <Property Name="TenHinhThuc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HoaDons" Relationship="DentalClinicModel.FK_HoaDon_HinhThucThanhToan" FromRole="HinhThucThanhToan" ToRole="HoaDon" />
         </EntityType>
-        <EntityType Name="HoaDon">
-          <Key>
-            <PropertyRef Name="ID_HoaDon" />
-          </Key>
-          <Property Name="ID_HoaDon" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TongTien" Type="Double" />
-          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="Id_GoiDichVu" Type="Int32" />
-          <Property Name="ID_ThanhToan" Type="Int32" />
-          <NavigationProperty Name="GoiDichVu" Relationship="DentalClinicModel.FK_HoaDon_GoiDichVu" FromRole="HoaDon" ToRole="GoiDichVu" />
-          <NavigationProperty Name="HinhThucThanhToan" Relationship="DentalClinicModel.FK_HoaDon_HinhThucThanhToan" FromRole="HoaDon" ToRole="HinhThucThanhToan" />
-          <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_HoaDon_AspNetUsers1" FromRole="HoaDon" ToRole="AspNetUser" />
-        </EntityType>
-        <Association Name="FK_HoaDon_GoiDichVu">
-          <End Type="DentalClinicModel.GoiDichVu" Role="GoiDichVu" Multiplicity="0..1" />
-          <End Type="DentalClinicModel.HoaDon" Role="HoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="GoiDichVu">
-              <PropertyRef Name="Id_DichVu" />
-            </Principal>
-            <Dependent Role="HoaDon">
-              <PropertyRef Name="Id_GoiDichVu" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HoaDon_HinhThucThanhToan">
-          <End Type="DentalClinicModel.HinhThucThanhToan" Role="HinhThucThanhToan" Multiplicity="0..1" />
-          <End Type="DentalClinicModel.HoaDon" Role="HoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HinhThucThanhToan">
-              <PropertyRef Name="ID_ThanhToan" />
-            </Principal>
-            <Dependent Role="HoaDon">
-              <PropertyRef Name="ID_ThanhToan" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="NhaSi">
           <Key>
             <PropertyRef Name="IDBACSI" />
@@ -484,8 +447,8 @@
           <Property Name="IsApproved" Type="Boolean" />
           <NavigationProperty Name="AspNetUserClaims" Relationship="DentalClinicModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
           <NavigationProperty Name="AspNetUserLogins" Relationship="DentalClinicModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
-          <NavigationProperty Name="HoaDons" Relationship="DentalClinicModel.FK_HoaDon_AspNetUsers1" FromRole="AspNetUser" ToRole="HoaDon" />
           <NavigationProperty Name="AspNetRoles" Relationship="DentalClinicModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+          <NavigationProperty Name="HoaDons" Relationship="DentalClinicModel.FK_HoaDon_AspNetUsers1" FromRole="AspNetUser" ToRole="HoaDon" />
           <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_AspNetUsers" FromRole="AspNetUser" ToRole="LichHen" />
         </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
@@ -516,6 +479,23 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+          <End Type="DentalClinicModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+        </Association>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="ID_HoaDon" />
+          </Key>
+          <Property Name="ID_HoaDon" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TongTien" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Id_GoiDichVu" Type="Int32" />
+          <Property Name="ID_ThanhToan" Type="Int32" />
+          <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_HoaDon_AspNetUsers1" FromRole="HoaDon" ToRole="AspNetUser" />
+          <NavigationProperty Name="GoiDichVu" Relationship="DentalClinicModel.FK_HoaDon_GoiDichVu" FromRole="HoaDon" ToRole="GoiDichVu" />
+          <NavigationProperty Name="HinhThucThanhToan" Relationship="DentalClinicModel.FK_HoaDon_HinhThucThanhToan" FromRole="HoaDon" ToRole="HinhThucThanhToan" />
+        </EntityType>
         <Association Name="FK_HoaDon_AspNetUsers1">
           <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
           <End Type="DentalClinicModel.HoaDon" Role="HoaDon" Multiplicity="*" />
@@ -528,9 +508,29 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="AspNetUserRoles">
-          <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
-          <End Type="DentalClinicModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+        <Association Name="FK_HoaDon_GoiDichVu">
+          <End Type="DentalClinicModel.GoiDichVu" Role="GoiDichVu" Multiplicity="0..1" />
+          <End Type="DentalClinicModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoiDichVu">
+              <PropertyRef Name="Id_DichVu" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="Id_GoiDichVu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_HinhThucThanhToan">
+          <End Type="DentalClinicModel.HinhThucThanhToan" Role="HinhThucThanhToan" Multiplicity="0..1" />
+          <End Type="DentalClinicModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HinhThucThanhToan">
+              <PropertyRef Name="ID_ThanhToan" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="ID_ThanhToan" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         <EntityType Name="LichHen">
           <Key>
@@ -643,17 +643,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HoaDons">
-            <EntityTypeMapping TypeName="DentalClinicModel.HoaDon">
-              <MappingFragment StoreEntitySet="HoaDon">
-                <ScalarProperty Name="ID_ThanhToan" ColumnName="ID_ThanhToan" />
-                <ScalarProperty Name="Id_GoiDichVu" ColumnName="Id_GoiDichVu" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
-                <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="NhaSis">
             <EntityTypeMapping TypeName="DentalClinicModel.NhaSi">
               <MappingFragment StoreEntitySet="NhaSi">
@@ -701,6 +690,17 @@
               <ScalarProperty Name="Id" ColumnName="UserId" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="HoaDons">
+            <EntityTypeMapping TypeName="DentalClinicModel.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="ID_ThanhToan" ColumnName="ID_ThanhToan" />
+                <ScalarProperty Name="Id_GoiDichVu" ColumnName="Id_GoiDichVu" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="LichHens">
             <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
               <MappingFragment StoreEntitySet="LichHen">

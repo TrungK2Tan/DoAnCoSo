@@ -119,9 +119,11 @@ namespace Booking_Dental_Clinic.Controllers
         {
             return View();
         }
-        public ActionResult Thanhtoan()
+        public ActionResult Thanhtoan(int? Id_DichVu)
         {
             var a = User.Identity.GetUserId();
+            var dichVu = db.GoiDichVus.FirstOrDefault(p => p.Id_DichVu == Id_DichVu);
+            var tienDichvu = dichVu.GiaDichVu;
             if (a == null )
             {
                 return RedirectToAction("Login", "Account");
@@ -129,6 +131,8 @@ namespace Booking_Dental_Clinic.Controllers
             ViewBag.Id_GoiDichVu = new SelectList(db.GoiDichVus, "Id_DichVu", "TenDichVu");
             ViewBag.ID_ThanhToan = new SelectList(db.HinhThucThanhToans, "ID_ThanhToan", "TenHinhThuc");
             ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "UserName");
+            ViewBag.Id_DichVu = Id_DichVu;
+            ViewBag.GiaDichVu = tienDichvu;
             ViewBag.a = a;
             return View();
 

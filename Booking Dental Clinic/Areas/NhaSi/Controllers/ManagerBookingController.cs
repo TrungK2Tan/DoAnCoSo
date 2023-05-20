@@ -36,6 +36,71 @@ namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
             return View(lichHen);
         }
 
+        // GET: NhaSi/ManagerBooking/Create
+        public ActionResult Create()
+        {
+            ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Email");
+            ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten");
+            ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten");
+            return View();
+        }
+
+        // POST: NhaSi/ManagerBooking/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "IdLich,Tenkhachhang,IDBACSI,IDDICHVU,Sdt,Ngaydat,Id,Gio")] LichHen lichHen)
+        {
+            if (ModelState.IsValid)
+            {
+                db.LichHens.Add(lichHen);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Email", lichHen.Id);
+            ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten", lichHen.IDDICHVU);
+            ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten", lichHen.IDBACSI);
+            return View(lichHen);
+        }
+
+        // GET: NhaSi/ManagerBooking/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            LichHen lichHen = db.LichHens.Find(id);
+            if (lichHen == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Email", lichHen.Id);
+            ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten", lichHen.IDDICHVU);
+            ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten", lichHen.IDBACSI);
+            return View(lichHen);
+        }
+
+        // POST: NhaSi/ManagerBooking/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "IdLich,Tenkhachhang,IDBACSI,IDDICHVU,Sdt,Ngaydat,Id,Gio")] LichHen lichHen)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(lichHen).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Email", lichHen.Id);
+            ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten", lichHen.IDDICHVU);
+            ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten", lichHen.IDBACSI);
+            return View(lichHen);
+        }
 
         // GET: NhaSi/ManagerBooking/Delete/5
         public ActionResult Delete(int? id)

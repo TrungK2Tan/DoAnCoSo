@@ -26,7 +26,8 @@
                     </div>
                     <div class="text-center py-5">
                         <p>@item.MoTaDichVu</p>
-                        @Html.ActionLink("Chọn Gói Dịch Vụ","Thanhtoan","Home") 
+                        @*@Html.ActionLink("Chọn Gói Dịch Vụ","Thanhtoan","Home")*@
+                        <a href="@Url.Action("ThanhToan", "Home", new {@Id_DichVu = item.Id_DichVu })">Thanh Toán</a>
                     </div>
                 </div>
             }

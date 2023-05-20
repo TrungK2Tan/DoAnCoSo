@@ -54,17 +54,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="HoaDons">
-      <EntityTypeMapping TypeName="DentalClinicModel.HoaDon">
-        <MappingFragment StoreEntitySet="HoaDon">
-          <ScalarProperty Name="ID_ThanhToan" ColumnName="ID_ThanhToan" />
-          <ScalarProperty Name="Id_GoiDichVu" ColumnName="Id_GoiDichVu" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
-          <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="NhaSis">
       <EntityTypeMapping TypeName="DentalClinicModel.NhaSi">
         <MappingFragment StoreEntitySet="NhaSi">
@@ -112,6 +101,17 @@
         <ScalarProperty Name="Id" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="HoaDons">
+      <EntityTypeMapping TypeName="DentalClinicModel.HoaDon">
+        <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="ID_ThanhToan" ColumnName="ID_ThanhToan" />
+          <ScalarProperty Name="Id_GoiDichVu" ColumnName="Id_GoiDichVu" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="LichHens">
       <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
         <MappingFragment StoreEntitySet="LichHen">

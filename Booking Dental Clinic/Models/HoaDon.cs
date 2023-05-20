@@ -15,13 +15,13 @@ namespace Booking_Dental_Clinic.Models
     public partial class HoaDon
     {
         public long ID_HoaDon { get; set; }
-        public Nullable<double> TongTien { get; set; }
+        public Nullable<decimal> TongTien { get; set; }
         public string Id { get; set; }
         public Nullable<int> Id_GoiDichVu { get; set; }
         public Nullable<int> ID_ThanhToan { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual GoiDichVu GoiDichVu { get; set; }
         public virtual HinhThucThanhToan HinhThucThanhToan { get; set; }
-        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

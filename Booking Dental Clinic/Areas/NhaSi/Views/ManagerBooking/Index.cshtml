@@ -13,52 +13,62 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Tenkhachhang)
+            <label> Tên Khách Hàng</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Sdt)
+            <label> Số Điện Thoại </label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Ngaydat)
+            <label> Ngày Đặt</label>
+        </th>
+        <th>
+            <label> Giờ</label>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AspNetUser.Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LoaiDichVu.Ten)
+            <label> Tên Dịch Vụ</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NhaSi.Ten)
+            <label> Tên Nha Sĩ</label>
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tenkhachhang)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sdt)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ngaydat)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NhaSi.Ten)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdLich }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdLich }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdLich })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tenkhachhang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sdt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngaydat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhaSi.Ten)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.IdLich }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IdLich }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdLich })*@
+                <a class="btn btn-sm btn-success" href="~/NhaSi/ManagerBooking/Edit?id=@item.IdLich">Cập Nhật</a>
+                <a class="btn btn-sm btn-danger" href="~/NhaSi/ManagerBooking/Delete?id=@item.IdLich">Xóa</a>
+                <a class="btn btn-sm btn-danger" href="~/NhaSi/ManagerBooking/Details?id=@item.IdLich">Chi tiết</a>
+            </td>
+        </tr>
+    }
 
 </table>

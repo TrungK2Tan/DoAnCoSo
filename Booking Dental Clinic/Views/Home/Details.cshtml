@@ -6,57 +6,21 @@
 }
 
 <div class="container py-5">
-    <div class="row g-5">
-        <div class="col-lg-8">
-            <div class="mb-5" style="display:inline-block">
+    <div class="row g-4">
+        <div class="col-lg-5">
+            <div class="mb-5">
                 <img class="img-fluid w-100 rounded mb-5" src="~/img/@Model.HinhAnh" style="max-width: 400px" alt="">
-                <h3>Nha Sĩ</h3>
+            </div>
+        </div>
+        <!-- Sidebar Start -->
+        <div class="col-lg-5">
+            <div class="mb-5">
+                <h2>Nha Sĩ</h2>
                 <h1 class="mb-4"> @Html.DisplayFor(model => model.Ten)</h1>
                 <p>
                     @Html.DisplayFor(model => model.ThongTin)
                 </p>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <!-- TÌM KIẾM -->
-            <div class="mb-5">
-                <div class="input-group">
-                    <input type="text" class="form-control p-3" placeholder="Từ Khóa">
-                    <button class="btn btn-primary px-3"><i class="fa fa-search"></i></button>
-                </div>
-            </div>
-            <div class="mb-5">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-4">Bài Đăng Khác</h4>
-                <div class="d-flex rounded overflow-hidden mb-3">
-                    <img class="img-fluid" src="~/img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                    <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">
-                        Mách bạn cách giảm đau khi mọc răng khôn nhanh tại nhà
-                    </a>
-                </div>
-                <div class="d-flex rounded overflow-hidden mb-3">
-                    <img class="img-fluid" src="~/img/blog-2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                    <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">
-                        Niềng răng là gì? Những điều cần biết trước khi niềng răng
-                    </a>
-                </div>
-                <div class="d-flex rounded overflow-hidden mb-3">
-                    <img class="img-fluid" src="~/img/blog-3.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                    <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">
-                        Tổng hợp các loại kem đánh răng tốt nhất thế giới hiện nay
-                    </a>
-                </div>
-                <div class="d-flex rounded overflow-hidden mb-3">
-                    <img class="img-fluid" src="~/img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                    <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">
-                        Mách bạn các cách trị ê buốt răng hiệu quả ngay tại nhà
-                    </a>
-                </div>
-                <div class="d-flex rounded overflow-hidden mb-3">
-                    <img class="img-fluid" src="~/img/blog-2.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                    <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">
-                        Cách làm trắng răng bằng chanh đơn giản tại nhà cho bạn
-                    </a>
-                </div>
+
             </div>
         </div>
     </div>

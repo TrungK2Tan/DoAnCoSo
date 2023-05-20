@@ -40,8 +40,10 @@
                 @Html.DisplayFor(modelItem => item.AspNetUser.Email)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.ID_HoaDon }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID_HoaDon })
+                @*@Html.ActionLink("Details", "Details", new { id = item.ID_HoaDon }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID_HoaDon })*@
+                <a class="btn btn-sm btn-danger" href="~/Admin/InvoiceManager/Delete?id=@item.ID_HoaDon">Xóa</a>
+                <a class="btn btn-sm btn-danger" href="~/Admin/InvoiceManager/Details?id=@item.ID_HoaDon">Chi tiết</a>
             </td>
         </tr>
     }
