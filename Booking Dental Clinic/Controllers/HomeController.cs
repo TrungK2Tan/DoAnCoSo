@@ -97,7 +97,7 @@ namespace Booking_Dental_Clinic.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         
-        public ActionResult Appointment([Bind(Include = "IdLich,Tenkhachhang,IDDICHVU,IDBACSI,Sdt,Ngaydat,Id")] LichHen DatLich)
+        public ActionResult Appointment([Bind(Include = "IdLich,Tenkhachhang,IDDICHVU,IDBACSI,Sdt,Ngaydat,Id,Gio")] LichHen DatLich)
         {
             if (ModelState.IsValid)
             {
@@ -121,10 +121,6 @@ namespace Booking_Dental_Clinic.Controllers
         }
         public ActionResult Thanhtoan()
         {
-            //if (Session["Id"] == null || Session["Id"].ToString() == "")
-            //{
-            //    return RedirectToAction("Login", "Account");
-            //}
             var a = User.Identity.GetUserId();
             if (a == null )
             {

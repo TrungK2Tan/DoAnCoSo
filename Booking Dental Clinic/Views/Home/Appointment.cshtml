@@ -15,6 +15,8 @@
                     <h1 class="display-4">Đặt Hẹn Cho Gia Đình Bạn</h1>
                 </div>
                 <p class="text-white mb-5">Đặt lich đi </p>
+                <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Thời Gian Làm Việc</h5>
+                <p class="text-white">Thứ 2-7: 8h00 - 20h00 </p>
                 <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="">TÌM BÁC SĨ</a>
                 <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="">THÊM</a>
             </div>
@@ -45,17 +47,21 @@
                         @Html.ValidationMessageFor(model => model.IDBACSI, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" id="Ngaydat" name="Ngaydat" type="datetime" value="" placeholder="Ngày đặt">
+                        <input class="form-control text-box single-line" id="Ngaydat" name="Ngaydat" type="date" value="" placeholder="Ngày đặt">
                         @Html.ValidationMessageFor(model => model.Ngaydat, "", new { @class = "text-danger" })
                     </div>
-                <div class="col-12 col-sm-6">
-                    <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.Id " placeholder="Id">
-                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
-                </div>
+                    <div class="col-12 col-sm-6">
+                        <input class="form-control text-box single-line" id="Gio" name="Gio" type="time" value="" placeholder="Giờ đặt" min="08:00" max="20:00">
+                        @Html.ValidationMessageFor(model => model.Gio, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-12 col-sm-6" hidden>
+                        <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.Id " placeholder="Id">
+                        @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                    </div>
 
                     <div class="col-12 col-sm-6">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Đặt Lịch" class="btn btn-default" />
+                            <input type="submit" value="Đặt Lịch" class=" btn btn-primary w-100 py-3" />
                         </div>
                     </div>
                 </div>

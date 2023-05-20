@@ -2,6 +2,13 @@
 @{
     ViewBag.Title = "Thanhtoan";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    List<SelectListItem> GetPaymentMethods()
+    {
+        List<SelectListItem> paymentMethods = new List<SelectListItem>();
+        paymentMethods.Add(new SelectListItem { Text = "Thanh toán trực tiếp", Value = "1" });
+        paymentMethods.Add(new SelectListItem { Text = "Thanh toán bằng Momo", Value = "2" });
+        return paymentMethods;
+    }
 }<!-- THANH TOÁN -->
 <div class="container-fluid bg-primary my-5 py-5">
     <div class="container py-5">
@@ -29,23 +36,28 @@
                                 <input class="form-control text-box single-line" id="Tongtien" name="Tongtien" type="text" value="" placeholder="Tổng tiền" readonly>
                                 @Html.ValidationMessageFor(model => model.TongTien, "", new { @class = "text-danger" })
                             </div>
-
+                            @*<div class="col-12 col-sm-6">
+                                    @Html.DropDownList("ID_ThanhToan", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.ID_ThanhToan, "", new { @class = "text-danger" })
+                                </div>*@
                             <div class="col-12 col-sm-6">
-                                @Html.DropDownList("ID_ThanhToan", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.DropDownListFor(model => model.ID_ThanhToan, GetPaymentMethods(), htmlAttributes: new { @class = "form-control", id = "ddlPaymentType" })
                                 @Html.ValidationMessageFor(model => model.ID_ThanhToan, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-12 col-sm-6">
                                 <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.Id" placeholder="Id" hidden>
                                 @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
                             </div>
-                            <div class="col-12 col-sm-6">
+                            <div id="paymentType1" class="col-12 col-sm-6">
                                 <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Thanh toán"  class="btn btn-default" />
+                                    <input type="submit" value="Thanh toán" class="btn btn-default" />
                                 </div>
-                                <a href="@Url.Action("Payment","Home")">Thanh toán Bằng Momo</a>
                             </div>
-
-
+                            <div id="paymentType1" class="col-12 col-sm-6">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <a class="btn btn-default" href="@Url.Action("Payment","Home")">Thanh toán Bằng Momo</a>
+                                </div>
+                            </div>
                         </div>
                     }
                 </div>
@@ -54,6 +66,18 @@
     </div>
 </div>
 <!-- KẾT THÚC THANH TOÁN -->
+<script>
+    document.getElementById("ddlPaymentType").addEventListener("change", function () {
+        var selectedValue = this.value;
+        var paymentType1 = document.getElementById("paymentType1");
+
+        if (selectedValue === "2") {
+            paymentType1.style.display = "none";
+        } else {
+            paymentType1.style.display = "block";
+        }
+    });
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", (_) => {
         document.querySelector("select").addEventListener("change", (e) => {

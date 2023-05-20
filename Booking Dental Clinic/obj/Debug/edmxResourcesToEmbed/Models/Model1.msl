@@ -65,19 +65,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LichHens">
-      <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
-        <MappingFragment StoreEntitySet="LichHen">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
-          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
-          <ScalarProperty Name="IDDICHVU" ColumnName="IDDICHVU" />
-          <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
-          <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
-          <ScalarProperty Name="IdLich" ColumnName="IdLich" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="NhaSis">
       <EntityTypeMapping TypeName="DentalClinicModel.NhaSi">
         <MappingFragment StoreEntitySet="NhaSi">
@@ -125,5 +112,19 @@
         <ScalarProperty Name="Id" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="LichHens">
+      <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
+        <MappingFragment StoreEntitySet="LichHen">
+          <ScalarProperty Name="Gio" ColumnName="Gio" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+          <ScalarProperty Name="IDDICHVU" ColumnName="IDDICHVU" />
+          <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
+          <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
+          <ScalarProperty Name="IdLich" ColumnName="IdLich" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

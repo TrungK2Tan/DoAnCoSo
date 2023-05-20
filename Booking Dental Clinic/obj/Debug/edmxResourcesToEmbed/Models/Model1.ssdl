@@ -96,8 +96,9 @@
     <Property Name="IDBACSI" Type="int" Nullable="false" />
     <Property Name="IDDICHVU" Type="int" Nullable="false" />
     <Property Name="Sdt" Type="nvarchar" MaxLength="20" />
-    <Property Name="Ngaydat" Type="datetime" />
+    <Property Name="Ngaydat" Type="date" />
     <Property Name="Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="Gio" Type="time" Precision="7" />
   </EntityType>
   <EntityType Name="LoaiDichVu">
     <Key>

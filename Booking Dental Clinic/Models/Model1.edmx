@@ -101,8 +101,9 @@
           <Property Name="IDBACSI" Type="int" Nullable="false" />
           <Property Name="IDDICHVU" Type="int" Nullable="false" />
           <Property Name="Sdt" Type="nvarchar" MaxLength="20" />
-          <Property Name="Ngaydat" Type="datetime" />
+          <Property Name="Ngaydat" Type="date" />
           <Property Name="Id" Type="nvarchar" MaxLength="128" />
+          <Property Name="Gio" Type="time" Precision="7" />
         </EntityType>
         <EntityType Name="LoaiDichVu">
           <Key>
@@ -357,16 +358,7 @@
             <End Role="HinhThucThanhToan" EntitySet="HinhThucThanhToans" />
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
-          <EntitySet Name="LichHens" EntityType="DentalClinicModel.LichHen" />
-          <AssociationSet Name="FK_LichHen_LoaiDichVu" Association="DentalClinicModel.FK_LichHen_LoaiDichVu">
-            <End Role="LoaiDichVu" EntitySet="LoaiDichVus" />
-            <End Role="LichHen" EntitySet="LichHens" />
-          </AssociationSet>
           <EntitySet Name="NhaSis" EntityType="DentalClinicModel.NhaSi" />
-          <AssociationSet Name="FK_LichHen_NhaSi" Association="DentalClinicModel.FK_LichHen_NhaSi">
-            <End Role="NhaSi" EntitySet="NhaSis" />
-            <End Role="LichHen" EntitySet="LichHens" />
-          </AssociationSet>
           <EntitySet Name="DienDans" EntityType="DentalClinicModel.DienDan" />
           <EntitySet Name="AspNetUsers" EntityType="DentalClinicModel.AspNetUser" />
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="DentalClinicModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
@@ -381,13 +373,22 @@
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="DentalClinicModel.AspNetUserRoles">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+          </AssociationSet>
+          <EntitySet Name="LichHens" EntityType="DentalClinicModel.LichHen" />
           <AssociationSet Name="FK_LichHen_AspNetUsers" Association="DentalClinicModel.FK_LichHen_AspNetUsers">
             <End Role="AspNetUser" EntitySet="AspNetUsers" />
             <End Role="LichHen" EntitySet="LichHens" />
           </AssociationSet>
-          <AssociationSet Name="AspNetUserRoles" Association="DentalClinicModel.AspNetUserRoles">
-            <End Role="AspNetUser" EntitySet="AspNetUsers" />
-            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+          <AssociationSet Name="FK_LichHen_LoaiDichVu" Association="DentalClinicModel.FK_LichHen_LoaiDichVu">
+            <End Role="LoaiDichVu" EntitySet="LoaiDichVus" />
+            <End Role="LichHen" EntitySet="LichHens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichHen_NhaSi" Association="DentalClinicModel.FK_LichHen_NhaSi">
+            <End Role="NhaSi" EntitySet="NhaSis" />
+            <End Role="LichHen" EntitySet="LichHens" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="GoiDichVu">
@@ -445,33 +446,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="LichHen">
-          <Key>
-            <PropertyRef Name="IdLich" />
-          </Key>
-          <Property Name="IdLich" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Tenkhachhang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="IDBACSI" Type="Int32" Nullable="false" />
-          <Property Name="IDDICHVU" Type="Int32" Nullable="false" />
-          <Property Name="Sdt" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Ngaydat" Type="DateTime" Precision="3" />
-          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="LoaiDichVu" Relationship="DentalClinicModel.FK_LichHen_LoaiDichVu" FromRole="LichHen" ToRole="LoaiDichVu" />
-          <NavigationProperty Name="NhaSi" Relationship="DentalClinicModel.FK_LichHen_NhaSi" FromRole="LichHen" ToRole="NhaSi" />
-          <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_LichHen_AspNetUsers" FromRole="LichHen" ToRole="AspNetUser" />
-        </EntityType>
-        <Association Name="FK_LichHen_LoaiDichVu">
-          <End Type="DentalClinicModel.LoaiDichVu" Role="LoaiDichVu" Multiplicity="1" />
-          <End Type="DentalClinicModel.LichHen" Role="LichHen" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LoaiDichVu">
-              <PropertyRef Name="IDDICHVU" />
-            </Principal>
-            <Dependent Role="LichHen">
-              <PropertyRef Name="IDDICHVU" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="NhaSi">
           <Key>
             <PropertyRef Name="IDBACSI" />
@@ -482,18 +456,6 @@
           <Property Name="ThongTin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_NhaSi" FromRole="NhaSi" ToRole="LichHen" />
         </EntityType>
-        <Association Name="FK_LichHen_NhaSi">
-          <End Type="DentalClinicModel.NhaSi" Role="NhaSi" Multiplicity="1" />
-          <End Type="DentalClinicModel.LichHen" Role="LichHen" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhaSi">
-              <PropertyRef Name="IDBACSI" />
-            </Principal>
-            <Dependent Role="LichHen">
-              <PropertyRef Name="IDBACSI" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="DienDan">
           <Key>
             <PropertyRef Name="Id_diendan" />
@@ -523,8 +485,8 @@
           <NavigationProperty Name="AspNetUserClaims" Relationship="DentalClinicModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
           <NavigationProperty Name="AspNetUserLogins" Relationship="DentalClinicModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
           <NavigationProperty Name="HoaDons" Relationship="DentalClinicModel.FK_HoaDon_AspNetUsers1" FromRole="AspNetUser" ToRole="HoaDon" />
-          <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_AspNetUsers" FromRole="AspNetUser" ToRole="LichHen" />
           <NavigationProperty Name="AspNetRoles" Relationship="DentalClinicModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+          <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_AspNetUsers" FromRole="AspNetUser" ToRole="LichHen" />
         </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
@@ -566,6 +528,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+          <End Type="DentalClinicModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+        </Association>
+        <EntityType Name="LichHen">
+          <Key>
+            <PropertyRef Name="IdLich" />
+          </Key>
+          <Property Name="IdLich" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tenkhachhang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDBACSI" Type="Int32" Nullable="false" />
+          <Property Name="IDDICHVU" Type="Int32" Nullable="false" />
+          <Property Name="Sdt" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ngaydat" Type="DateTime" Precision="0" />
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Gio" Type="Time" Precision="7" />
+          <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_LichHen_AspNetUsers" FromRole="LichHen" ToRole="AspNetUser" />
+          <NavigationProperty Name="LoaiDichVu" Relationship="DentalClinicModel.FK_LichHen_LoaiDichVu" FromRole="LichHen" ToRole="LoaiDichVu" />
+          <NavigationProperty Name="NhaSi" Relationship="DentalClinicModel.FK_LichHen_NhaSi" FromRole="LichHen" ToRole="NhaSi" />
+        </EntityType>
         <Association Name="FK_LichHen_AspNetUsers">
           <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
           <End Type="DentalClinicModel.LichHen" Role="LichHen" Multiplicity="*" />
@@ -578,9 +560,29 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="AspNetUserRoles">
-          <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
-          <End Type="DentalClinicModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+        <Association Name="FK_LichHen_LoaiDichVu">
+          <End Type="DentalClinicModel.LoaiDichVu" Role="LoaiDichVu" Multiplicity="1" />
+          <End Type="DentalClinicModel.LichHen" Role="LichHen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiDichVu">
+              <PropertyRef Name="IDDICHVU" />
+            </Principal>
+            <Dependent Role="LichHen">
+              <PropertyRef Name="IDDICHVU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichHen_NhaSi">
+          <End Type="DentalClinicModel.NhaSi" Role="NhaSi" Multiplicity="1" />
+          <End Type="DentalClinicModel.LichHen" Role="LichHen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaSi">
+              <PropertyRef Name="IDBACSI" />
+            </Principal>
+            <Dependent Role="LichHen">
+              <PropertyRef Name="IDBACSI" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         </Schema>
     </edmx:ConceptualModels>
@@ -652,19 +654,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="LichHens">
-            <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
-              <MappingFragment StoreEntitySet="LichHen">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
-                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
-                <ScalarProperty Name="IDDICHVU" ColumnName="IDDICHVU" />
-                <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
-                <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
-                <ScalarProperty Name="IdLich" ColumnName="IdLich" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="NhaSis">
             <EntityTypeMapping TypeName="DentalClinicModel.NhaSi">
               <MappingFragment StoreEntitySet="NhaSi">
@@ -712,6 +701,20 @@
               <ScalarProperty Name="Id" ColumnName="UserId" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="LichHens">
+            <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
+              <MappingFragment StoreEntitySet="LichHen">
+                <ScalarProperty Name="Gio" ColumnName="Gio" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="IDDICHVU" ColumnName="IDDICHVU" />
+                <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
+                <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
+                <ScalarProperty Name="IdLich" ColumnName="IdLich" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
