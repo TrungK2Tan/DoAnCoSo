@@ -29,12 +29,12 @@
                 <div class="row g-3">
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" id="Tenkhachhang" name="Tenkhachhang" type="text" value="" placeholder="Họ và tên">
+                        <input class="form-control text-box single-line" id="Tenkhachhang" name="Tenkhachhang" type="text" value="" placeholder="Họ và tên" required>
                         @Html.ValidationMessageFor(model => model.Tenkhachhang, "", new { @class = "text-danger" })
                     </div>
 
                     <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field Sdt must be a number." id="Sdt" name="Sdt" type="text" value="" placeholder="Số điện thoại">
+                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field Sdt must be a number." id="Sdt" name="Sdt" type="text" value="" placeholder="Số điện thoại" required>
                         @Html.ValidationMessageFor(model => model.Sdt, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12 col-sm-6">
@@ -47,11 +47,11 @@
                         @Html.ValidationMessageFor(model => model.IDBACSI, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" id="Ngaydat" name="Ngaydat" type="date" value="" placeholder="Ngày đặt">
+                        <input class="form-control text-box single-line" id="Ngaydat" name="Ngaydat" type="date" value="" placeholder="Ngày đặt" required>
                         @Html.ValidationMessageFor(model => model.Ngaydat, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" id="Gio" name="Gio" type="time" value="" placeholder="Giờ đặt" min="08:00" max="20:00">
+                        <input class="form-control text-box single-line" id="Gio" name="Gio" type="time" value="" placeholder="Giờ đặt" min="08:00" max="20:00" required>
                         @Html.ValidationMessageFor(model => model.Gio, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12 col-sm-6" hidden>
