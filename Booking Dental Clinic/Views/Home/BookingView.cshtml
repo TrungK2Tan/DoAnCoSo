@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Booking_Dental_Clinic.Models.LichHen>
+
+@{
+    ViewBag.Title = "BookingView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lịch Đã Đặt</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            <label> Tên </label>
+        </th>
+        <th>
+            <label> Số Điện Thoại </label>
+        </th>
+        <th>
+            <label> Ngày Đặt</label>
+        </th>
+        <th>
+            <label> Giờ</label>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </th>
+        <th>
+            <label> Tên Dịch Vụ</label>
+        </th>
+        <th>
+            <label> Tên Nha Sĩ</label>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tenkhachhang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sdt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngaydat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhaSi.Ten)
+            </td>
+            <td>
+                <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt@*, tenNhaSi = item.NhaSi.Ten*@ })">Đặt Lịch</a>
+            </td>
+        </tr>
+    }
+
+</table>

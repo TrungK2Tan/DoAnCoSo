@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <div class="container py-5">
@@ -20,7 +21,9 @@
                 <p>
                     @Html.DisplayFor(model => model.ThongTin)
                 </p>
-
+                <div class="col-12 col-sm-6">
+                        <a href="@Url.Action("Appointment", "Home")">Đặt Lịch</a>
+                </div>
             </div>
         </div>
     </div>

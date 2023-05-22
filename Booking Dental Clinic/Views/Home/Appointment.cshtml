@@ -29,12 +29,12 @@
                 <div class="row g-3">
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" id="Tenkhachhang" name="Tenkhachhang" type="text" value="" placeholder="Họ và tên" required>
+                        <input class="form-control text-box single-line" id="Tenkhachhang" name="Tenkhachhang" type="text" value="@ViewBag.Ten" placeholder="Họ và tên" required>
                         @Html.ValidationMessageFor(model => model.Tenkhachhang, "", new { @class = "text-danger" })
                     </div>
 
                     <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field Sdt must be a number." id="Sdt" name="Sdt" type="text" value="" placeholder="Số điện thoại" required>
+                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field Sdt must be a number." id="Sdt" name="Sdt" type="text" value="@ViewBag.Sdt" placeholder="Số điện thoại" required>
                         @Html.ValidationMessageFor(model => model.Sdt, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12 col-sm-6">
@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="col-12 col-sm-6">
-                        @Html.DropDownList("IDBACSI", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.DropDownList("IDBACSI",null, htmlAttributes: new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.IDBACSI, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12 col-sm-6">

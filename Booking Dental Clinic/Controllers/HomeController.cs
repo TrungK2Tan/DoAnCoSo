@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using PagedList;
 using MoMo;
 using Newtonsoft.Json.Linq;
+using System.Data.Entity;
 
 namespace Booking_Dental_Clinic.Controllers
 {
@@ -22,6 +23,21 @@ namespace Booking_Dental_Clinic.Controllers
             
             return View(nhasi);
         }
+        [Authorize]
+        public ActionResult BookingView()
+        {
+
+            // Lấy ID đăng nhập của người dùng hiện tại
+            string currentUserId = User.Identity.GetUserId();
+            // Lấy danh sách lịch hẹn dựa trên ID đăng nhập
+            var lichHens = db.LichHens
+                .Where(l => l.Id == currentUserId)
+                .ToList();
+            return View(lichHens);
+        }
+
+
+
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -84,10 +100,14 @@ namespace Booking_Dental_Clinic.Controllers
             return View();
         }
         [Authorize]
-        public ActionResult Appointment()
+        public ActionResult Appointment(string ten, string sdt/*, string tenNhaSi*/)
         {
             var a = User.Identity.GetUserName();
             //var user = db.AspNetUsers.Find(id);
+            ViewBag.Ten = ten;
+            ViewBag.Sdt = sdt;
+            //ch lay duoc thong tin nha si
+            //ViewBag.TenNhaSi = tenNhaSi;
             ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten");
             ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten");
             ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Id");

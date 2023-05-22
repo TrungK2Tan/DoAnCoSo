@@ -30,7 +30,6 @@
                         <div class="row g-3">
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                             <div class="col-12 col-sm-6">
-                                @*@Html.DropDownList("Id_GoiDichVu", null, htmlAttributes: new { @class = "form-control" })*@
                                 <select id="Id_GoiDichVu" name="Id_GoiDichVu" class="form-control">
                                     @foreach (var dichvu in goidichvu)
                                     {
@@ -50,8 +49,6 @@
                                 <label class="form-control" id="labelTongTien">@String.Format("{0:0,0}", ViewBag.GiaDichVu) đ</label>
                                 <input class="form-control text-box single-line" id="Tongtien" name="Tongtien" type="text" value="@ViewBag.GiaDichVu" placeholder="Tổng tiền" hidden>
                                 @Html.ValidationMessageFor(model => model.TongTien, "", new { @class = "text-danger" })
-                                @*<input class="form-control text-box single-line" id="Tongtien" name="Tongtien" type="text" value="" placeholder="Tổng tiền" readonly>
-        @Html.ValidationMessageFor(model => model.TongTien, "", new { @class = "text-danger" })*@
                             </div>
 
                             <div class="col-12 col-sm-6">
