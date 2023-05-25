@@ -24,7 +24,11 @@ namespace Booking_Dental_Clinic.Models
         public string Ten { get; set; }
         public string HinhAnh { get; set; }
         public string ThongTin { get; set; }
+        public Nullable<System.TimeSpan> GioKham { get; set; }
+        public Nullable<System.TimeSpan> GioKetThuc { get; set; }
+        public string UserId { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LichHen> LichHens { get; set; }
     }

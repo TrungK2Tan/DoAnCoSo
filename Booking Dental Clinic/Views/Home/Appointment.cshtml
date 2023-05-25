@@ -2,7 +2,8 @@
 @{
     ViewBag.Title = "Appointment";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
+    Booking_Dental_Clinic.Models.DentalClinicEntities db = new Booking_Dental_Clinic.Models.DentalClinicEntities();
+    var nhasi = db.NhaSis.ToList();
 }
 
 <!-- ĐẶT LỊCH -->
@@ -23,49 +24,62 @@
             <div class="col-lg-6">
                 <div class="bg-white text-center rounded p-5">
                     <h1 class="mb-4">ĐẶT LỊCH TRỰC TUYẾN VỚI BÁC SĨ</h1>
-                        @using (Html.BeginForm())
-                        {
-                            @Html.AntiForgeryToken()
-                <div class="row g-3">
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" id="Tenkhachhang" name="Tenkhachhang" type="text" value="@ViewBag.Ten" placeholder="Họ và tên" required>
-                        @Html.ValidationMessageFor(model => model.Tenkhachhang, "", new { @class = "text-danger" })
-                    </div>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="row g-3">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="col-12 col-sm-6">
+                                <input class="form-control text-box single-line" id="Tenkhachhang" name="Tenkhachhang" type="text" value="@ViewBag.Ten" placeholder="Họ và tên" required>
+                                @Html.ValidationMessageFor(model => model.Tenkhachhang, "", new { @class = "text-danger" })
+                            </div>
 
-                    <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field Sdt must be a number." id="Sdt" name="Sdt" type="text" value="@ViewBag.Sdt" placeholder="Số điện thoại" required>
-                        @Html.ValidationMessageFor(model => model.Sdt, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        @Html.DropDownList("IDDICHVU", null, htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.IDDICHVU, "", new { @class = "text-danger" })
-                    </div>
+                            <div class="col-12 col-sm-6">
+                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Sdt must be a number." id="Sdt" name="Sdt" type="text" value="@ViewBag.Sdt" placeholder="Số điện thoại" required>
+                                @Html.ValidationMessageFor(model => model.Sdt, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                @Html.DropDownList("IDDICHVU", null, "Chọn dịch vụ", htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.IDDICHVU, "", new { @class = "text-danger" })
+                            </div>
 
-                    <div class="col-12 col-sm-6">
-                        @Html.DropDownList("IDBACSI",null, htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.IDBACSI, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" id="Ngaydat" name="Ngaydat" type="date" value="" placeholder="Ngày đặt" required>
-                        @Html.ValidationMessageFor(model => model.Ngaydat, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <input class="form-control text-box single-line" id="Gio" name="Gio" type="time" value="" placeholder="Giờ đặt" min="08:00" max="20:00" required>
-                        @Html.ValidationMessageFor(model => model.Gio, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="col-12 col-sm-6" hidden>
-                        <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.Id " placeholder="Id">
-                        @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
-                    </div>
+                            <div class="col-12 col-sm-6">
+                                @*@Html.DropDownList("IDBACSI", null, "Chọn nha sĩ", htmlAttributes: new { @class = "form-control" })*@
+                                <select id="IDBACSI" name="IDBACSI" class="form-control">
+                                    @foreach (var nhaSi in nhasi)
+                                    {
+                                        if (nhaSi.IDBACSI == ViewBag.IDBACSI)
+                                        {
+                                            <option value="@nhaSi.IDBACSI" selected="@ViewBag.IDBACSI">@nhaSi.Ten</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@nhaSi.IDBACSI">@nhaSi.Ten</option>
+                                        }
+                                    }
+                                </select>
+                                @Html.ValidationMessageFor(model => model.IDBACSI, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input class="form-control text-box single-line" id="Ngaydat" name="Ngaydat" type="date" value="" placeholder="Ngày đặt" required>
+                                @Html.ValidationMessageFor(model => model.Ngaydat, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input class="form-control text-box single-line" id="Gio" name="Gio" type="time" value="" placeholder="Giờ đặt" min="08:00" max="20:00" required>
+                                @Html.ValidationMessageFor(model => model.Gio, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-12 col-sm-6" hidden>
+                                <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.Id " placeholder="Id">
+                                @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                            </div>
 
-                    <div class="col-12 col-sm-6">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Đặt Lịch" class=" btn btn-primary w-100 py-3" />
+                            <div class="col-12 col-sm-6">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Đặt Lịch" class=" btn btn-primary w-100 py-3" />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                        }
+                    }
                 </div>
             </div>
         </div>

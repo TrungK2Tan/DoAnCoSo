@@ -54,26 +54,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NhaSis">
-      <EntityTypeMapping TypeName="DentalClinicModel.NhaSi">
-        <MappingFragment StoreEntitySet="NhaSi">
-          <ScalarProperty Name="ThongTin" ColumnName="ThongTin" />
-          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-          <ScalarProperty Name="Ten" ColumnName="Ten" />
-          <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DienDans">
-      <EntityTypeMapping TypeName="DentalClinicModel.DienDan">
-        <MappingFragment StoreEntitySet="DienDan">
-          <ScalarProperty Name="content" ColumnName="content" />
-          <ScalarProperty Name="img" ColumnName="img" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="Id_diendan" ColumnName="Id_diendan" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="AspNetUsers">
       <EntityTypeMapping TypeName="DentalClinicModel.AspNetUser">
         <MappingFragment StoreEntitySet="AspNetUsers">
@@ -123,6 +103,31 @@
           <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
           <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
           <ScalarProperty Name="IdLich" ColumnName="IdLich" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhaSis">
+      <EntityTypeMapping TypeName="DentalClinicModel.NhaSi">
+        <MappingFragment StoreEntitySet="NhaSi">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="GioKetThuc" ColumnName="GioKetThuc" />
+          <ScalarProperty Name="GioKham" ColumnName="GioKham" />
+          <ScalarProperty Name="ThongTin" ColumnName="ThongTin" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DienDans">
+      <EntityTypeMapping TypeName="DentalClinicModel.DienDan">
+        <MappingFragment StoreEntitySet="DienDan">
+          <ScalarProperty Name="content2" ColumnName="content2" />
+          <ScalarProperty Name="img2" ColumnName="img2" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="Id_diendan" ColumnName="Id_diendan" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

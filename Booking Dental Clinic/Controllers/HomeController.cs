@@ -35,9 +35,18 @@ namespace Booking_Dental_Clinic.Controllers
                 .ToList();
             return View(lichHens);
         }
+        [Authorize]
+        public ActionResult PriceView()
+        {
 
-
-
+            // Lấy ID đăng nhập của người dùng hiện tại
+            string currentUserId = User.Identity.GetUserId();
+            // Lấy danh sách dich vu dựa trên ID đăng nhập
+            var dichvus = db.HoaDons
+                .Where(l => l.Id == currentUserId)
+                .ToList();
+            return View(dichvus);
+        }
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -100,18 +109,17 @@ namespace Booking_Dental_Clinic.Controllers
             return View();
         }
         [Authorize]
-        public ActionResult Appointment(string ten, string sdt/*, string tenNhaSi*/)
+        public ActionResult Appointment(string ten, string sdt, int? IDBACSI)
         {
+            var nhasi = db.NhaSis.FirstOrDefault(c => c.IDBACSI == IDBACSI);
             var a = User.Identity.GetUserName();
-            //var user = db.AspNetUsers.Find(id);
             ViewBag.Ten = ten;
             ViewBag.Sdt = sdt;
-            //ch lay duoc thong tin nha si
-            //ViewBag.TenNhaSi = tenNhaSi;
             ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten");
             ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten");
             ViewBag.Id = new SelectList(db.AspNetUsers, "Id", "Id");
             ViewBag.a = a;
+            ViewBag.IDBACSI = IDBACSI;
             return View();
         }
         [HttpPost]
@@ -188,7 +196,7 @@ namespace Booking_Dental_Clinic.Controllers
             string accessKey = "iPXneGmrJH0G8FOP";
             string serectkey = "sFcbSGRSJjwGxwhhcEktCHWYUuTuPNDB";
             string orderInfo = "test";
-            string returnUrl = "https://localhost:44394/Home/Thanhtoan";
+            string returnUrl = "https://localhost:44390/Home/ConfirmPaymentClient";
             string notifyurl = "https://4c8d-2001-ee0-5045-50-58c1-b2ec-3123-740d.ap.ngrok.io/Home/SavePayment"; //lưu ý: notifyurl không được sử dụng localhost, có thể sử dụng ngrok để public localhost trong quá trình test
 
             string amount = "1000";
@@ -234,6 +242,10 @@ namespace Booking_Dental_Clinic.Controllers
             JObject jmessage = JObject.Parse(responseFromMomo);
 
             return Redirect(jmessage.GetValue("payUrl").ToString());
+        }
+        public ActionResult ConfirmPaymentClient()
+        {
+            return View();
         }
     }
 }

@@ -18,5 +18,7 @@ namespace Booking_Dental_Clinic.Models
         public string title { get; set; }
         public string img { get; set; }
         public string content { get; set; }
+        public string img2 { get; set; }
+        public string content2 { get; set; }
     }
 }

@@ -19,7 +19,7 @@
         <th>
             @Html.DisplayNameFor(model => model.UserName)
         </th>
-        <th></th>
+        <th> Tên nha sĩ</th>
     </tr>
 
     @foreach (var item in Model)
@@ -28,23 +28,32 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-
             <td>
                 @Html.DisplayFor(modelItem => item.UserName)
             </td>
             <td>
+                @foreach (var nhaSi in item.NhaSis)
+                {
+                    @nhaSi.Ten
+                    if (nhaSi != item.NhaSis.Last())
+                    {
+                        <text>, </text>
+                    }
+                }
+            </td>
+            <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
                 <a class="btn btn-sm btn-success" href="~/Admin/Manager/Edit?id=@item.Id">Cập Nhật</a>
                 <a class="btn btn-sm btn-danger" href="~/Admin/Manager/Delete?id=@item.Id">Xóa</a>
                 <a class="btn btn-sm btn-danger" href="~/Admin/Manager/Details?id=@item.Id">Chi tiết</a>
 
             </td>
             <td>
-                @if (item.IsApproved == false )
+                @if (item.IsApproved == false)
                 {
-                    <button class="btn-approve" data-id="@item.Id" >Approved</button>
+                    <button class="btn-approve" data-id="@item.Id">Approved</button>
                 }
                 else
                 {

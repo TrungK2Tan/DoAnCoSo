@@ -58,7 +58,7 @@
                 @Html.DisplayFor(modelItem => item.NhaSi.Ten)
             </td>
             <td>
-                <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt@*, tenNhaSi = item.NhaSi.Ten*@ })">Đặt Lịch</a>
+                <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt,tennhasi = item.NhaSi.Ten,@IDBACSI = item.IDBACSI})">ĐẶT LẠI</a>
             </td>
         </tr>
     }

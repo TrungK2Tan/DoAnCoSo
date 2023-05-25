@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Booking_Dental_Clinic.Models.HoaDon>
+
+@{
+    ViewBag.Title = "PriceView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Gói Dịch Vụ Đã Đặt</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Tổng Tiền
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </th>
+        <th>
+           Tên Dịch Vụ
+        </th>
+        <th>
+            Hình Thức Thanh Toán
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TongTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GoiDichVu.TenDichVu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HinhThucThanhToan.TenHinhThuc)
+        </td>
+    </tr>
+}
+
+</table>

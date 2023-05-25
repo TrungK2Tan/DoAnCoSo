@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Booking_Dental_Clinic.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
 {
@@ -17,8 +18,18 @@ namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
         // GET: NhaSi/ManagerBooking
         public ActionResult Index()
         {
-            var lichHens = db.LichHens.Include(l => l.AspNetUser).Include(l => l.LoaiDichVu).Include(l => l.NhaSi);
+            // ID loại nha sĩ cần lấy lịch hẹn
+            var loaiNhaSiId = User.Identity.GetUserId(); // Thay thế 1 bằng ID loại nha sĩ cần lấy
+
+            // Lấy lịch hẹn theo ID loại nha sĩ
+            var lichHens = db.LichHens.Include(l => l.AspNetUser)
+                .Include(l => l.LoaiDichVu)
+                .Include(l => l.NhaSi)
+                .Where(l => l.NhaSi.UserId == loaiNhaSiId); // Áp dụng điều kiện ID loại nha sĩ
+
             return View(lichHens.ToList());
+            //var lichHens = db.LichHens.Include(l => l.AspNetUser).Include(l => l.LoaiDichVu).Include(l => l.NhaSi);
+            //return View(lichHens.ToList());
         }
 
         // GET: NhaSi/ManagerBooking/Details/5

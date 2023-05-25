@@ -198,6 +198,7 @@
     <Compile Include="Areas\Admin\Controllers\ManagerController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManagerUserController.cs" />
     <Compile Include="Areas\NhaSi\Controllers\ManagerBookingController.cs" />
+    <Compile Include="Areas\NhaSi\Controllers\ManagerPackageController.cs" />
     <Compile Include="Areas\NhaSi\Controllers\NhaSiController.cs" />
     <Compile Include="Areas\NhaSi\NhaSiAreaRegistration.cs" />
     <Compile Include="ChatHub.cs" />
@@ -288,9 +289,24 @@
     <Content Include="img\blog-1.jpg" />
     <Content Include="img\blog-2.jpg" />
     <Content Include="img\blog-3.jpg" />
-    <Content Include="img\diendan2.jpg" />
-    <Content Include="img\diendan3.jpg" />
-    <Content Include="img\diendan4.jpg" />
+    <Content Include="img\diendan\diendan1.jpg" />
+    <Content Include="img\diendan\diendan1b.jpg" />
+    <Content Include="img\diendan\diendan2a.jpg" />
+    <Content Include="img\diendan\diendan2b.jpg" />
+    <Content Include="img\diendan\diendan3a.jpg" />
+    <Content Include="img\diendan\diendan3b.jpg" />
+    <Content Include="img\diendan\diendan4a.jpg" />
+    <Content Include="img\diendan\diendan4b.jpg" />
+    <Content Include="img\diendan\diendan5a.jpg" />
+    <Content Include="img\diendan\diendan5b.jpg" />
+    <Content Include="img\diendan\diendan6a.jpg" />
+    <Content Include="img\diendan\diendan6b.jpg" />
+    <Content Include="img\diendan\diendan7a.jpg" />
+    <Content Include="img\diendan\diendan7b.jpg" />
+    <Content Include="img\diendan\diendan8a.jpg" />
+    <Content Include="img\diendan\diendan8b.jpg" />
+    <Content Include="img\diendan\diendan9a.jpg" />
+    <Content Include="img\diendan\diendan9b.jpg" />
     <Content Include="img\hero.jpg" />
     <Content Include="img\icon_dental.ico" />
     <Content Include="img\nhasi1.jpg" />
@@ -387,6 +403,11 @@
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Details.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Edit.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Index.cshtml" />
+    <Content Include="Areas\NhaSi\Views\ManagerPackage\Create.cshtml" />
+    <Content Include="Areas\NhaSi\Views\ManagerPackage\Delete.cshtml" />
+    <Content Include="Areas\NhaSi\Views\ManagerPackage\Details.cshtml" />
+    <Content Include="Areas\NhaSi\Views\ManagerPackage\Edit.cshtml" />
+    <Content Include="Areas\NhaSi\Views\ManagerPackage\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -535,6 +556,8 @@
     <Content Include="Views\Home\Thanhtoan.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Home\BookingView.cshtml" />
+    <Content Include="Views\Home\PriceView.cshtml" />
+    <Content Include="Views\Home\ConfirmPaymentClient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

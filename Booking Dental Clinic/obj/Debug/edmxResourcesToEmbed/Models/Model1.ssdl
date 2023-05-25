@@ -60,6 +60,8 @@
     <Property Name="title" Type="nvarchar" MaxLength="200" />
     <Property Name="img" Type="varchar" MaxLength="200" />
     <Property Name="content" Type="ntext" />
+    <Property Name="img2" Type="varchar" MaxLength="200" />
+    <Property Name="content2" Type="ntext" />
   </EntityType>
   <EntityType Name="GoiDichVu">
     <Key>
@@ -115,6 +117,9 @@
     <Property Name="Ten" Type="nvarchar" MaxLength="50" />
     <Property Name="HinhAnh" Type="varchar" MaxLength="200" />
     <Property Name="ThongTin" Type="ntext" />
+    <Property Name="GioKham" Type="time" Precision="7" />
+    <Property Name="GioKetThuc" Type="time" Precision="7" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
   </EntityType>
   <Association Name="FK_AspNetUserRoles_AspNetUsers">
     <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
@@ -242,6 +247,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_NhaSi_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="NhaSi" Type="Self.NhaSi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NhaSi">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DentalClinicModelStoreContainer">
     <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
@@ -294,6 +311,10 @@
     <AssociationSet Name="FK_LichHen_NhaSi" Association="Self.FK_LichHen_NhaSi">
       <End Role="NhaSi" EntitySet="NhaSi" />
       <End Role="LichHen" EntitySet="LichHen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhaSi_AspNetUsers" Association="Self.FK_NhaSi_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="NhaSi" EntitySet="NhaSi" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
