@@ -70,6 +70,12 @@
       <End Role="HinhThucThanhToan" EntitySet="HinhThucThanhToans" />
       <End Role="HoaDon" EntitySet="HoaDons" />
     </AssociationSet>
+    <EntitySet Name="DienDans" EntityType="DentalClinicModel.DienDan" />
+    <EntitySet Name="NhaSis" EntityType="DentalClinicModel.NhaSi" />
+    <AssociationSet Name="FK_NhaSi_AspNetUsers" Association="DentalClinicModel.FK_NhaSi_AspNetUsers">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="NhaSi" EntitySet="NhaSis" />
+    </AssociationSet>
     <EntitySet Name="LichHens" EntityType="DentalClinicModel.LichHen" />
     <AssociationSet Name="FK_LichHen_AspNetUsers" Association="DentalClinicModel.FK_LichHen_AspNetUsers">
       <End Role="AspNetUser" EntitySet="AspNetUsers" />
@@ -79,16 +85,10 @@
       <End Role="LoaiDichVu" EntitySet="LoaiDichVus" />
       <End Role="LichHen" EntitySet="LichHens" />
     </AssociationSet>
-    <EntitySet Name="NhaSis" EntityType="DentalClinicModel.NhaSi" />
-    <AssociationSet Name="FK_NhaSi_AspNetUsers" Association="DentalClinicModel.FK_NhaSi_AspNetUsers">
-      <End Role="AspNetUser" EntitySet="AspNetUsers" />
-      <End Role="NhaSi" EntitySet="NhaSis" />
-    </AssociationSet>
     <AssociationSet Name="FK_LichHen_NhaSi" Association="DentalClinicModel.FK_LichHen_NhaSi">
       <End Role="NhaSi" EntitySet="NhaSis" />
       <End Role="LichHen" EntitySet="LichHens" />
     </AssociationSet>
-    <EntitySet Name="DienDans" EntityType="DentalClinicModel.DienDan" />
   </EntityContainer>
   <EntityType Name="GoiDichVu">
     <Key>
@@ -129,8 +129,8 @@
     <NavigationProperty Name="AspNetUserLogins" Relationship="DentalClinicModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
     <NavigationProperty Name="AspNetRoles" Relationship="DentalClinicModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
     <NavigationProperty Name="HoaDons" Relationship="DentalClinicModel.FK_HoaDon_AspNetUsers1" FromRole="AspNetUser" ToRole="HoaDon" />
-    <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_AspNetUsers" FromRole="AspNetUser" ToRole="LichHen" />
     <NavigationProperty Name="NhaSis" Relationship="DentalClinicModel.FK_NhaSi_AspNetUsers" FromRole="AspNetUser" ToRole="NhaSi" />
+    <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_AspNetUsers" FromRole="AspNetUser" ToRole="LichHen" />
   </EntityType>
   <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
     <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
@@ -213,6 +213,43 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="DienDan">
+    <Key>
+      <PropertyRef Name="Id_diendan" />
+    </Key>
+    <Property Name="Id_diendan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="img" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="img2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="content2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NhaSi">
+    <Key>
+      <PropertyRef Name="IDBACSI" />
+    </Key>
+    <Property Name="IDBACSI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ThongTin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="GioBatDau" Type="Time" Precision="7" />
+    <Property Name="GioKetThuc" Type="Time" Precision="7" />
+    <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_NhaSi_AspNetUsers" FromRole="NhaSi" ToRole="AspNetUser" />
+    <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_NhaSi" FromRole="NhaSi" ToRole="LichHen" />
+  </EntityType>
+  <Association Name="FK_NhaSi_AspNetUsers">
+    <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="DentalClinicModel.NhaSi" Role="NhaSi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NhaSi">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityType Name="LichHen">
     <Key>
       <PropertyRef Name="IdLich" />
@@ -224,7 +261,8 @@
     <Property Name="Sdt" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Ngaydat" Type="DateTime" Precision="0" />
     <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="Gio" Type="Time" Precision="7" />
+    <Property Name="GioBatDau" Type="Time" Precision="7" />
+    <Property Name="GioKetThuc" Type="Time" Precision="7" />
     <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_LichHen_AspNetUsers" FromRole="LichHen" ToRole="AspNetUser" />
     <NavigationProperty Name="LoaiDichVu" Relationship="DentalClinicModel.FK_LichHen_LoaiDichVu" FromRole="LichHen" ToRole="LoaiDichVu" />
     <NavigationProperty Name="NhaSi" Relationship="DentalClinicModel.FK_LichHen_NhaSi" FromRole="LichHen" ToRole="NhaSi" />
@@ -253,32 +291,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="NhaSi">
-    <Key>
-      <PropertyRef Name="IDBACSI" />
-    </Key>
-    <Property Name="IDBACSI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="HinhAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="ThongTin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="GioKham" Type="Time" Precision="7" />
-    <Property Name="GioKetThuc" Type="Time" Precision="7" />
-    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_NhaSi_AspNetUsers" FromRole="NhaSi" ToRole="AspNetUser" />
-    <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_NhaSi" FromRole="NhaSi" ToRole="LichHen" />
-  </EntityType>
-  <Association Name="FK_NhaSi_AspNetUsers">
-    <End Type="DentalClinicModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
-    <End Type="DentalClinicModel.NhaSi" Role="NhaSi" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AspNetUser">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="NhaSi">
-        <PropertyRef Name="UserId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_LichHen_NhaSi">
     <End Type="DentalClinicModel.NhaSi" Role="NhaSi" Multiplicity="1" />
     <End Type="DentalClinicModel.LichHen" Role="LichHen" Multiplicity="*" />
@@ -291,15 +303,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="DienDan">
-    <Key>
-      <PropertyRef Name="Id_diendan" />
-    </Key>
-    <Property Name="Id_diendan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="img" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="img2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="content2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-  </EntityType>
 </Schema>

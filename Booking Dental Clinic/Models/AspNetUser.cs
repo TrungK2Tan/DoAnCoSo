@@ -21,8 +21,8 @@ namespace Booking_Dental_Clinic.Models
             this.AspNetUserLogins = new HashSet<AspNetUserLogin>();
             this.AspNetRoles = new HashSet<AspNetRole>();
             this.HoaDons = new HashSet<HoaDon>();
-            this.LichHens = new HashSet<LichHen>();
             this.NhaSis = new HashSet<NhaSi>();
+            this.LichHens = new HashSet<LichHen>();
         }
     
         public string Id { get; set; }
@@ -48,8 +48,8 @@ namespace Booking_Dental_Clinic.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LichHen> LichHens { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhaSi> NhaSis { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LichHen> LichHens { get; set; }
     }
 }

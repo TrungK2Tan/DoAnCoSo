@@ -100,7 +100,8 @@
     <Property Name="Sdt" Type="nvarchar" MaxLength="20" />
     <Property Name="Ngaydat" Type="date" />
     <Property Name="Id" Type="nvarchar" MaxLength="128" />
-    <Property Name="Gio" Type="time" Precision="7" />
+    <Property Name="GioBatDau" Type="time" Precision="7" />
+    <Property Name="GioKetThuc" Type="time" Precision="7" />
   </EntityType>
   <EntityType Name="LoaiDichVu">
     <Key>
@@ -117,9 +118,9 @@
     <Property Name="Ten" Type="nvarchar" MaxLength="50" />
     <Property Name="HinhAnh" Type="varchar" MaxLength="200" />
     <Property Name="ThongTin" Type="ntext" />
-    <Property Name="GioKham" Type="time" Precision="7" />
-    <Property Name="GioKetThuc" Type="time" Precision="7" />
     <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="GioBatDau" Type="time" Precision="7" />
+    <Property Name="GioKetThuc" Type="time" Precision="7" />
   </EntityType>
   <Association Name="FK_AspNetUserRoles_AspNetUsers">
     <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />

@@ -22,7 +22,10 @@
             <label> Ngày Đặt</label>
         </th>
         <th>
-            <label> Giờ</label>
+            <label> Giờ Bắt Đầu  </label>
+        </th>
+        <th>
+            <label> Giờ Kết Thúc </label>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AspNetUser.Email)
@@ -49,7 +52,10 @@
                 @Html.DisplayFor(modelItem => item.Ngaydat)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Gio)
+                @Html.DisplayFor(modelItem => item.GioBatDau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioKetThuc)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AspNetUser.Email)
@@ -62,8 +68,8 @@
             </td>
             <td>
                 @*@Html.ActionLink("Edit", "Edit", new { id = item.IdLich }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.IdLich }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.IdLich })*@
+            @Html.ActionLink("Details", "Details", new { id = item.IdLich }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdLich })*@
                 <a class="btn btn-sm btn-success" href="~/NhaSi/ManagerBooking/Edit?id=@item.IdLich">Cập Nhật</a>
                 <a class="btn btn-sm btn-danger" href="~/NhaSi/ManagerBooking/Delete?id=@item.IdLich">Xóa</a>
                 <a class="btn btn-sm btn-danger" href="~/NhaSi/ManagerBooking/Details?id=@item.IdLich">Chi tiết</a>

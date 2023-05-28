@@ -19,7 +19,10 @@
             <label> Ngày Đặt</label>
         </th>
         <th>
-            <label> Giờ</label>
+            <label> Giờ Bắt Đầu </label>
+        </th>
+        <th>
+            <label> Giờ Kết Thúc  </label>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AspNetUser.Email)
@@ -46,7 +49,10 @@
                 @Html.DisplayFor(modelItem => item.Ngaydat)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Gio)
+                @Html.DisplayFor(modelItem => item.GioBatDau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioKetThuc)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AspNetUser.Email)

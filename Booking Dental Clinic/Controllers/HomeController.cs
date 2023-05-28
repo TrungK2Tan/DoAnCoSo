@@ -78,10 +78,15 @@ namespace Booking_Dental_Clinic.Controllers
         {
             return View();
         }
-        public ActionResult BlogGrid()
+        public ActionResult BlogGrid(int? page)
         {
-            List<DienDan> diendan = db.DienDans.ToList();
-            return View(diendan);
+            if (page == null) page = 1;
+            var dienDans = db.DienDans.OrderBy(b => b.Id_diendan);
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(dienDans.ToPagedList(pageNumber, pageSize));
+            //List<DienDan> diendan = db.DienDans.ToList();
+            //return View(diendan);
         }
         public ActionResult BlogDetail(int? id)
         {
@@ -125,7 +130,7 @@ namespace Booking_Dental_Clinic.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         
-        public ActionResult Appointment([Bind(Include = "IdLich,Tenkhachhang,IDDICHVU,IDBACSI,Sdt,Ngaydat,Id,Gio")] LichHen DatLich)
+        public ActionResult Appointment([Bind(Include = "IdLich,Tenkhachhang,IDDICHVU,IDBACSI,Sdt,Ngaydat,Id,GioBatDau,GioKetThuc")] LichHen DatLich)
         {
             if (ModelState.IsValid)
             {
@@ -163,8 +168,6 @@ namespace Booking_Dental_Clinic.Controllers
             ViewBag.GiaDichVu = tienDichvu;
             ViewBag.a = a;
             return View();
-
-
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -243,9 +246,67 @@ namespace Booking_Dental_Clinic.Controllers
 
             return Redirect(jmessage.GetValue("payUrl").ToString());
         }
-        public ActionResult ConfirmPaymentClient()
-        {
-            return View();
-        }
+        //public ActionResult ConfirmPaymentClient(Result result)
+        //{
+        //    if (result != null && result.errorCode == "0")
+        //    {
+        //        try
+        //        {
+        //            // Get the current user's ID
+        //            string currentUserId = User.Identity.GetUserId();
+
+        //            using (var transaction = db.Database.BeginTransaction())
+        //            {
+        //                try
+        //                {
+        //                    if (ModelState.IsValid)
+        //                    {
+        //                        // Retrieve additional information from the database
+        //                        var goiDichVu = db.GoiDichVus.FirstOrDefault(g => g.Id_DichVu == result.ID_GoiDichVu);
+        //                        var hinhThucThanhToan = db.HinhThucThanhToans.FirstOrDefault(h => h.ID_ThanhToan == result.ID_ThanhToan);
+
+        //                        // Create a new instance of HoaDon and set its properties
+        //                        HoaDon hoaDon = new HoaDon
+        //                        {
+        //                            Id = currentUserId,
+        //                            // Set other properties of HoaDon here
+        //                        };
+
+        //                        if (goiDichVu != null)
+        //                        {
+        //                            hoaDon.GoiDichVu = goiDichVu.TenDichVu;
+        //                            hoaDon.TongTien = goiDichVu.GiaDichVu;
+        //                        }
+
+        //                        if (hinhThucThanhToan != null)
+        //                        {
+        //                            hoaDon.HinhThucThanhToan = hinhThucThanhToan.TenHinhThuc;
+        //                        }
+
+        //                        db.HoaDons.Add(hoaDon);
+        //                        db.SaveChanges();
+        //                        transaction.Commit();
+
+        //                        return RedirectToAction("Index", "Home");
+        //                    }
+        //                }
+        //                catch (Exception ex)
+        //                {
+        //                    transaction.Rollback();
+        //                    return Json(new { success = false, error = ex.Message });
+        //                }
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            // Handle exceptions here
+        //            return Json(new { success = false, error = ex.Message });
+        //        }
+        //    }
+
+        //    return View();
+        //}
+
+
     }
 }
