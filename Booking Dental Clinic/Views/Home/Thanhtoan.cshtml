@@ -52,8 +52,12 @@
                             </div>
 
                             <div class="col-12 col-sm-6">
-                                @Html.DropDownListFor(model => model.ID_ThanhToan,GetPaymentMethods(), "Chọn Hình Thức Thanh Toán", htmlAttributes: new { @class = "form-control", id = "ddlPaymentType"})
+                                @Html.DropDownListFor(model => model.ID_ThanhToan, GetPaymentMethods(), "Chọn Hình Thức Thanh Toán", htmlAttributes: new { @class = "form-control", id = "ddlPaymentType" })
                                 @Html.ValidationMessageFor(model => model.ID_ThanhToan, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                @Html.DropDownList("IDBACSI", null, "Chọn Nha Sĩ", htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.NhaSi, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-12 col-sm-6">
                                 <input class="form-control text-box single-line" id="id" name="id" type="text" value="@ViewBag.Id" placeholder="Id" hidden>
@@ -61,14 +65,14 @@
                             </div>
                             <div id="paymentType1" class="col-12 col-sm-6">
                                 <div class="col-md-offset-2 col-md-10">
-                                    <input  type="submit" value="Thanh toán" class="btn btn-default" />
+                                    <input type="submit" value="Thanh toán" class="btn btn-default" />
                                 </div>
                             </div>
-                            <div id="paymentType2" class="col-12 col-sm-6">
-                                <div class="col-md-offset-2 col-md-10">
-                                    <a class="btn btn-default" href="@Url.Action("Payment","Home")">Thanh toán Bằng Momo</a>
-                                </div>
-                            </div>
+                            @*<div id="paymentType2" class="col-12 col-sm-6">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <a class="btn btn-default" href="@Url.Action("ThanhToan","Home")">Thanh toán</a>
+                                    </div>
+                                </div>*@
                         </div>
                     }
                 </div>
@@ -77,26 +81,25 @@
     </div>
 </div>
 <!-- KẾT THÚC THANH TOÁN -->
+@*<script>
+        document.getElementById("ddlPaymentType").addEventListener("change", function () {
+            var selectedValue = $(this).val();
+            // Kiểm tra giá trị đã chọn
+            if (selectedValue === '1') {
+                $('#paymentType2').hide(); // Ẩn phần tử có id="paymentType2"
+            } else {
+                $('#paymentType2').show(); // Hiển thị phần tử có id="paymentType2"
+            }
+            var selectedValue = this.value;
+            var paymentType1 = document.getElementById("paymentType1");
 
-<script>
-    document.getElementById("ddlPaymentType").addEventListener("change", function () {
-        var selectedValue = $(this).val();
-        // Kiểm tra giá trị đã chọn
-        if (selectedValue === '1') {
-            $('#paymentType2').hide(); // Ẩn phần tử có id="paymentType2"
-        } else {
-            $('#paymentType2').show(); // Hiển thị phần tử có id="paymentType2"
-        }
-        var selectedValue = this.value;
-        var paymentType1 = document.getElementById("paymentType1");
-
-        if (selectedValue === "2") {
-            paymentType1.style.display = "none";
-        } else {
-            paymentType1.style.display = "block";
-        }
-    });
-</script>
+            if (selectedValue === "2") {
+                paymentType1.style.display = "none";
+            } else {
+                paymentType1.style.display = "block";
+            }
+        });
+    </script>*@
 <script>
     document.addEventListener("DOMContentLoaded", (_) => {
         document.querySelector("select").addEventListener("change", (e) => {

@@ -51,6 +51,7 @@
     <Property Name="AccessFailedCount" Type="int" />
     <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
     <Property Name="IsApproved" Type="bit" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="DienDan">
     <Key>
@@ -83,11 +84,13 @@
     <Key>
       <PropertyRef Name="ID_HoaDon" />
     </Key>
-    <Property Name="ID_HoaDon" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_HoaDon" Type="nvarchar" MaxLength="450" Nullable="false" />
     <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" />
     <Property Name="Id" Type="nvarchar" MaxLength="128" />
     <Property Name="Id_GoiDichVu" Type="int" />
     <Property Name="ID_ThanhToan" Type="int" />
+    <Property Name="TrangThai" Type="bit" />
+    <Property Name="IDBACSI" Type="int" />
   </EntityType>
   <EntityType Name="LichHen">
     <Key>
@@ -212,6 +215,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_HoaDon_NhaSi">
+    <End Role="NhaSi" Type="Self.NhaSi" Multiplicity="0..1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaSi">
+        <PropertyRef Name="IDBACSI" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="IDBACSI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_LichHen_AspNetUsers">
     <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
     <End Role="LichHen" Type="Self.LichHen" Multiplicity="*" />
@@ -299,6 +314,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_HoaDon_HinhThucThanhToan" Association="Self.FK_HoaDon_HinhThucThanhToan">
       <End Role="HinhThucThanhToan" EntitySet="HinhThucThanhToan" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDon_NhaSi" Association="Self.FK_HoaDon_NhaSi">
+      <End Role="NhaSi" EntitySet="NhaSi" />
       <End Role="HoaDon" EntitySet="HoaDon" />
     </AssociationSet>
     <AssociationSet Name="FK_LichHen_AspNetUsers" Association="Self.FK_LichHen_AspNetUsers">

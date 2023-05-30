@@ -18,6 +18,7 @@ namespace Booking_Dental_Clinic.Models
 
         }
         public bool IsApproved { get; set; }
+        public string FullName { get; set; }
 
         public ApplicationUser()
         {

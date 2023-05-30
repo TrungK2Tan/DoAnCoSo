@@ -5,21 +5,27 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Gói Dịch Vụ Đã Đặt</h2>
+<h2>PriceView</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
-            Tổng Tiền
+           Tông Tiền
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AspNetUser.Email)
         </th>
         <th>
-           Tên Dịch Vụ
+            Gói DỊch Vụ 
         </th>
         <th>
-            Hình Thức Thanh Toán
+            Hình thức thanh toán
+        </th>
+        <th>
+           Tên nha sĩ
         </th>
         <th></th>
     </tr>
@@ -37,6 +43,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.HinhThucThanhToan.TenHinhThuc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhaSi.Ten)
         </td>
     </tr>
 }

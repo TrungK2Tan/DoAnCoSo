@@ -25,7 +25,7 @@
                 <p class="d-inline-block text-primary border-5" style="font-size:20px">@Html.DisplayFor(model => model.GioBatDau)-@Html.DisplayFor(model => model.GioKetThuc)</p>
                     <div class="col-12 col-sm-6">
                         <div class="col-md-offset-2 col-md-4">
-                            <a class=" btn btn-primary w-100 py-3" href="@Url.Action("Appointment", "Home", new {@IDBACSI=Model.IDBACSI})">Đặt Lịch</a>
+                            <a class=" btn btn-primary w-100 py-3" href="@Url.Action("Appointment", "Home", new {@IDBACSI=Model.IDBACSI, @GioBatDau=Model.GioBatDau, @GioKetThuc=Model.GioKetThuc})">Đặt Lịch</a>
                         </div>
                     </div>
                 </div>

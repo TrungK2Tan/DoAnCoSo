@@ -384,9 +384,6 @@
     <Content Include="Areas\Admin\Views\Manager\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Manager\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Manager\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\InvoiceManager\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\InvoiceManager\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\InvoiceManager\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Blog\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Blog\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Blog\Details.cshtml" />
@@ -403,11 +400,12 @@
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Details.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Edit.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Index.cshtml" />
-    <Content Include="Areas\NhaSi\Views\ManagerPackage\Create.cshtml" />
-    <Content Include="Areas\NhaSi\Views\ManagerPackage\Delete.cshtml" />
-    <Content Include="Areas\NhaSi\Views\ManagerPackage\Details.cshtml" />
-    <Content Include="Areas\NhaSi\Views\ManagerPackage\Edit.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerPackage\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\InvoiceManager\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\InvoiceManager\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\InvoiceManager\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\InvoiceManager\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\InvoiceManager\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

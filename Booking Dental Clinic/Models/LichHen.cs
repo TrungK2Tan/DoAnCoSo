@@ -24,8 +24,8 @@ namespace Booking_Dental_Clinic.Models
         public Nullable<System.TimeSpan> GioBatDau { get; set; }
         public Nullable<System.TimeSpan> GioKetThuc { get; set; }
     
-        public virtual AspNetUser AspNetUser { get; set; }
         public virtual LoaiDichVu LoaiDichVu { get; set; }
         public virtual NhaSi NhaSi { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

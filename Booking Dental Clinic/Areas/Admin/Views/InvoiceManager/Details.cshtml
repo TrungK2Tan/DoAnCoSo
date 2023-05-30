@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
-    Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Details</h2>
@@ -17,6 +17,22 @@
 
         <dd>
             @Html.DisplayFor(model => model.TongTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
         </dd>
 
         <dt>
@@ -36,11 +52,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+            @Html.DisplayNameFor(model => model.NhaSi.Ten)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AspNetUser.Email)
+            @Html.DisplayFor(model => model.NhaSi.Ten)
         </dd>
 
     </dl>

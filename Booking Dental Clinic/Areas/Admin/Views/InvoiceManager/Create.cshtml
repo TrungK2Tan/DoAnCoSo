@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Create</h2>
@@ -15,6 +15,14 @@
         <h4>HoaDon</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_HoaDon, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ID_HoaDon, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ID_HoaDon, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.TongTien, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -44,6 +52,24 @@
             <div class="col-md-10">
                 @Html.DropDownList("ID_ThanhToan", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ID_ThanhToan, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrangThai, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.TrangThai)
+                    @Html.ValidationMessageFor(model => model.TrangThai, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IDBACSI, "IDBACSI", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("IDBACSI", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.IDBACSI, "", new { @class = "text-danger" })
             </div>
         </div>
 

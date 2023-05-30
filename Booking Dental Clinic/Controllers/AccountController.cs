@@ -207,7 +207,7 @@ namespace Booking_Dental_Clinic.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , IsApproved = false };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , IsApproved = false,FullName = model.FullName };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

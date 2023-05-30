@@ -24,7 +24,7 @@
             <div class="col-lg-6">
                 <div class="bg-white text-center rounded p-5">
                     <h1 class="mb-4">ĐẶT LỊCH TRỰC TUYẾN VỚI BÁC SĨ</h1>
-                    @using (Html.BeginForm())
+                    @using (Html.BeginForm("Appointment", "Home", FormMethod.Post))
                     {
                         @Html.AntiForgeryToken()
                         <div class="row g-3">
@@ -63,7 +63,9 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <span>Giờ bắt đầu</span>
-                                <input class="form-control text-box single-line" id="GioBatDau" name="GioBatDau" type="time" value="" min="08:00" max="20:00" required>
+                                <input class="form-control text-box single-line" id="GioBatDau" name="GioBatDau" type="time" value="@ViewBag.GioBatDau" min="08:00" max="20:00" required>
+
+                                @*<input class="form-control text-box single-line" id="GioBatDau" name="GioBatDau" type="time" value="" min="08:00" max="20:00" required>*@
                                 @Html.ValidationMessageFor(model => model.GioBatDau, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-12 col-sm-6">
@@ -73,7 +75,9 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <span>Giờ kết thúc</span>
-                                <input class="form-control text-box single-line" id="GioKetThuc" name="GioKetThuc" type="time" value="" min="08:00" max="20:00" required>
+                                <input class="form-control text-box single-line" id="GioKetThuc" name="GioKetThuc" type="time" value="@ViewBag.GioKetThuc" min="08:00" max="20:00" required>
+
+                                @*<input class="form-control text-box single-line" id="GioKetThuc" name="GioKetThuc" type="time" value="" min="08:00" max="20:00" required>*@
                                 @Html.ValidationMessageFor(model => model.GioKetThuc, "", new { @class = "text-danger" })
                             </div>
                             <div class="col-12 col-sm-6" hidden>
@@ -118,19 +122,13 @@
     });
 </script>
 <script>
-    // Khi chọn nha sĩ từ select
-    document.getElementById("IDBACSI").addEventListener("change", function () {
-        var selectedNhaSiId = this.value;
+    // Set the minimum date for "Ngày khám" input to tomorrow's date
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    var dd = String(tomorrow.getDate()).padStart(2, '0');
+    var mm = String(tomorrow.getMonth() + 1).padStart(2, '0'); // January is 0!
+    var yyyy = tomorrow.getFullYear();
 
-        // Lấy thông tin về GioBatDau và GioKetThuc từ nha sĩ đã chọn
-        var nhaSi = nhasi.find(function (nhaSi) {
-            return nhaSi.IDBACSI === selectedNhaSiId;
-        });
-
-        // Điền thông tin GioBatDau và GioKetThuc vào input tương ứng
-        if (nhaSi) {
-            document.getElementById("GioBatDau").value = nhaSi.GioBatDau;
-            document.getElementById("GioKetThuc").value = nhaSi.GioKetThuc;
-        }
-    });
+    tomorrow = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("Ngaydat").setAttribute("min", tomorrow);
 </script>
