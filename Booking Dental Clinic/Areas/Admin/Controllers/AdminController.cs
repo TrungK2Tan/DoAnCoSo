@@ -15,6 +15,10 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         {
             return View();
         }
+        public ActionResult Search()
+        {
+            return View();
+        }
 
     }
       

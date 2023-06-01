@@ -5,77 +5,80 @@
     Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
 }
 
-<h2>Delete</h2>
+<div class="container">
+    <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>LichHen</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Tenkhachhang)
-        </dt>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">LichHen</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Tenkhachhang)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Tenkhachhang)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Tenkhachhang)
-        </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Sdt)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Sdt)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sdt)
-        </dt>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Ngaydat)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Ngaydat)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sdt)
-        </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.GioBatDau)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.GioBatDau)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Ngaydat)
-        </dt>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.GioKetThuc)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.GioKetThuc)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Ngaydat)
-        </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.AspNetUser.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.AspNetUser.Email)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Gio)
-        </dt>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.LoaiDichVu.Ten)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.LoaiDichVu.Ten)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Gio)
-        </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.NhaSi.Ten)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.NhaSi.Ten)
+                </dd>
+            </dl>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </dt>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
 
-        <dd>
-            @Html.DisplayFor(model => model.AspNetUser.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LoaiDichVu.Ten)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LoaiDichVu.Ten)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NhaSi.Ten)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NhaSi.Ten)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                <div class="form-actions text-center">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+                </div>
+            }
         </div>
-    }
+    </div>
 </div>

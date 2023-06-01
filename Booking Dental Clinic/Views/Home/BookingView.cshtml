@@ -5,68 +5,42 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Lịch Đã Đặt</h2>
+<div class="container">
+    <h2 class="text-center mt-5">Lịch Đã Đặt</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            <label> Tên </label>
-        </th>
-        <th>
-            <label> Số Điện Thoại </label>
-        </th>
-        <th>
-            <label> Ngày Đặt</label>
-        </th>
-        <th>
-            <label> Giờ Bắt Đầu </label>
-        </th>
-        <th>
-            <label> Giờ Kết Thúc  </label>
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </th>
-        <th>
-            <label> Tên Dịch Vụ</label>
-        </th>
-        <th>
-            <label> Tên Nha Sĩ</label>
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tenkhachhang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sdt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ngaydat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GioBatDau)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GioKetThuc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AspNetUser.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NhaSi.Ten)
-            </td>
-            <td>
-                <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt,tennhasi = item.NhaSi.Ten,@IDBACSI = item.IDBACSI})">ĐẶT LẠI</a>
-            </td>
-        </tr>
-    }
-
-</table>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Số Điện Thoại</th>
+                    <th>Ngày Đặt</th>
+                    <th>Giờ Bắt Đầu</th>
+                    <th>Giờ Kết Thúc</th>
+                    <th>Email</th>
+                    <th>Tên Dịch Vụ</th>
+                    <th>Tên Nha Sĩ</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Tenkhachhang)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Sdt)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Ngaydat)</td>
+                        <td>@Html.DisplayFor(modelItem => item.GioBatDau)</td>
+                        <td>@Html.DisplayFor(modelItem => item.GioKetThuc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.AspNetUser.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NhaSi.Ten)</td>
+                        <td>
+                            <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt,tennhasi = item.NhaSi.Ten,@IDBACSI = item.IDBACSI})" class="btn btn-primary">ĐẶT LẠI</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

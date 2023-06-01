@@ -1,71 +1,77 @@
-﻿@model IEnumerable<Booking_Dental_Clinic.Models.AspNetUser>
+﻿@model PagedList.IPagedList<Booking_Dental_Clinic.Models.AspNetUser>
+@using PagedList.Mvc;
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
-<h2>Index</h2>
+<h1>Quản lý tài khoản nha sĩ</h1>
+<!-- Navbar Search-->
+<form action="@Url.Action("Search", "Manager")" method="get" class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+    <div class="input-group">
+        <input type="text" name="searchTerm" class="form-control" placeholder="Tìm Kiếm..." aria-label="Tìm Kiếm..." aria-describedby="btnNavbarSearch" value="@ViewBag.SearchTerm" />
+        <button class="btn btn-primary" id="btnNavbarSearch" type="submit"><i class="fas fa-search"></i></button>
+    </div>
+</form>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-
-        <th>
-            @Html.DisplayNameFor(model => model.UserName)
-        </th>
-        <th> Tên nha sĩ</th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <thead>
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @foreach (var nhaSi in item.NhaSis)
-                {
-                    @nhaSi.Ten
-                    if (nhaSi != item.NhaSis.Last())
-                    {
-                        <text>, </text>
-                    }
-                }
-            </td>
-            <td>
-                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
-                <a class="btn btn-sm btn-success" href="~/Admin/Manager/Edit?id=@item.Id">Cập Nhật</a>
-                <a class="btn btn-sm btn-danger" href="~/Admin/Manager/Delete?id=@item.Id">Xóa</a>
-                <a class="btn btn-sm btn-danger" href="~/Admin/Manager/Details?id=@item.Id">Chi tiết</a>
-
-            </td>
-            <td>
-                @if (item.IsApproved == false)
-                {
-                    <button class="btn-approve" data-id="@item.Id">Approved</button>
-                }
-                else
-                {
-                    <button class="btn-approve" data-id="@item.Id" disabled>Approve</button>
-                }
-            </td>
-
+            <th>Email</th>
+            <th>User Name</th>
+            <th>Tên nha sĩ</th>
+            <th>Actions</th>
+            <th>Status</th>
         </tr>
-    }
-
-</table>    
-
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+                <td>
+                    @foreach (var nhaSi in item.NhaSis)
+                    {
+                        @nhaSi.Ten
+                        if (nhaSi != item.NhaSis.Last())
+                        {
+                            <text>, </text>
+                        }
+                    }
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-success" href="~/Admin/Manager/Edit?id=@item.Id">Cập Nhật</a>
+                    <a class="btn btn-sm btn-danger" href="~/Admin/Manager/Delete?id=@item.Id">Xóa</a>
+                    <a class="btn btn-sm btn-danger" href="~/Admin/Manager/Details?id=@item.Id">Chi tiết</a>
+                </td>
+                <td>
+                    @if (item.IsApproved == false)
+                    {
+                        <button class="btn btn-sm btn-primary btn-approve" data-id="@item.Id">Approve</button>
+                    }
+                    else
+                    {
+                        <button class="btn btn-sm btn-primary btn-approve" data-id="@item.Id" disabled>Approved</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="row mt-4">
+    <div class="col">
+        <div class="d-flex justify-content-center">
+            Trang @(Model.PageNumber) / @Model.PageCount
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+        </div>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {

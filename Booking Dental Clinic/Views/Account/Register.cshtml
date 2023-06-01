@@ -3,7 +3,7 @@
     ViewBag.Title = "Register";
 }
 
-<section>
+<section class="register-section">
     @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
@@ -11,55 +11,100 @@
         <hr />
         @Html.ValidationSummary("", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-            <div class="col-md-12">
+            @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+            <div>
                 @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
-            <div class="col-md-12">
+            @Html.LabelFor(m => m.FullName, new { @class = "control-label" })
+            <div>
                 @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            <p> Mật khẩu </p>
-            <div class="col-md-12">
+            @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+            <div>
                 @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
             </div>
         </div>
-        <div class="form-group ">
-            <p> Xác nhận mật khẩu</p>
-            <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "control-label" })
+            <div>
                 @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
             </div>
         </div>
-
         <div class="form-group">
-            <p> Loại tài khoản</p>
-            <div class="col-md-10">
+            @Html.LabelFor(m => m.PhoneNumber, new { @class = "control-label" })
+            <div>
+                @Html.PasswordFor(m => m.PhoneNumber, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPhoneNumber, new { @class = "control-label" })
+            <div>
+                @Html.PasswordFor(m => m.ConfirmPhoneNumber, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Role, new { @class = "control-label" })
+            <div>
                 @Html.DropDownListFor(m => m.Role, new SelectList(new List<string> { "NhaSi", "BenhNhan" }), new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-default" value="Đăng Ký" />
+            <div>
+                <input type="submit" class="btn btn-primary" value="Đăng Ký" />
             </div>
         </div>
-
     }
 </section>
+
 <style>
-    section {
-        position: relative;
+    .register-section {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        width: 100%;
+        justify-content: center;
         height: 100vh;
-        overflow-x: hidden;
     }
+
+        .register-section h4 {
+            margin-bottom: 20px;
+        }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
 </style>
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

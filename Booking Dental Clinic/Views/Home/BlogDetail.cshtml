@@ -4,19 +4,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<!-- DIỄN ĐÀN  -->
 <div class="container py-5">
     <div class="row g-5">
-        <div class="col-lg-11" style="display:block ;margin:auto" >
-            <!-- CHI TIẾT DIỄN ĐÀN -->
+        <div class="col-lg-8 mx-auto">
             <div class="mb-5">
                 <h1 class="mb-4">@Html.DisplayFor(model => model.title)</h1>
-                <img class="img-fluid w-100 rounded mb-5" src="~/img/diendan/@Model.img" alt="" style="max-width:90%">
-                <p> @Html.DisplayFor(model => model.content)</p>
-                <img class="img-fluid w-100 rounded mb-5" src="~/img/diendan/@Model.img2" alt="" style="max-width:90%">
-                <p> @Html.DisplayFor(model => model.content2)</p>
-                <div class="d-flex justify-content-between bg-light rounded p-4 mt-4 mb-4">
+                <img class="img-fluid rounded mb-5" src="~/img/diendan/@Model.img" alt="" style="max-width: 100%;">
+                <p>@Html.DisplayFor(model => model.content)</p>
+                <img class="img-fluid rounded mb-5" src="~/img/diendan/@Model.img2" alt="" style="max-width: 100%;">
+                <p>@Html.DisplayFor(model => model.content2)</p>
+                @*<div class="d-flex justify-content-between bg-light rounded p-4 mt-4 mb-4">
                     <div class="d-flex align-items-center">
                         <span>Trần Quốc Duy</span>
                     </div>
@@ -24,48 +21,42 @@
                         <span class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</span>
                         <span class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</span>
                     </div>
+                </div>*@
+            </div>            @*<div class="mb-5">
+            <h4 class="text-primary text-uppercase border-bottom border-5 mb-4">3 Bình Luận</h4>
+            <div class="comment mb-4">
+                <div class="comment-author">
+                    <h6><a href="">Nguyễn Tấn Trung</a> <small><i>22 tháng 05</i></small></h6>
+                </div>
+                <div class="comment-content">
+                    <p>PEEK KA PU</p>
+                    <button class="btn btn-sm btn-light">Phản Hồi</button>
                 </div>
             </div>
+        </div>
+        <div class="bg-light rounded p-5">
+            <h4 class="text-primary text-uppercase border-bottom border-5 border-white mb-4">ĐỂ LẠI BÌNH LUẬN</h4>
+            <form>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6">
+                        <input type="text" class="form-control bg-white border-0" placeholder="Tên Của Bạn" style="height: 55px;">
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <input type="email" class="form-control bg-white border-0" placeholder="Email" style="height: 55px;">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control bg-white border-0" placeholder="Tiêu Đề" style="height: 55px;">
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control bg-white border-0" rows="5" placeholder="Nội Dung"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary w-100 py-3" type="submit">Gửi Bình Luận</button>
+                    </div>
+                </div>
+            </form>
+        </div>*@
 
-            <!-- KẾT THÚC DIỄN ĐÀN -->
-            <!-- Bình Luận-->
-            <div class="mb-5">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-4">3 Bình Luận</h4>
-                <div class="d-flex mb-4">
-                    <div class="ps-3">
-                        <h6><a href="">Nguyễn Tấn Trung</a> <small><i>22 tháng 05</i></small></h6>
-                        <p>
-                            PEEK KA PU
-                        </p>
-                        <button class="btn btn-sm btn-light">Phản Hồi</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Thêm Bình Luận-->
-            <div class="bg-light rounded p-5">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-white mb-4">ĐỂ LẠI BÌNH LUẬN</h4>
-                <form>
-                    <div class="row g-3">
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control bg-white border-0" placeholder="Tên Của Bạn" style="height: 55px;">
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control bg-white border-0" placeholder="Email" style="height: 55px;">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control bg-white border-0" placeholder="Tiêu Đề" style="height: 55px;">
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control bg-white border-0" rows="5" placeholder="Nội Dung"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Gửi Bình Luận</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <!-- Kết Thúc Bình Luận-->
         </div>
     </div>
 </div>
-<!-- HẾT DIỄN ĐÀN -->

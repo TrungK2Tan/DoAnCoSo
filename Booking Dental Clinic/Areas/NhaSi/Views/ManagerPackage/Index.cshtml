@@ -5,40 +5,29 @@
     Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
 }
 
-<h2>Index</h2>
+<div class="container">
+    <h2>Index</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TongTien)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GoiDichVu.TenDichVu)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HinhThucThanhToan.TenHinhThuc)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TongTien)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GoiDichVu.TenDichVu)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HinhThucThanhToan.TenHinhThuc)
-        </td>
-    </tr>
-}
-
-</table>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Tổng Tiền</th>
+                <th>Email</th>
+                <th>Tên Dịch Vụ</th>
+                <th>Hình Thức Thanh Toán</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.TongTien)</td>
+                    <td>@Html.DisplayFor(modelItem => item.AspNetUser.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.GoiDichVu.TenDichVu)</td>
+                    <td>@Html.DisplayFor(modelItem => item.HinhThucThanhToan.TenHinhThuc)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

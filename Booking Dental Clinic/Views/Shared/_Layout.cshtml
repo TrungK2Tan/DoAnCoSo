@@ -73,6 +73,15 @@
                 <a href="~/Home/Index" class="navbar-brand">
                     <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>STH</h1>
                 </a>
+                <form action="@Url.Action("Search", "Home")" method="get" class="search-form">
+                    <div class="search-input-wrapper">
+                        <input type="text" name="keyword" placeholder="Nhập từ khóa tìm kiếm" class="search-input" />
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -114,18 +123,17 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Thông Tin</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>GIỚI THIỆU</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>DỊCH VỤ</a>
-                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>HỖ TRỢ</a>
+                        <a class="text-light mb-2" href="~/Home/About"><i class="fa fa-angle-right me-2"></i>GIỚI THIỆU</a>
+                        <a class="text-light mb-2" href="~/Home/Service"><i class="fa fa-angle-right me-2"></i>DỊCH VỤ</a>
+                        <a class="text-light" href="~/Home/Contact"><i class="fa fa-angle-right me-2"></i>HỖ TRỢ</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">PHỔ BIẾN</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>ĐẶT LỊCH</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>DỊCH VỤ</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>BÁC SĨ</a>
-                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>HỖ TRỢ</a>
+                        <a class="text-light mb-2" href="~/Home/Appointment"><i class="fa fa-angle-right me-2"></i>ĐẶT LỊCH</a>
+                        <a class="text-light mb-2" href="~/Home/Price"><i class="fa fa-angle-right me-2"></i>GÓI</a>
+                        <a class="text-light mb-2" href="~/Home/Team"><i class="fa fa-angle-right me-2"></i>BÁC SĨ</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -399,6 +407,42 @@
             .form-container .btn:hover, .nut-mo-chatbox:hover {
                 opacity: 1;
             }
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 300px;
+        }
+
+        .search-button {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 10px 15px;
+            margin-left: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .search-button i {
+                margin-right: 5px;
+            }
+
+            .search-button:hover {
+                background-color: #0056b3;
+            }
+
+
     </style>
     <script src="~/Scripts/jquery.signalR-2.4.3.min.js"></script>
     <!-- SignalR hub script. -->
@@ -444,5 +488,4 @@
     </script>
 </body>
 @RenderSection("scripts", required: false)
-
 </html>

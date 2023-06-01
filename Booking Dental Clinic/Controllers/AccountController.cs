@@ -143,7 +143,7 @@ namespace Booking_Dental_Clinic.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ModelState.AddModelError("", "Thông tin đăng nhập không hợp lệ!!");
                     return View(model);
             }
         }
@@ -207,7 +207,7 @@ namespace Booking_Dental_Clinic.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , IsApproved = false,FullName = model.FullName };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , IsApproved = false,FullName = model.FullName,PhoneNumber = model.PhoneNumber};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

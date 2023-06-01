@@ -1,53 +1,94 @@
-﻿
-@model PagedList.IPagedList<Booking_Dental_Clinic.Models.DienDan>
+﻿@model PagedList.IPagedList<Booking_Dental_Clinic.Models.DienDan>
 @using PagedList.Mvc;
-    @{
-        ViewBag.Title = "BlogGrid";
-        Layout = "~/Views/Shared/_Layout.cshtml";
-    }
-    <!-- DIỄN ĐÀN  -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Diễn Đàn</h5>
-                <h1 class="display-4">Bài Viết Nha Khoa Mới Nhất Của Chúng Tôi</h1>
-            </div>
-            <div class="row g-5">
-                @foreach (var item in Model)
-                {
-                    <div class="col-xl-4 col-lg-6">
-                        <div class="bg-light rounded overflow-hidden">
-                            <img class="img-fluid w-100" src="~/img/diendan/@item.img" alt="">
-                            <div class="p-4">
-                                <a class="h3 d-block mb-3" href="@Url.Action("BlogDetail", new { id = item.Id_diendan })">@Html.DisplayFor(modelItem => item.title)</a>
-                            </div>
-                            <div class="d-flex justify-content-between border-top p-4">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle me-2" src="~/img/user.jpg" width="25" height="25" alt="">
-                                    <small>Trần Quốc Duy</small>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
-                                    <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
-                                </div>
-                            </div>
+@{
+    ViewBag.Title = "BlogGrid";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+            <h5 class="text-primary text-uppercase border-bottom border-5">Diễn Đàn</h5>
+            <h1 class="display-4">Bài Viết Nha Khoa Mới Nhất Của Chúng Tôi</h1>
+        </div>
+        <div class="row g-5">
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-4 col-lg-6">
+                    <div class="card bg-light rounded overflow-hidden">
+                        <img class="card-img-top" src="~/img/diendan/@item.img" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="@Url.Action("BlogDetail", new { id = item.Id_diendan })">@Html.DisplayFor(modelItem => item.title)</a></h3>
                         </div>
-
+                        <div class="card-footer d-flex justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="~/img/user.jpg" width="25" height="25" alt="">
+                                <small>Trần Quốc Duy</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
+                                <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
+                            </div>
+                        </div>
                     </div>
-                }
-                <br />
-                <br />
-                <!-- Thêm phân trang vào -->
-                <div class="page-footer" style="display:flex;justify-content:space-around">
-                    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
                 </div>
-                <div class="page-footer" style="display:flex;justify-content:space-around">
-                    @Html.PagedListPager(Model, page => Url.Action("BlogGrid", new { page }))
-                </div>
-                <!-- Kết thúc -->
-
+            }
+            <div class="col-12 mt-5">
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item @((Model.PageNumber == 1) ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("BlogGrid", new { page = 1 })" aria-label="First">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item @((Model.PageNumber == 1) ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("BlogGrid", new { page = Model.PageNumber - 1 })" aria-label="Previous">
+                                <span aria-hidden="true">&lsaquo;</span>
+                            </a>
+                        </li>
+                        @for (int i = 1; i <= Model.PageCount; i++)
+                        {
+                            <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                                <a class="page-link" href="@Url.Action("BlogGrid", new { page = i })">@i</a>
+                            </li>
+                        }
+                        <li class="page-item @((Model.PageNumber == Model.PageCount) ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("BlogGrid", new { page = Model.PageNumber + 1 })" aria-label="Next">
+                                <span aria-hidden="true">&rsaquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item @((Model.PageNumber == Model.PageCount) ? "disabled" : "")">
+                            <a class="page-link" href="@Url.Action("BlogGrid", new { page = Model.PageCount })" aria-label="Last">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
-    <!-- KẾT THÚC DIỄN ĐÀN -->
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            // Handle pagination link click
+            $("#paginationContainer").on("click", "a.page-link", function (e) {
+                e.preventDefault();
+                var page = $(this).data("page");
+                loadBlogGrid(page);
+            });
+
+            // Load blog grid content using AJAX
+            function loadBlogGrid(page) {
+                var url = "@Url.Action("BlogGrid")";
+                $.get(url, { page: page }, function (data) {
+                    $("#blogGrid").html(data);
+                    // Scroll to the top of the grid after loading new content
+                    $("html, body").animate({ scrollTop: $("#blogGrid").offset().top }, 500);
+                });
+            }
+        });
+    </script>
+}

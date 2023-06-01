@@ -46,7 +46,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id_diendan,title,img,content")] DienDan dienDan)
+        public ActionResult Create([Bind(Include = "Id_diendan,title,img,content,img2,content2")] DienDan dienDan)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id_diendan,title,img,content")] DienDan dienDan)
+        public ActionResult Edit([Bind(Include = "Id_diendan,title,img,content,img2,content2")] DienDan dienDan)
         {
             if (ModelState.IsValid)
             {

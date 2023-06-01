@@ -5,76 +5,42 @@
     Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Trang Quản Lý Lịch Khám Của Nha Sĩ</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            <label> Tên Khách Hàng</label>
-        </th>
-        <th>
-            <label> Số Điện Thoại </label>
-        </th>
-        <th>
-            <label> Ngày Đặt</label>
-        </th>
-        <th>
-            <label> Giờ Bắt Đầu  </label>
-        </th>
-        <th>
-            <label> Giờ Kết Thúc </label>
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </th>
-        <th>
-            <label> Tên Dịch Vụ</label>
-        </th>
-        <th>
-            <label> Tên Nha Sĩ</label>
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tenkhachhang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sdt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ngaydat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GioBatDau)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GioKetThuc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AspNetUser.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NhaSi.Ten)
-            </td>
-            <td>
-                @*@Html.ActionLink("Edit", "Edit", new { id = item.IdLich }) |
-            @Html.ActionLink("Details", "Details", new { id = item.IdLich }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.IdLich })*@
-                <a class="btn btn-sm btn-success" href="~/NhaSi/ManagerBooking/Edit?id=@item.IdLich">Cập Nhật</a>
-                <a class="btn btn-sm btn-danger" href="~/NhaSi/ManagerBooking/Delete?id=@item.IdLich">Xóa</a>
-                <a class="btn btn-sm btn-danger" href="~/NhaSi/ManagerBooking/Details?id=@item.IdLich">Chi tiết</a>
-            </td>
-        </tr>
-    }
-
-</table>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Tên Khách Hàng</th>
+                <th>Số Điện Thoại</th>
+                <th>Ngày Đặt</th>
+                <th>Giờ Bắt Đầu</th>
+                <th>Giờ Kết Thúc</th>
+                <th>Email</th>
+                <th>Tên Dịch Vụ</th>
+                <th>Tên Nha Sĩ</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Tenkhachhang)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Sdt)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Ngaydat)</td>
+                    <td>@Html.DisplayFor(modelItem => item.GioBatDau)</td>
+                    <td>@Html.DisplayFor(modelItem => item.GioKetThuc)</td>
+                    <td>@Html.DisplayFor(modelItem => item.AspNetUser.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NhaSi.Ten)</td>
+                    <td>
+                        <a class="btn btn-sm btn-success" href="~/NhaSi/ManagerBooking/Edit?id=@item.IdLich">Cập Nhật</a>
+                        <a class="btn btn-sm btn-danger" href="~/NhaSi/ManagerBooking/Delete?id=@item.IdLich">Xóa</a>
+                        <a class="btn btn-sm btn-primary" href="~/NhaSi/ManagerBooking/Details?id=@item.IdLich">Chi tiết</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

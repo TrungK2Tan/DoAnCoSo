@@ -7,37 +7,36 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>DienDan</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.title)
-        </dt>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">DienDan</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-md-2">
+                @Html.DisplayNameFor(model => model.title)
+            </dt>
+            <dd class="col-md-10">
+                @Html.DisplayFor(model => model.title)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.title)
-        </dd>
+            <dt class="col-md-2">
+                @Html.DisplayNameFor(model => model.img)
+            </dt>
+            <dd class="col-md-10">
+                <img src="@Url.Content("~/img/diendan/" + Model.img)" alt="Image" class="img-fluid" />
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.img)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.img)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.content)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.content)
-        </dd>
-
-    </dl>
+            <dt class="col-md-2">
+                @Html.DisplayNameFor(model => model.content)
+            </dt>
+            <dd class="col-md-10">
+                @Html.DisplayFor(model => model.content)
+            </dd>
+        </dl>
+    </div>
 </div>
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_diendan }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_diendan }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index", new { }, new { @class = "btn btn-secondary" })
 </p>

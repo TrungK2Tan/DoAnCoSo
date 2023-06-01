@@ -5,109 +5,36 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Delete</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <h3>Are you sure you want to delete this?</h3>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">User Information</h5>
+                    <hr />
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+                    <dl class="row">
+                        <dt class="col-sm-3">Email</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.Email)</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UserName)
-        </dt>
+                        <dt class="col-sm-3">Username</dt>
+                        <dd class="col-sm-9">@Html.DisplayFor(model => model.UserName)</dd>
+                    </dl>
 
-        <dd>
-            @Html.DisplayFor(model => model.UserName)
-        </dd>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
 
-    </dl>
-
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                        <div class="form-actions">
+                            <input type="submit" value="Delete" class="btn btn-danger" /> |
+                            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
-    }
+    </div>
 </div>
-
-@*<dt>
-    @Html.DisplayNameFor(model => model.EmailConfirmed)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.EmailConfirmed)
-</dd>
-
-<dt>
-    @Html.DisplayNameFor(model => model.PasswordHash)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.PasswordHash)
-</dd>
-
-<dt>
-    @Html.DisplayNameFor(model => model.SecurityStamp)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.SecurityStamp)
-</dd>
-
-<dt>
-    @Html.DisplayNameFor(model => model.PhoneNumber)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.PhoneNumber)
-</dd>
-
-<dt>
-    @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.PhoneNumberConfirmed)
-</dd>
-
-<dt>
-    @Html.DisplayNameFor(model => model.TwoFactorEnabled)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.TwoFactorEnabled)
-</dd>
-
-<dt>
-    @Html.DisplayNameFor(model => model.LockoutEndDateUtc)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.LockoutEndDateUtc)
-</dd>
-
-<dt>
-    @Html.DisplayNameFor(model => model.LockoutEnabled)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.LockoutEnabled)
-</dd>
-
-<dt>
-    @Html.DisplayNameFor(model => model.AccessFailedCount)
-</dt>
-
-<dd>
-    @Html.DisplayFor(model => model.AccessFailedCount)
-</dd>*@

@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using Booking_Dental_Clinic.Models;
 using Microsoft.AspNet.Identity;
+using PagedList;
 
 namespace Booking_Dental_Clinic.Areas.Admin.Controllers
 {
@@ -17,14 +18,22 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         private DentalClinicEntities db = new DentalClinicEntities();
 
         // GET: Admin/Manager
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var doctorsRole = db.AspNetRoles.SingleOrDefault(r => r.Name == "NhaSi");
 
             if (doctorsRole != null)
             {
                 var doctors = doctorsRole.AspNetUsers.ToList();
-                return View(doctors);
+                // Số mục trên mỗi trang
+                int pageSize = 5;
+
+                // Số trang hiện tại, mặc định là 1
+                int pageNumber = (page ?? 1);
+                // Sử dụng gói PagedList.Mvc để phân trang danh sách các bác sĩ
+                var pagedDoctors = doctors.ToPagedList(pageNumber, pageSize);
+
+                return View(pagedDoctors);
             }
 
             return View(new List<AspNetUser>());
@@ -55,7 +64,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] AspNetUser aspNetUser)
+        public ActionResult Create([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName,FullName")] AspNetUser aspNetUser)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +96,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] AspNetUser aspNetUser)
+        public ActionResult Edit([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName,FullName")] AspNetUser aspNetUser)
         {
             if (ModelState.IsValid)
             {

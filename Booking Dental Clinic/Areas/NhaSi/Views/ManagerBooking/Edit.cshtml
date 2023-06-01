@@ -5,19 +5,18 @@
     Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
 }
 
-<h2>Edit</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>LichHen</h4>
+
+    <div class="container">
+        <h4>Sửa</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.IdLich)
 
-        <div class="form-group">
+        <div class="row form-group">
             @Html.LabelFor(model => model.Tenkhachhang, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Tenkhachhang, new { htmlAttributes = new { @class = "form-control" } })
@@ -25,7 +24,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row form-group">
             @Html.LabelFor(model => model.IDBACSI, "IDBACSI", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IDBACSI", null, htmlAttributes: new { @class = "form-control" })
@@ -33,7 +32,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row form-group">
             @Html.LabelFor(model => model.IDDICHVU, "IDDICHVU", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IDDICHVU", null, htmlAttributes: new { @class = "form-control" })
@@ -41,7 +40,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row form-group">
             @Html.LabelFor(model => model.Sdt, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Sdt, new { htmlAttributes = new { @class = "form-control" } })
@@ -49,7 +48,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row form-group">
             @Html.LabelFor(model => model.Ngaydat, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Ngaydat, new { htmlAttributes = new { @class = "form-control" } })
@@ -57,7 +56,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row form-group">
             @Html.LabelFor(model => model.Id, "Id", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("Id", null, htmlAttributes: new { @class = "form-control" })
@@ -65,22 +64,30 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Gio, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="row form-group">
+            @Html.LabelFor(model => model.GioBatDau, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Gio, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Gio, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.GioBatDau, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.GioBatDau, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row form-group">
+            @Html.LabelFor(model => model.GioKetThuc, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GioKetThuc, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.GioKetThuc, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="text-center">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
 </div>

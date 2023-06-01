@@ -3,7 +3,6 @@
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
 }
 
 <div class="container py-5">
@@ -13,22 +12,21 @@
                 <img class="img-fluid w-100 rounded mb-5" src="~/img/@Model.HinhAnh" style="max-width: 400px" alt="">
             </div>
         </div>
-        <!-- Sidebar Start -->
-        <div class="col-lg-5">
+        <div class="col-lg-7">
             <div class="mb-5">
                 <h2>Nha Sĩ</h2>
-                <h1 class="mb-4"> @Html.DisplayFor(model => model.Ten)</h1>
-                <p>
-                    @Html.DisplayFor(model => model.ThongTin)
-                </p>
-                <h2 class="d-inline-block text-primary border-bottom border-5"> Thời gian làm việc:</h2>
-                <p class="d-inline-block text-primary border-5" style="font-size:20px">@Html.DisplayFor(model => model.GioBatDau)-@Html.DisplayFor(model => model.GioKetThuc)</p>
-                    <div class="col-12 col-sm-6">
-                        <div class="col-md-offset-2 col-md-4">
-                            <a class=" btn btn-primary w-100 py-3" href="@Url.Action("Appointment", "Home", new {@IDBACSI=Model.IDBACSI, @GioBatDau=Model.GioBatDau, @GioKetThuc=Model.GioKetThuc})">Đặt Lịch</a>
-                        </div>
+                <h1 class="display-4 mb-4">@Html.DisplayFor(model => model.Ten)</h1>
+                <p class="lead">@Html.DisplayFor(model => model.ThongTin)</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="text-primary border-bottom border-5">Thời gian làm việc:</h2>
+                        <p class="text-primary" style="font-size: 20px">@Html.DisplayFor(model => model.GioBatDau)-@Html.DisplayFor(model => model.GioKetThuc)</p>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="btn btn-primary btn-lg w-50 py-2" href="@Url.Action("Appointment", "Home", new {@IDBACSI = Model.IDBACSI, @GioBatDau = Model.GioBatDau, @GioKetThuc = Model.GioKetThuc})">Đặt Lịch</a>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 </div>

@@ -85,6 +85,17 @@ namespace Booking_Dental_Clinic.Models
         public string Role { get; set; }
         public bool IsApproved { get; set; }
         public string FullName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "PhoneNumber")]
+        public string PhoneNumber { get; set; }
+
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Confirm PhoneNumber")]
+        [Compare("PhoneNumber", ErrorMessage = "The PhoneNumber and confirmation PhoneNumber do not match.")]
+        public string ConfirmPhoneNumber { get; set; }
     }
 
     public class ResetPasswordViewModel

@@ -260,6 +260,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Others\MoMoSecurity.cs" />
     <Compile Include="Others\PaymentRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -395,16 +396,13 @@
     <Content Include="Areas\Admin\Views\ManagerUser\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ManagerUser\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Manager\message.cshtml" />
-    <Content Include="Areas\NhaSi\Views\ManagerBooking\Create.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Delete.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Details.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Edit.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Index.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerPackage\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\InvoiceManager\Create.cshtml" />
     <Content Include="Areas\Admin\Views\InvoiceManager\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\InvoiceManager\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\InvoiceManager\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\InvoiceManager\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -556,6 +554,8 @@
     <Content Include="Views\Home\BookingView.cshtml" />
     <Content Include="Views\Home\PriceView.cshtml" />
     <Content Include="Views\Home\ConfirmPaymentClient.cshtml" />
+    <Content Include="Views\Home\NoResults.cshtml" />
+    <Content Include="Views\Home\SearchResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

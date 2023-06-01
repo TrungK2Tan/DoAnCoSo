@@ -5,63 +5,64 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Details</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Details</h2>
 
-<div>
-    <h4>HoaDon</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TongTien)
-        </dt>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">HoaDon</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.TongTien)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.TongTien)
+                        </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TongTien)
-        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.TrangThai)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.TrangThai)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TrangThai)
-        </dt>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.AspNetUser.Email)
+                        </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TrangThai)
-        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.GoiDichVu.TenDichVu)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.GoiDichVu.TenDichVu)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </dt>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.HinhThucThanhToan.TenHinhThuc)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.HinhThucThanhToan.TenHinhThuc)
+                        </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.AspNetUser.Email)
-        </dd>
+                        <dt class="col-sm-3">
+                            @Html.DisplayNameFor(model => model.NhaSi.Ten)
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.NhaSi.Ten)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.GoiDichVu.TenDichVu)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GoiDichVu.TenDichVu)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HinhThucThanhToan.TenHinhThuc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HinhThucThanhToan.TenHinhThuc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NhaSi.Ten)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NhaSi.Ten)
-        </dd>
-
-    </dl>
+            <div class="mt-4">
+                @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-secondary" })
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_HoaDon }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

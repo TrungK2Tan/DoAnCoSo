@@ -106,7 +106,7 @@ namespace Booking_Dental_Clinic.Controllers
         {
             if (page == null) page = 1;
             var nhasis = db.NhaSis.OrderBy(b => b.IDBACSI);
-            int pageSize = 2;
+            int pageSize = 3;
             int pageNumber = (page ?? 1);
             return View(nhasis.ToPagedList(pageNumber, pageSize));
         }
@@ -163,9 +163,33 @@ namespace Booking_Dental_Clinic.Controllers
             ViewBag.Id = DatLich.Id;
             return View(DatLich);
         }
-        public ActionResult Search()
+        public ActionResult Search(string keyword)
         {
-            return View();
+            // Tìm kiếm theo từ khóa keyword trong tên nha sĩ
+            var nhaSiResults = db.NhaSis.Where(n => n.Ten.Contains(keyword)).ToList();
+
+            // Tìm kiếm theo từ khóa keyword trong tên dịch vụ
+            var dichVuResults = db.GoiDichVus.Where(d => d.TenDichVu.Contains(keyword)).ToList();
+
+            // Tạo một ViewModel để chứa kết quả tìm kiếm
+            var searchResults = new SearchViewModel
+            {
+                Keyword = keyword,
+                NhaSiResults = nhaSiResults,
+                DichVuResults = dichVuResults
+            };
+
+            // Kiểm tra kết quả tìm kiếm để xác định view cần hiển thị
+            if (nhaSiResults.Any() || dichVuResults.Any())
+            {
+                // Gửi kết quả tìm kiếm cho view "SearchResults"
+                return View("SearchResults", searchResults);
+            }
+            else
+            {
+                // Không có kết quả tìm kiếm, gửi thông báo cho view "NoResults"
+                return View("NoResults", searchResults);
+            }
         }
         public ActionResult Thanhtoan(int? Id_DichVu)
         {

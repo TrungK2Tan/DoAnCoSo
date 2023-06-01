@@ -5,71 +5,76 @@
     Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
 }
 
-<h2>Details</h2>
+<div class="container">
+    <h2>Details</h2>
 
-<div>
-    <h4>LichHen</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Tenkhachhang)
-        </dt>
+    <div class="card">
+        <div class="card-header">
+            <h4>Lịch Hẹn</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Tenkhachhang)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Tenkhachhang)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Tenkhachhang)
-        </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Sdt)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Sdt)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sdt)
-        </dt>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Ngaydat)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Ngaydat)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sdt)
-        </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.GioBatDau)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.GioBatDau)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Ngaydat)
-        </dt>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.GioKetThuc)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.GioKetThuc)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Ngaydat)
-        </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.AspNetUser.Email)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.AspNetUser.Email)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Gio)
-        </dt>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.LoaiDichVu.Ten)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.LoaiDichVu.Ten)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Gio)
-        </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.NhaSi.Ten)
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.NhaSi.Ten)
+                </dd>
+            </dl>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AspNetUser.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LoaiDichVu.Ten)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LoaiDichVu.Ten)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NhaSi.Ten)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NhaSi.Ten)
-        </dd>
-
-    </dl>
+    <div class="text-center mt-3">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IdLich }, new { @class = "btn btn-primary" }) |
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdLich }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
