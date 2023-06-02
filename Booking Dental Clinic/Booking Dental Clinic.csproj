@@ -197,8 +197,10 @@
     <Compile Include="Areas\Admin\Controllers\InvoiceManagerController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManagerController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManagerUserController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RateController.cs" />
     <Compile Include="Areas\NhaSi\Controllers\ManagerBookingController.cs" />
     <Compile Include="Areas\NhaSi\Controllers\ManagerPackageController.cs" />
+    <Compile Include="Areas\NhaSi\Controllers\ManagerRateController.cs" />
     <Compile Include="Areas\NhaSi\Controllers\NhaSiController.cs" />
     <Compile Include="Areas\NhaSi\NhaSiAreaRegistration.cs" />
     <Compile Include="ChatHub.cs" />
@@ -219,6 +221,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DanhGiaBinhLuan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DienDan.cs">
@@ -398,12 +403,15 @@
     <Content Include="Areas\Admin\Views\Manager\message.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Delete.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Details.cshtml" />
-    <Content Include="Areas\NhaSi\Views\ManagerBooking\Edit.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerBooking\Index.cshtml" />
     <Content Include="Areas\NhaSi\Views\ManagerPackage\Index.cshtml" />
     <Content Include="Areas\Admin\Views\InvoiceManager\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\InvoiceManager\Details.cshtml" />
     <Content Include="Areas\Admin\Views\InvoiceManager\Index.cshtml" />
+    <Content Include="Areas\NhaSi\Views\ManagerRate\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Rate\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Rate\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\TotalRevenue.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

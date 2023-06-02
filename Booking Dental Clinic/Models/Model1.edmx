@@ -58,6 +58,16 @@
           <Property Name="IsApproved" Type="bit" />
           <Property Name="FullName" Type="nvarchar" MaxLength="500" />
         </EntityType>
+        <EntityType Name="DanhGiaBinhLuan">
+          <Key>
+            <PropertyRef Name="Id_DanhGia" />
+          </Key>
+          <Property Name="Id_DanhGia" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DiemDanhGia" Type="float" />
+          <Property Name="NoiDung" Type="ntext" />
+          <Property Name="NgayTao" Type="datetime" />
+          <Property Name="IDBACSI" Type="int" />
+        </EntityType>
         <EntityType Name="DienDan">
           <Key>
             <PropertyRef Name="Id_diendan" />
@@ -139,6 +149,18 @@
             </Principal>
             <Dependent Role="AspNetUserRoles">
               <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DanhGiaBinhLuan_NhaSi">
+          <End Role="NhaSi" Type="Self.NhaSi" Multiplicity="0..1" />
+          <End Role="DanhGiaBinhLuan" Type="Self.DanhGiaBinhLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaSi">
+              <PropertyRef Name="IDBACSI" />
+            </Principal>
+            <Dependent Role="DanhGiaBinhLuan">
+              <PropertyRef Name="IDBACSI" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -286,6 +308,7 @@
           <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DanhGiaBinhLuan" EntityType="Self.DanhGiaBinhLuan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DienDan" EntityType="Self.DienDan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GoiDichVu" EntityType="Self.GoiDichVu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HinhThucThanhToan" EntityType="Self.HinhThucThanhToan" Schema="dbo" store:Type="Tables" />
@@ -296,6 +319,10 @@
           <AssociationSet Name="FK_AspNetUserRoles_AspNetUsers" Association="Self.FK_AspNetUserRoles_AspNetUsers">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DanhGiaBinhLuan_NhaSi" Association="Self.FK_DanhGiaBinhLuan_NhaSi">
+            <End Role="NhaSi" EntitySet="NhaSi" />
+            <End Role="DanhGiaBinhLuan" EntitySet="DanhGiaBinhLuan" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
@@ -402,6 +429,11 @@
             <End Role="NhaSi" EntitySet="NhaSis" />
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
+          <EntitySet Name="DanhGiaBinhLuans" EntityType="DentalClinicModel.DanhGiaBinhLuan" />
+          <AssociationSet Name="FK_DanhGiaBinhLuan_NhaSi" Association="DentalClinicModel.FK_DanhGiaBinhLuan_NhaSi">
+            <End Role="NhaSi" EntitySet="NhaSis" />
+            <End Role="DanhGiaBinhLuan" EntitySet="DanhGiaBinhLuans" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="AspNetRole">
           <Key>
@@ -500,6 +532,7 @@
           <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_NhaSi" FromRole="NhaSi" ToRole="LichHen" />
           <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_NhaSi_AspNetUsers" FromRole="NhaSi" ToRole="AspNetUser" />
           <NavigationProperty Name="HoaDons" Relationship="DentalClinicModel.FK_HoaDon_NhaSi" FromRole="NhaSi" ToRole="HoaDon" />
+          <NavigationProperty Name="DanhGiaBinhLuans" Relationship="DentalClinicModel.FK_DanhGiaBinhLuan_NhaSi" FromRole="NhaSi" ToRole="DanhGiaBinhLuan" />
         </EntityType>
         <Association Name="FK_LichHen_LoaiDichVu">
           <End Type="DentalClinicModel.LoaiDichVu" Role="LoaiDichVu" Multiplicity="1" />
@@ -670,6 +703,29 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="DanhGiaBinhLuan">
+          <Key>
+            <PropertyRef Name="Id_DanhGia" />
+          </Key>
+          <Property Name="Id_DanhGia" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DiemDanhGia" Type="Double" />
+          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NgayTao" Type="DateTime" Precision="3" />
+          <Property Name="IDBACSI" Type="Int32" />
+          <NavigationProperty Name="NhaSi" Relationship="DentalClinicModel.FK_DanhGiaBinhLuan_NhaSi" FromRole="DanhGiaBinhLuan" ToRole="NhaSi" />
+        </EntityType>
+        <Association Name="FK_DanhGiaBinhLuan_NhaSi">
+          <End Type="DentalClinicModel.NhaSi" Role="NhaSi" Multiplicity="0..1" />
+          <End Type="DentalClinicModel.DanhGiaBinhLuan" Role="DanhGiaBinhLuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaSi">
+              <PropertyRef Name="IDBACSI" />
+            </Principal>
+            <Dependent Role="DanhGiaBinhLuan">
+              <PropertyRef Name="IDBACSI" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -807,6 +863,17 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />
                 <ScalarProperty Name="ID_HoaDon" ColumnName="ID_HoaDon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DanhGiaBinhLuans">
+            <EntityTypeMapping TypeName="DentalClinicModel.DanhGiaBinhLuan">
+              <MappingFragment StoreEntitySet="DanhGiaBinhLuan">
+                <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+                <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+                <ScalarProperty Name="DiemDanhGia" ColumnName="DiemDanhGia" />
+                <ScalarProperty Name="Id_DanhGia" ColumnName="Id_DanhGia" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

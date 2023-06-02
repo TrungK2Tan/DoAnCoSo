@@ -10,6 +10,7 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
+        private DentalClinicEntities db = new DentalClinicEntities(); 
         // GET: Admin/Admin
         public ActionResult Index()
         {
@@ -19,7 +20,15 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         {
             return View();
         }
+        public ActionResult TotalRevenue()
+        {
+            // Retrieve the total revenue from your data source
+            decimal? totalRevenue = db.HoaDons.Sum(i => i.TongTien);
+
+            return View(totalRevenue);
+        }
+
 
     }
-      
+
 }

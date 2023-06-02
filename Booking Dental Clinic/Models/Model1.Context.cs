@@ -36,5 +36,6 @@ namespace Booking_Dental_Clinic.Models
         public virtual DbSet<NhaSi> NhaSis { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
+        public virtual DbSet<DanhGiaBinhLuan> DanhGiaBinhLuans { get; set; }
     }
 }

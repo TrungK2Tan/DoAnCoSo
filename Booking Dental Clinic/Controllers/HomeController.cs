@@ -313,6 +313,24 @@ namespace Booking_Dental_Clinic.Controllers
 
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddReview(DanhGiaBinhLuan review)
+        {
+            if (ModelState.IsValid)
+            {
+                // Lưu đánh giá và bình luận vào cơ sở dữ liệu
+                db.DanhGiaBinhLuans.Add(review);
+                db.SaveChanges();
+
+                return RedirectToAction("Details", new { id = review.IDBACSI });
+            }
+
+            // Nếu dữ liệu không hợp lệ, quay lại trang Details với thông tin nha sĩ và các đánh giá và bình luận đã nhập trước đó
+            NhaSi nhaSi = db.NhaSis.Find(review.IDBACSI);
+            nhaSi.DanhGiaBinhLuans = db.DanhGiaBinhLuans.Where(r => r.IDBACSI == review.IDBACSI).ToList();
+            return View("Details", nhaSi);
+        }
 
     }
 }

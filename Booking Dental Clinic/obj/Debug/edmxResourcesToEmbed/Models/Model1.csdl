@@ -56,6 +56,11 @@
       <End Role="NhaSi" EntitySet="NhaSis" />
       <End Role="HoaDon" EntitySet="HoaDons" />
     </AssociationSet>
+    <EntitySet Name="DanhGiaBinhLuans" EntityType="DentalClinicModel.DanhGiaBinhLuan" />
+    <AssociationSet Name="FK_DanhGiaBinhLuan_NhaSi" Association="DentalClinicModel.FK_DanhGiaBinhLuan_NhaSi">
+      <End Role="NhaSi" EntitySet="NhaSis" />
+      <End Role="DanhGiaBinhLuan" EntitySet="DanhGiaBinhLuans" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="AspNetRole">
     <Key>
@@ -154,6 +159,7 @@
     <NavigationProperty Name="LichHens" Relationship="DentalClinicModel.FK_LichHen_NhaSi" FromRole="NhaSi" ToRole="LichHen" />
     <NavigationProperty Name="AspNetUser" Relationship="DentalClinicModel.FK_NhaSi_AspNetUsers" FromRole="NhaSi" ToRole="AspNetUser" />
     <NavigationProperty Name="HoaDons" Relationship="DentalClinicModel.FK_HoaDon_NhaSi" FromRole="NhaSi" ToRole="HoaDon" />
+    <NavigationProperty Name="DanhGiaBinhLuans" Relationship="DentalClinicModel.FK_DanhGiaBinhLuan_NhaSi" FromRole="NhaSi" ToRole="DanhGiaBinhLuan" />
   </EntityType>
   <Association Name="FK_LichHen_LoaiDichVu">
     <End Type="DentalClinicModel.LoaiDichVu" Role="LoaiDichVu" Multiplicity="1" />
@@ -320,6 +326,29 @@
         <PropertyRef Name="IDBACSI" />
       </Principal>
       <Dependent Role="HoaDon">
+        <PropertyRef Name="IDBACSI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DanhGiaBinhLuan">
+    <Key>
+      <PropertyRef Name="Id_DanhGia" />
+    </Key>
+    <Property Name="Id_DanhGia" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DiemDanhGia" Type="Double" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+    <Property Name="IDBACSI" Type="Int32" />
+    <NavigationProperty Name="NhaSi" Relationship="DentalClinicModel.FK_DanhGiaBinhLuan_NhaSi" FromRole="DanhGiaBinhLuan" ToRole="NhaSi" />
+  </EntityType>
+  <Association Name="FK_DanhGiaBinhLuan_NhaSi">
+    <End Type="DentalClinicModel.NhaSi" Role="NhaSi" Multiplicity="0..1" />
+    <End Type="DentalClinicModel.DanhGiaBinhLuan" Role="DanhGiaBinhLuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaSi">
+        <PropertyRef Name="IDBACSI" />
+      </Principal>
+      <Dependent Role="DanhGiaBinhLuan">
         <PropertyRef Name="IDBACSI" />
       </Dependent>
     </ReferentialConstraint>

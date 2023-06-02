@@ -1,6 +1,81 @@
-﻿@*@model IEnumerable<Booking_Dental_Clinic.Models.LichHen>*@
+﻿
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
 }
-<h1> Index</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Nha sĩ Nha khoa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+            margin: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        p {
+            color: #666666;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+            .profile img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 20px;
+            }
+
+            .profile h2 {
+                margin: 0;
+                color: #333333;
+            }
+
+            .profile p {
+                margin: 0;
+                color: #666666;
+            }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nha sĩ Nha khoa STH</h1>
+    </div>
+
+    <div class="content">
+        <div class="profile">
+            <img src="~/img/icon_dental.ico">
+        </div>
+
+        <p> Với niềm đam mê và kinh nghiệm lâu năm trong lĩnh vực nha khoa, tôi cam kết mang lại cho bạn một nụ cười khỏe đẹp và tự tin.</p>
+
+        <p>Tôi tin rằng việc duy trì sức khỏe răng miệng là rất quan trọng và tôi luôn luôn cung cấp các dịch vụ nha khoa chất lượng cao như tẩy trắng răng, chỉnh nha, điều trị mắc cài và nhiều hơn nữa. Tôi cam kết tạo ra một môi trường thoải mái, an toàn và chuyên nghiệp để bạn có một trải nghiệm dễ chịu khi đến nha khoa.</p>
+
+        <p>Hãy liên hệ với chúng tôi ngay hôm nay để đặt hẹn và chăm sóc cho nụ cười của bạn!</p>
+    </div>
+</body>
+</html>

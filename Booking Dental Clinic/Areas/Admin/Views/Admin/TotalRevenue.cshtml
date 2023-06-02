@@ -1,0 +1,18 @@
+﻿@model decimal?
+@{
+    ViewBag.Title = "TotalRevenue";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<h2>Tổng doanh thu của nha khoa</h2>
+
+@if (Model.HasValue)
+{
+    <p>Tổng Doanh Thu: @Model.Value.ToString("C")</p>
+}
+else
+{
+    <p>No revenue data available.</p>
+}

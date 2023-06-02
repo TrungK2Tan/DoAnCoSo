@@ -19,6 +19,7 @@ namespace Booking_Dental_Clinic.Models
         {
             this.LichHens = new HashSet<LichHen>();
             this.HoaDons = new HashSet<HoaDon>();
+            this.DanhGiaBinhLuans = new HashSet<DanhGiaBinhLuan>();
         }
     
         public int IDBACSI { get; set; }
@@ -34,5 +35,7 @@ namespace Booking_Dental_Clinic.Models
         public virtual AspNetUser AspNetUser { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DanhGiaBinhLuan> DanhGiaBinhLuans { get; set; }
     }
 }

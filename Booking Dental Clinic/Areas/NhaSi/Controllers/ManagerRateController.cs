@@ -11,24 +11,21 @@ using Microsoft.AspNet.Identity;
 
 namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
 {
-    public class ManagerPackageController : Controller
+    public class ManagerRateController : Controller
     {
         private DentalClinicEntities db = new DentalClinicEntities();
 
-        // GET: NhaSi/ManagerPackage
+        // GET: NhaSi/ManagerRate
         public ActionResult Index()
         {
-            // ID loại nha sĩ cần lấy lịch hẹn
+            // ID loại nha sĩ cần lấy đánh giá
             var loaiNhaSiId = User.Identity.GetUserId(); // Thay thế 1 bằng ID loại nha sĩ cần lấy
-
-            // Lấy lịch hẹn theo ID loại nha sĩ
-            var hoaDons = db.HoaDons.Include(l => l.AspNetUser)
-                .Include(l => l.GoiDichVu)
-                .Include(l => l.NhaSi)
-                .Where(l => l.NhaSi.UserId == loaiNhaSiId); // Áp dụng điều kiện ID loại nha sĩ
-
-            return View(hoaDons.ToList());
+            var danhGiaBinhLuans = db.DanhGiaBinhLuans.Include(d => d.NhaSi).Where(l => l.NhaSi.UserId == loaiNhaSiId); ;
+            return View(danhGiaBinhLuans.ToList());
         }
+
+      
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

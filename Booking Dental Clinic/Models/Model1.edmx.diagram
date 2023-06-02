@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fc9511f998d64242a82da23eb6c833d5" Name="Diagram1" ZoomLevel="97">
+      <Diagram DiagramId="fc9511f998d64242a82da23eb6c833d5" Name="Diagram1" ZoomLevel="67">
         <EntityTypeShape EntityType="DentalClinicModel.AspNetRole" Width="1.5" PointX="3" PointY="5.75" />
         <EntityTypeShape EntityType="DentalClinicModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="19.75" />
         <EntityTypeShape EntityType="DentalClinicModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="22.5" />
-        <EntityTypeShape EntityType="DentalClinicModel.DienDan" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DentalClinicModel.DienDan" Width="1.5" PointX="6.25" PointY="4.75" />
         <EntityTypeShape EntityType="DentalClinicModel.GoiDichVu" Width="1.5" PointX="6" PointY="8.625" />
         <EntityTypeShape EntityType="DentalClinicModel.HinhThucThanhToan" Width="1.5" PointX="6" PointY="16.375" />
         <EntityTypeShape EntityType="DentalClinicModel.LichHen" Width="1.5" PointX="5.25" PointY="12.125" />
@@ -27,6 +27,8 @@
         <AssociationConnector Association="DentalClinicModel.FK_HoaDon_GoiDichVu" />
         <AssociationConnector Association="DentalClinicModel.FK_HoaDon_HinhThucThanhToan" />
         <AssociationConnector Association="DentalClinicModel.FK_HoaDon_NhaSi" />
+        <EntityTypeShape EntityType="DentalClinicModel.DanhGiaBinhLuan" Width="1.5" PointX="5.25" PointY="19.5" />
+        <AssociationConnector Association="DentalClinicModel.FK_DanhGiaBinhLuan_NhaSi" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

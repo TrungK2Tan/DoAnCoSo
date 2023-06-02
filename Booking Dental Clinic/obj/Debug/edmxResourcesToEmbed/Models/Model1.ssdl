@@ -53,6 +53,16 @@
     <Property Name="IsApproved" Type="bit" />
     <Property Name="FullName" Type="nvarchar" MaxLength="500" />
   </EntityType>
+  <EntityType Name="DanhGiaBinhLuan">
+    <Key>
+      <PropertyRef Name="Id_DanhGia" />
+    </Key>
+    <Property Name="Id_DanhGia" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DiemDanhGia" Type="float" />
+    <Property Name="NoiDung" Type="ntext" />
+    <Property Name="NgayTao" Type="datetime" />
+    <Property Name="IDBACSI" Type="int" />
+  </EntityType>
   <EntityType Name="DienDan">
     <Key>
       <PropertyRef Name="Id_diendan" />
@@ -134,6 +144,18 @@
       </Principal>
       <Dependent Role="AspNetUserRoles">
         <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DanhGiaBinhLuan_NhaSi">
+    <End Role="NhaSi" Type="Self.NhaSi" Multiplicity="0..1" />
+    <End Role="DanhGiaBinhLuan" Type="Self.DanhGiaBinhLuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaSi">
+        <PropertyRef Name="IDBACSI" />
+      </Principal>
+      <Dependent Role="DanhGiaBinhLuan">
+        <PropertyRef Name="IDBACSI" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -281,6 +303,7 @@
     <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DanhGiaBinhLuan" EntityType="Self.DanhGiaBinhLuan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DienDan" EntityType="Self.DienDan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GoiDichVu" EntityType="Self.GoiDichVu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HinhThucThanhToan" EntityType="Self.HinhThucThanhToan" Schema="dbo" store:Type="Tables" />
@@ -291,6 +314,10 @@
     <AssociationSet Name="FK_AspNetUserRoles_AspNetUsers" Association="Self.FK_AspNetUserRoles_AspNetUsers">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DanhGiaBinhLuan_NhaSi" Association="Self.FK_DanhGiaBinhLuan_NhaSi">
+      <End Role="NhaSi" EntitySet="NhaSi" />
+      <End Role="DanhGiaBinhLuan" EntitySet="DanhGiaBinhLuan" />
     </AssociationSet>
     <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />

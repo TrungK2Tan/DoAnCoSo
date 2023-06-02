@@ -17,20 +17,7 @@ namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
         // GET: NhaSi/NhaSi
         public ActionResult Index()
         {
-            var lichHens = db.LichHens.Include(l => l.AspNetUser).Include(l => l.LoaiDichVu).Include(l => l.NhaSi);
-            return View(lichHens.ToList());
+            return View();
         }
-
-        
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
     }
 }
