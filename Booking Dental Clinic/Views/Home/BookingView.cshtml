@@ -36,7 +36,7 @@
                         <td>@Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)</td>
                         <td>@Html.DisplayFor(modelItem => item.NhaSi.Ten)</td>
                         <td>
-                            <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt,tennhasi = item.NhaSi.Ten,@IDBACSI = item.IDBACSI})" class="btn btn-primary">ĐẶT LẠI</a>
+                            <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt,tennhasi = item.NhaSi.Ten,@IDBACSI = item.IDBACSI,@GioBatDau = item.GioBatDau, @GioKetThuc = item.GioKetThuc})" class="btn btn-primary">ĐẶT LẠI</a>
                         </td>
                     </tr>
                 }

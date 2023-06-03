@@ -52,29 +52,6 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
             return View(aspNetUser);
         }
 
-        // GET: Admin/ManagerUser/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Admin/ManagerUser/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName,FullName")] AspNetUser aspNetUser)
-        {
-            if (ModelState.IsValid)
-            {
-                db.AspNetUsers.Add(aspNetUser);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(aspNetUser);
-        }
-
         // GET: Admin/ManagerUser/Edit/5
         public ActionResult Edit(string id)
         {

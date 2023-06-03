@@ -22,11 +22,19 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         }
         public ActionResult TotalRevenue()
         {
-            // Retrieve the total revenue from your data source
-            decimal? totalRevenue = db.HoaDons.Sum(i => i.TongTien);
+            // Retrieve the list of HoaDons where TrangThai is true
+            var hoaDons = db.HoaDons.Where(i => i.TrangThai == true).ToList();
 
-            return View(totalRevenue);
+            // Calculate the total revenue
+            decimal? totalRevenue = hoaDons.Sum(i => i.TongTien);
+
+            // Pass the list of HoaDons and totalRevenue to the view
+            ViewBag.HoaDons = hoaDons;
+            ViewBag.TotalRevenue = totalRevenue;
+
+            return View();
         }
+
 
 
     }

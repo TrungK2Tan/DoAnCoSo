@@ -17,37 +17,37 @@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.FullName, new { @class = "control-label" })
+            Họ và tên
             <div>
                 @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+            Mật khẩu
             <div>
                 @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "control-label" })
+            Xác nhận mật khẩu
             <div>
                 @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.PhoneNumber, new { @class = "control-label" })
+           Số điện thoại
             <div>
-                @Html.PasswordFor(m => m.PhoneNumber, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.ConfirmPhoneNumber, new { @class = "control-label" })
+           Xác nhận số điện thoại
             <div>
-                @Html.PasswordFor(m => m.ConfirmPhoneNumber, new { @class = "form-control" })
+                @Html.TextBoxFor(m => m.ConfirmPhoneNumber, new { @class = "form-control" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(m => m.Role, new { @class = "control-label" })
+            Loại tài khoản
             <div>
                 @Html.DropDownListFor(m => m.Role, new SelectList(new List<string> { "NhaSi", "BenhNhan" }), new { @class = "form-control" })
             </div>

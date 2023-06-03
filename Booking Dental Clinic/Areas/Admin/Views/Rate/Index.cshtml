@@ -5,11 +5,9 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Trang Đánh Giá</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 
 <div class="table-responsive">
     <table class="table table-striped">
@@ -30,7 +28,7 @@
                     <td>@Html.DisplayFor(modelItem => item.NoiDung)</td>
                     <td>@Html.DisplayFor(modelItem => item.NgayTao)</td>
                     <td>@Html.DisplayFor(modelItem => item.NhaSi.Ten)</td>
-                    <td>@Html.ActionLink("Delete", "Delete", new { id = item.Id_DanhGia }, new { @class = "btn btn-danger btn-sm" })</td>
+                    <td>@Html.ActionLink("Xóa", "Delete", new { id = item.Id_DanhGia }, new { @class = "btn btn-danger btn-sm" })</td>
                 </tr>
             }
         </tbody>

@@ -132,37 +132,35 @@ namespace Booking_Dental_Clinic.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        
+
         public ActionResult Appointment([Bind(Include = "IdLich,Tenkhachhang,IDDICHVU,IDBACSI,Sdt,Ngaydat,Id,GioBatDau,GioKetThuc")] LichHen DatLich)
         {
             if (ModelState.IsValid)
             {
-                // Lấy ID của người dùng hiện tại
                 string currentUserId = User.Identity.GetUserId();
-
-                // Gán ID vào thuộc tính DatLich.Id
                 DatLich.Id = currentUserId;
-                // Kiểm tra số lượng lịch hẹn đã đặt cho nha sĩ tương ứng
-                var numberOfAppointments = db.LichHens.Count(l => l.IDBACSI == DatLich.IDBACSI && l.GioBatDau == DatLich.GioBatDau && l.GioKetThuc == DatLich.GioKetThuc);
+
+                var numberOfAppointments = db.LichHens.Count(l => l.IDBACSI == DatLich.IDBACSI && l.Ngaydat.HasValue && DbFunctions.TruncateTime(l.Ngaydat) == DbFunctions.TruncateTime(DatLich.Ngaydat) && ((l.GioBatDau >= DatLich.GioBatDau && l.GioBatDau <= DatLich.GioKetThuc) || (l.GioKetThuc >= DatLich.GioBatDau && l.GioKetThuc <= DatLich.GioKetThuc) || (l.GioBatDau <= DatLich.GioBatDau && l.GioKetThuc >= DatLich.GioKetThuc)));
+
                 if (numberOfAppointments >= 2)
                 {
                     ModelState.AddModelError("", "Nha sĩ này đã đủ số lượng lịch hẹn cho khung giờ này. Vui lòng chọn nha sĩ khác.");
-                    // Nếu muốn chuyển đến một trang thông báo hoặc hiển thị thông báo trong view, bạn có thể thực hiện ở đây.
-                    // Ví dụ: return RedirectToAction("AppointmentFull");
-                    // hoặc ViewBag.AppointmentFull = true;
                     ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten", DatLich.IDDICHVU);
                     ViewBag.Id = DatLich.Id;
                     return View(DatLich);
                 }
+
                 db.LichHens.Add(DatLich);
                 db.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
+
             ViewBag.IDBACSI = new SelectList(db.NhaSis, "IDBACSI", "Ten", DatLich.IDBACSI);
             ViewBag.IDDICHVU = new SelectList(db.LoaiDichVus, "IDDICHVU", "Ten", DatLich.IDDICHVU);
             ViewBag.Id = DatLich.Id;
             return View(DatLich);
         }
+
         public ActionResult Search(string keyword)
         {
             // Tìm kiếm theo từ khóa keyword trong tên nha sĩ
@@ -331,6 +329,5 @@ namespace Booking_Dental_Clinic.Controllers
             nhaSi.DanhGiaBinhLuans = db.DanhGiaBinhLuans.Where(r => r.IDBACSI == review.IDBACSI).ToList();
             return View("Details", nhaSi);
         }
-
     }
 }

@@ -395,7 +395,6 @@
     <Content Include="Areas\Admin\Views\Blog\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Blog\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Blog\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\ManagerUser\Create.cshtml" />
     <Content Include="Areas\Admin\Views\ManagerUser\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\ManagerUser\Details.cshtml" />
     <Content Include="Areas\Admin\Views\ManagerUser\Edit.cshtml" />
@@ -412,6 +411,7 @@
     <Content Include="Areas\Admin\Views\Rate\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Rate\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Admin\TotalRevenue.cshtml" />
+    <Content Include="Areas\Admin\Views\InvoiceManager\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
