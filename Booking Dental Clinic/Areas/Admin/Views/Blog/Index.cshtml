@@ -28,7 +28,6 @@
             Nội dung
         </th>
     </tr>
-
     @foreach (var item in Model)
     {
         <tr>
@@ -39,13 +38,13 @@
                 <img class="img-fluid w-100" src="~/img/diendan/@item.img" alt="">
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.content)
+                @TruncateText(item.content, 100)
             </td>
             <td>
-                <img class="img-fluid w-100" src="~/img/diendan/@item.img2" alt=""> 
+                <img class="img-fluid w-100" src="~/img/diendan/@item.img2" alt="">
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.content2)
+                @TruncateText(item.content2, 100)
             </td>
             <td>
                 <a class="btn btn-sm btn-success" href="~/Admin/Blog/Edit?id=@item.Id_diendan">Cập Nhật</a>
@@ -55,4 +54,44 @@
         </tr>
     }
 
+
+    @*@foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    <img class="img-fluid w-100" src="~/img/diendan/@item.img" alt="">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.content)
+                </td>
+                <td>
+                    <img class="img-fluid w-100" src="~/img/diendan/@item.img2" alt="">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.content2)
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-success" href="~/Admin/Blog/Edit?id=@item.Id_diendan">Cập Nhật</a>
+                    <a class="btn btn-sm btn-danger" href="~/Admin/Blog/Delete?id=@item.Id_diendan">Xóa</a>
+                    <a class="btn btn-sm btn-danger" href="~/Admin/Blog/Details?id=@item.Id_diendan">Chi tiết</a>
+                </td>
+            </tr>
+        }*@
+
 </table>
+@functions {
+    public static string TruncateText(string text, int maxLength)
+    {
+        if (text.Length > maxLength)
+        {
+            return text.Substring(0, maxLength) + "...";
+        }
+        else
+        {
+            return text;
+        }
+    }
+}

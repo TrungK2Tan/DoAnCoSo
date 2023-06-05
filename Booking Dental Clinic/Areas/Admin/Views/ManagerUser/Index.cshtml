@@ -5,6 +5,15 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 <h1 class="mt-4">Quản lý tài khoản khách</h1>
+<!--Tìm Kiếm-->
+@using (Html.BeginForm("Index", "ManagerUser", FormMethod.Get))
+{
+    <p>
+        Tìm kiếm: @Html.TextBox("searchString", ViewBag.SearchString as string)
+        <input type="submit" value="Tìm kiếm" />
+    </p>
+}
+<!-- Hiển thị danh sách các nha sĩ -->
 <table class="table ">
     <thead>
         <tr>

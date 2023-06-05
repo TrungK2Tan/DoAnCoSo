@@ -32,8 +32,7 @@ namespace Booking_Dental_Clinic.Controllers
             string currentUserId = User.Identity.GetUserId();
             // Lấy danh sách lịch hẹn dựa trên ID đăng nhập
             var lichHens = db.LichHens
-                .Where(l => l.Id == currentUserId)
-                .ToList();
+                .Where(l => l.Id == currentUserId).OrderBy(l => l.Ngaydat).ToList();
             return View(lichHens);
         }
         [Authorize]

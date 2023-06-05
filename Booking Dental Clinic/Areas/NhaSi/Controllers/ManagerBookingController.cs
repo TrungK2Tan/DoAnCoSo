@@ -25,7 +25,7 @@ namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
             var lichHens = db.LichHens.Include(l => l.AspNetUser)
                 .Include(l => l.LoaiDichVu)
                 .Include(l => l.NhaSi)
-                .Where(l => l.NhaSi.UserId == loaiNhaSiId); // Áp dụng điều kiện ID loại nha sĩ
+                .Where(l => l.NhaSi.UserId == loaiNhaSiId).OrderBy(l => l.Ngaydat);  // Áp dụng điều kiện ID loại nha sĩ
 
             return View(lichHens.ToList());
             //var lichHens = db.LichHens.Include(l => l.AspNetUser).Include(l => l.LoaiDichVu).Include(l => l.NhaSi);

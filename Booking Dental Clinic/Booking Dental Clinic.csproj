@@ -564,6 +564,7 @@
     <Content Include="Views\Home\ConfirmPaymentClient.cshtml" />
     <Content Include="Views\Home\NoResults.cshtml" />
     <Content Include="Views\Home\SearchResults.cshtml" />
+    <Content Include="Views\Home\CancelAppointment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

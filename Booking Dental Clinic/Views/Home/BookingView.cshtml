@@ -38,6 +38,9 @@
                         <td>
                             <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt,tennhasi = item.NhaSi.Ten,@IDBACSI = item.IDBACSI,@GioBatDau = item.GioBatDau, @GioKetThuc = item.GioKetThuc})" class="btn btn-primary">ĐẶT LẠI</a>
                         </td>
+                        <td>
+                            <a href="@Url.Action("CancelAppointment", "Home",new { IdLich = item.IdLich } )" class="btn btn-primary">Hủy lịch hẹn</a>
+                        </td>
                     </tr>
                 }
             </tbody>

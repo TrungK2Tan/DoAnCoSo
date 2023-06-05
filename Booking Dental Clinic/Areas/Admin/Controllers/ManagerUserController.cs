@@ -16,13 +16,19 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
         private DentalClinicEntities db = new DentalClinicEntities();
 
         // GET: Admin/ManagerUser
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string searchString)
         {
             var user = db.AspNetRoles.SingleOrDefault(r => r.Name == "BenhNhan");
 
             if (user != null)
             {
                 var users = user.AspNetUsers.ToList();
+
+                if (!string.IsNullOrEmpty(searchString))
+                {
+                    users = users.Where(u => u.FullName.ToLower().Contains(searchString)).ToList();
+                }
+
                 // Số mục trên mỗi trang
                 int pageSize = 5;
 
@@ -30,6 +36,8 @@ namespace Booking_Dental_Clinic.Areas.Admin.Controllers
                 int pageNumber = (page ?? 1);
                 // Sử dụng gói PagedList.Mvc để phân trang danh sách các bác sĩ
                 var pagedUser = users.ToPagedList(pageNumber, pageSize);
+
+                ViewBag.SearchString = searchString;
 
                 return View(pagedUser);
             }
