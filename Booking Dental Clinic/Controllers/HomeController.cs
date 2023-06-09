@@ -138,6 +138,7 @@ namespace Booking_Dental_Clinic.Controllers
             {
                 string currentUserId = User.Identity.GetUserId();
                 DatLich.Id = currentUserId;
+                DatLich.IsApproved = false; // Đặt trạng thái IsApproved là false
 
                 var numberOfAppointments = db.LichHens.Count(l => l.IDBACSI == DatLich.IDBACSI && l.Ngaydat.HasValue && DbFunctions.TruncateTime(l.Ngaydat) == DbFunctions.TruncateTime(DatLich.Ngaydat) && ((l.GioBatDau >= DatLich.GioBatDau && l.GioBatDau <= DatLich.GioKetThuc) || (l.GioKetThuc >= DatLich.GioBatDau && l.GioKetThuc <= DatLich.GioKetThuc) || (l.GioBatDau <= DatLich.GioBatDau && l.GioKetThuc >= DatLich.GioKetThuc)));
 
@@ -159,7 +160,20 @@ namespace Booking_Dental_Clinic.Controllers
             ViewBag.Id = DatLich.Id;
             return View(DatLich);
         }
+        [HttpPost]
+        public ActionResult CancelBooking(int bookingId)
+        {
+            // Kiểm tra trạng thái của đặt lịch và thực hiện hủy nếu hợp lệ
+            var booking = db.LichHens.Find(bookingId);
+            if (booking != null && booking.IsApproved == false) // Thay đổi ở đây
+            {
+                db.LichHens.Remove(booking);
+                db.SaveChanges();
+                return Json(new { success = true });
+            }
 
+            return Json(new { success = false });
+        }
         public ActionResult Search(string keyword)
         {
             // Tìm kiếm theo từ khóa keyword trong tên nha sĩ
@@ -224,6 +238,7 @@ namespace Booking_Dental_Clinic.Controllers
                     db.SaveChanges();
                     if(HoaDon.ID_ThanhToan == 2)
                     {
+                        HoaDon.TrangThai = true; // Gán TrangThai là false
                         return RedirectToAction("Payment", "Home", new { order = HoaDon.ID_HoaDon });
                     }
                     return RedirectToAction("Index", "Home");

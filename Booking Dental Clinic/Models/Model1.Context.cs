@@ -31,11 +31,11 @@ namespace Booking_Dental_Clinic.Models
         public virtual DbSet<DienDan> DienDans { get; set; }
         public virtual DbSet<GoiDichVu> GoiDichVus { get; set; }
         public virtual DbSet<HinhThucThanhToan> HinhThucThanhToans { get; set; }
-        public virtual DbSet<LichHen> LichHens { get; set; }
         public virtual DbSet<LoaiDichVu> LoaiDichVus { get; set; }
         public virtual DbSet<NhaSi> NhaSis { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<DanhGiaBinhLuan> DanhGiaBinhLuans { get; set; }
+        public virtual DbSet<LichHen> LichHens { get; set; }
     }
 }

@@ -115,6 +115,7 @@
     <Property Name="Id" Type="nvarchar" MaxLength="128" />
     <Property Name="GioBatDau" Type="time" Precision="7" />
     <Property Name="GioKetThuc" Type="time" Precision="7" />
+    <Property Name="IsApproved" Type="bit" />
   </EntityType>
   <EntityType Name="LoaiDichVu">
     <Key>

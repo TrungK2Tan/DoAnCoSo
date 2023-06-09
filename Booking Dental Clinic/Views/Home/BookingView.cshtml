@@ -20,7 +20,8 @@
                     <th>Email</th>
                     <th>Tên Dịch Vụ</th>
                     <th>Tên Nha Sĩ</th>
-                    <th></th>
+                    <th>Trạng thái</th>
+                    <th>Hủy đặt lịch</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,10 +37,20 @@
                         <td>@Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)</td>
                         <td>@Html.DisplayFor(modelItem => item.NhaSi.Ten)</td>
                         <td>
-                            <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt,tennhasi = item.NhaSi.Ten,@IDBACSI = item.IDBACSI,@GioBatDau = item.GioBatDau, @GioKetThuc = item.GioKetThuc})" class="btn btn-primary">ĐẶT LẠI</a>
+                            @if (item.IsApproved == true)
+                            {
+                                <span class="text-success">Đã xác nhận</span>
+                            }
+                            else
+                            {
+                                <span class="text-danger">Chưa xác nhận</span>
+                                <button class="btn btn-primary" onclick="cancelBooking('@item.IdLich')">
+                                    Hủy đặt lịch
+                                </button>
+                            }
                         </td>
                         <td>
-                            <a href="@Url.Action("CancelAppointment", "Home",new { IdLich = item.IdLich } )" class="btn btn-primary">Hủy lịch hẹn</a>
+                            <a href="@Url.Action("Appointment", "Home", new { ten = item.Tenkhachhang, sdt = item.Sdt,tennhasi = item.NhaSi.Ten,@IDBACSI = item.IDBACSI,@GioBatDau = item.GioBatDau, @GioKetThuc = item.GioKetThuc})" class="btn btn-primary">ĐẶT LẠI</a>
                         </td>
                     </tr>
                 }
@@ -47,3 +58,25 @@
         </table>
     </div>
 </div>
+<script>
+    function cancelBooking(bookingId) {
+        if (confirm('Bạn có chắc chắn muốn hủy đặt lịch này?')) {
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("CancelBooking", "Home")',
+                data: { bookingId: bookingId },
+                success: function (result) {
+                    if (result.success) {
+                        alert('Hủy đặt lịch thành công.');
+                        location.reload();
+                    } else {
+                        alert('Không thể hủy đặt lịch.');
+                    }
+                },
+                error: function () {
+                    alert('Đã xảy ra lỗi.');
+                }
+            });
+        }
+    }
+</script>

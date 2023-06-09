@@ -6,7 +6,11 @@
 }
 
 <h2>Trang Quản Lý Lịch Khám Của Nha Sĩ</h2>
-
+<div class="payment-buttons">
+    <a class="btn btn-success" href="@Url.Action("Index", "ManagerBooking")" data-filter="da-xac-nhan">Đã xác nhận</a>
+    <a class="btn btn-danger" href="@Url.Action("Index", "ManagerBooking")" data-filter="chua-xac-nhan">Chưa xác nhận</a>
+    <a class="btn btn-primary" id="btnXemTatCa">Xem tất cả</a>
+</div>
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
@@ -19,13 +23,14 @@
                 <th>Email</th>
                 <th>Tên Dịch Vụ</th>
                 <th>Tên Nha Sĩ</th>
+                <th>Trạng Thái</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
+                <tr data-status="@((item.IsApproved == true) ? "da-xac-nhan" : "chua-xac-nhan")">
                     <td>@Html.DisplayFor(modelItem => item.Tenkhachhang)</td>
                     <td>@Html.DisplayFor(modelItem => item.Sdt)</td>
                     <td>@Html.DisplayFor(modelItem => item.Ngaydat)</td>
@@ -35,6 +40,16 @@
                     <td>@Html.DisplayFor(modelItem => item.LoaiDichVu.Ten)</td>
                     <td>@Html.DisplayFor(modelItem => item.NhaSi.Ten)</td>
                     <td>
+                        @if (item.IsApproved == true)
+                        {
+                            <button class="btn btn-sm btn-primary btn-approve" data-id="@item.IdLich"disabled >Đã xác nhận</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-sm btn-primary btn-approve" data-id="@item.IdLich" >Chưa xác nhận</button>
+                        }
+                    </td>
+                    <td>
                         <a class="btn btn-sm btn-danger" href="~/NhaSi/ManagerBooking/Delete?id=@item.IdLich">Xóa</a>
                         <a class="btn btn-sm btn-primary" href="~/NhaSi/ManagerBooking/Details?id=@item.IdLich">Chi tiết</a>
                     </td>
@@ -43,3 +58,46 @@
         </tbody>
     </table>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Lọc lịch theo trạng thái
+    $('.payment-buttons a').click(function (e) {
+        e.preventDefault();
+
+        // Lấy giá trị của thuộc tính data-filter
+        var filter = $(this).data('filter');
+
+        // Ẩn tất cả các hàng trong bảng
+        $('tbody tr').hide();
+
+        // Hiển thị các hàng có trạng thái tương ứng với filter
+        $('tbody tr[data-status="' + filter + '"]').show();
+    });
+
+    // Xem tất cả
+    $('#btnXemTatCa').click(function (e) {
+        e.preventDefault();
+        $('tbody tr').show();
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".btn-approve").on("click", function () {
+            var button = $(this);
+            var id = button.data("id");
+            $.ajax({
+                url: "@Url.Action("Approve", "ManagerBooking")",
+                type: "POST",
+                data: { id: id },
+                success: function () {
+                    alert("Bạn đã xác nhận thành công.");
+                    $("#status-" + id).text("Đã xác nhận");
+                    button.attr("disabled", true);
+                },
+                error: function () {
+                    alert("Có lỗi xảy ra. Vui lòng thử lại sau.");
+                }
+            });
+        });
+    });
+</script>

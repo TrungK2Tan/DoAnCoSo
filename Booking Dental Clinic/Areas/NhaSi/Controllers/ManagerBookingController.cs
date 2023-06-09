@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Booking_Dental_Clinic.Models;
@@ -46,7 +47,26 @@ namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
             }
             return View(lichHen);
         }
-     
+        public async Task<ActionResult> Approve(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            LichHen lichHen = db.LichHens.Find(id);
+            if (lichHen == null)
+            {
+                return HttpNotFound();
+            }
+
+            lichHen.IsApproved = true; // Update the IsApproved property to true
+            await db.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
+
         // GET: NhaSi/ManagerBooking/Delete/5
         public ActionResult Delete(int? id)
         {

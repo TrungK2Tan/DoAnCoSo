@@ -58,21 +58,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LichHens">
-      <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
-        <MappingFragment StoreEntitySet="LichHen">
-          <ScalarProperty Name="GioKetThuc" ColumnName="GioKetThuc" />
-          <ScalarProperty Name="GioBatDau" ColumnName="GioBatDau" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
-          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
-          <ScalarProperty Name="IDDICHVU" ColumnName="IDDICHVU" />
-          <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
-          <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
-          <ScalarProperty Name="IdLich" ColumnName="IdLich" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="LoaiDichVus">
       <EntityTypeMapping TypeName="DentalClinicModel.LoaiDichVu">
         <MappingFragment StoreEntitySet="LoaiDichVu">
@@ -143,6 +128,22 @@
           <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
           <ScalarProperty Name="DiemDanhGia" ColumnName="DiemDanhGia" />
           <ScalarProperty Name="Id_DanhGia" ColumnName="Id_DanhGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LichHens">
+      <EntityTypeMapping TypeName="DentalClinicModel.LichHen">
+        <MappingFragment StoreEntitySet="LichHen">
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="GioKetThuc" ColumnName="GioKetThuc" />
+          <ScalarProperty Name="GioBatDau" ColumnName="GioBatDau" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+          <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+          <ScalarProperty Name="IDDICHVU" ColumnName="IDDICHVU" />
+          <ScalarProperty Name="IDBACSI" ColumnName="IDBACSI" />
+          <ScalarProperty Name="Tenkhachhang" ColumnName="Tenkhachhang" />
+          <ScalarProperty Name="IdLich" ColumnName="IdLich" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
