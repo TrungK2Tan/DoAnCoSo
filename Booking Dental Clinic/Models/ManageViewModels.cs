@@ -7,6 +7,8 @@ namespace Booking_Dental_Clinic.Models
 {
     public class IndexViewModel
     {
+        public string UserName { get; set; }
+        public string Account { get; set; }
         public bool HasPassword { get; set; }
         public IList<UserLoginInfo> Logins { get; set; }
         public string PhoneNumber { get; set; }

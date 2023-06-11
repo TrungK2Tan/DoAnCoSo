@@ -66,6 +66,8 @@ namespace Booking_Dental_Clinic.Controllers
             var userId = User.Identity.GetUserId();
             var model = new IndexViewModel
             {
+                UserName=User.Identity.GetUserName(),
+                Account = userId,
                 HasPassword = HasPassword(),
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
