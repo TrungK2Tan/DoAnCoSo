@@ -8,7 +8,11 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Booking_Dental_Clinic.Models;
+using EllipticCurve.Utils;
 using Microsoft.AspNet.Identity;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+
 
 namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
 {
@@ -47,6 +51,25 @@ namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
             }
             return View(lichHen);
         }
+        //public async Task<ActionResult> Approve(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+
+        //    LichHen lichHen = db.LichHens.Find(id);
+        //    if (lichHen == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+
+        //    lichHen.IsApproved = true; // Update the IsApproved property to true
+        //    await db.SaveChangesAsync();
+
+        //    return RedirectToAction("Index");
+        //}
+
         public async Task<ActionResult> Approve(int? id)
         {
             if (id == null)
@@ -60,13 +83,53 @@ namespace Booking_Dental_Clinic.Areas.NhaSi.Controllers
                 return HttpNotFound();
             }
 
-            lichHen.IsApproved = true; // Update the IsApproved property to true
+            lichHen.IsApproved = true; // Cập nhật thuộc tính IsApproved thành true
             await db.SaveChangesAsync();
+
+            // Lấy ngày giờ đặt lịch
+            DateTime appointmentDate = lichHen.Ngaydat?.Date ?? DateTime.MinValue;
+            DateTime startTime = appointmentDate + lichHen.GioBatDau.Value;
+            DateTime endTime = appointmentDate + lichHen.GioKetThuc.Value;
+
+
+            // Nội dung email 
+            string emailTo = lichHen.AspNetUser.Email; // Email address of the appointment holder
+            string subject = "Thông báo đặt lịch hẹn thành công";
+            string body = $"Lịch hẹn của bạn đã được chấp nhận thành công.\n" +
+                  $"Thông tin lịch hẹn:\n" +
+                  $"- Nha sĩ: {lichHen.NhaSi.Ten}\n" +
+                  $"- Ngày: {appointmentDate.ToShortDateString()}\n" +
+                  $"- Giờ bắt đầu: {startTime.ToShortTimeString()}\n" +
+                  $"- Giờ kết thúc: {endTime.ToShortTimeString()}";
+
+            // Configure SendGrid information
+            string sendGridApiKey = "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";
+            string sendGridFromEmail = "nhakhoasth@gmail.com";
+            string sendGridFromName = "Nha Khoa STH";
+
+            // Tạo đối tượng SendGridMessage
+            SendGridMessage sendGridMessage = new SendGridMessage();
+            sendGridMessage.From = new EmailAddress(sendGridFromEmail, sendGridFromName);
+            sendGridMessage.AddTo(emailTo);
+            sendGridMessage.Subject = subject;
+            sendGridMessage.PlainTextContent = body;
+            sendGridMessage.HtmlContent = body;
+
+            // Tạo đối tượng SendGridClient và gửi email
+            var sendGridClient = new SendGridClient(sendGridApiKey);
+
+            try
+            {
+                var response = await sendGridClient.SendEmailAsync(sendGridMessage);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi nếu gửi email không thành công
+                // ...
+            }
 
             return RedirectToAction("Index");
         }
-
-
         // GET: NhaSi/ManagerBooking/Delete/5
         public ActionResult Delete(int? id)
         {

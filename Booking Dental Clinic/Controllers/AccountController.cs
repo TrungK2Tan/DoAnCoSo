@@ -11,12 +11,15 @@ using Microsoft.Owin.Security;
 using Booking_Dental_Clinic.Models;
 using Microsoft.Owin.Security.OAuth;
 using System.Web.Security;
+using System.Data.Entity;
 
 namespace Booking_Dental_Clinic.Controllers
 {
+    
     [Authorize]
     public class AccountController : Controller
     {
+        DentalClinicEntities db = new DentalClinicEntities();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -207,7 +210,7 @@ namespace Booking_Dental_Clinic.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , IsApproved = false,FullName = model.FullName,PhoneNumber = model.PhoneNumber};
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FullName = model.FullName, IsApproved = false,PhoneNumber = model.PhoneNumber};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -224,6 +227,20 @@ namespace Booking_Dental_Clinic.Controllers
                     }
                     else if (roles.Contains("NhaSi"))
                     {
+                        // Assign NhaSiId with the Register Id
+                        var UserId = user.Id;
+                        // Assign TenNhaSi with the FullName
+                        var tenNhaSi = user.FullName;
+                        var nhaSi = new NhaSi
+                        {
+                            UserId = UserId,
+                            Ten = tenNhaSi
+                        };
+
+                        // Save the NhaSi object to the database
+                        // Replace "dbContext" with your actual database context
+                        db.NhaSis.Add(nhaSi);
+                        await db.SaveChangesAsync();
                         // Display message for user account approval
                         ViewBag.Message = "Your account has been created and is awaiting approval from the admin.";
 

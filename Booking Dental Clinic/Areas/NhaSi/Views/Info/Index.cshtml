@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/NhaSi/Views/Shared/_LayoutNhaSi.cshtml";
+}
+@if (Model != null)
+{
+    <div class="nhasi-info">
+        <h2 class="nhasi-info__title">@Model.Ten</h2>
+        <div class="nhasi-info__image">
+            <img src="@Model.HinhAnh" alt="Doctor's Image" />
+        </div>
+        <p class="nhasi-info__detail">Information: @Model.ThongTin</p>
+        <p class="nhasi-info__detail">Start Time: @Model.GioBatDau</p>
+        <p class="nhasi-info__detail">End Time: @Model.GioKetThuc</p>
+    </div>
+}
+else
+{
+    <p class="error-message">Lỗi.</p>
+}
+
+@Html.ActionLink("Sửa", "Edit", new { id = Model.IDBACSI }, new { @class = "edit-link" })

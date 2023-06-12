@@ -672,3 +672,7 @@ E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\PagedList.dll
 E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\PagedList.Mvc.dll
 E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\PagedList.xml
 E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\PagedList.Mvc.xml
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\SendGrid.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\StarkbankEcdsa.dll
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\SendGrid.pdb
+E:\Đặt lịch phòng khám\Booking Dental Clinic\bin\SendGrid.xml
